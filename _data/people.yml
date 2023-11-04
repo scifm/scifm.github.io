@@ -1,0 +1,34 @@
+venkvis:
+    display_name: "Venkat Viswanathan"
+    webpage: "https://www.andrew.cmu.edu/user/venkatv/index.html#"
+    image: assets/img/venkvis.png
+    bio: Associate Professor of Mechanical Engineering, Carnegie Mellon University
+    email: "venkvis [at] umich [dot] edu"
+
+awadell:
+    display_name: "Alex Wadell"
+    webpage: "https://www.linkedin.com/in/alexiuswadell/"
+    bio: Ph.D. Student, Mechanical Engineering, University of Michigan
+    image: assets/img/awadell.jpg
+    email: "awadell [at] umich [dot] edu"
+
+abhutani:
+    display_name: "Anoushka Bhutani"
+    image: assets/img/abhutani.png
+    bio: Ph.D. Student, Mechanical Engineering, University of Michigan
+    email: "abhutani [at] unmich [dot] edu"
+
+asebasti:
+    display_name: "Amal S Sebastian"
+    role: phd
+    image: assets/img/asebasti.jpeg
+    bio: Ph.D. Student, Aerospace Engineering, University of Michigan
+    webpage: "https://amalss18.github.io/"
+    email: asebasti [at] umich [dot] edu
+
+shangzhu:
+  display_name: "Shang Zhu"
+  image: assets/img/shangzhu.jpeg
+  bio: Ph.D. Candidate, Mechanical Engineering, University of Michigan
+  webpage: "https://www.linkedin.com/in/shang-zhu-0935a4153/"
+  email: shangzhu [at] umich [dot] edu
