@@ -11,7 +11,7 @@ people:
 - awadell
 ---
 
-## Foundation Models for Molecular Discovery
+## Traversing High Dimensional Chemical Design Space with Foundation Models
 
 ![]({% link assets/img/incite_image_mb.png %})
 
