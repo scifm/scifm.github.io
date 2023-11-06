@@ -11,7 +11,7 @@ people:
 - awadell
 ---
 
-## The Challenge
+## Foundation Models for Molecular Discovery
 
 ![]({% link assets/img/incite_image_mb.png %})
 

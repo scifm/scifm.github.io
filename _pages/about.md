@@ -10,6 +10,7 @@ people:
 - asebasti
 - shangzhu
 ---
+
 ## The Team
 <section class="people project-people">
     {% for uname in page.people %}
