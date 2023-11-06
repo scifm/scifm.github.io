@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% if item.icon %}
+{% assign icon = item.icon %}
+{% assign class = "shortnews" %}
+{% else %}
+{% assign icon = "newspaper-o" %}
+{% endif %}
+{% assign project = site.projects[page.project] %}
+{% assign project-title = project.link %}
+
+
+<div class="row">
+    <div class="col-md-8 mb-5">
+        <p class="date"><span class="fa fa-fw fa-{{ icon }}"></span> {{ page.date | date: '%B %d, %Y' }}</p>
+        <div class="post">
+            {{ content }}
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        {% if page.image %}
+        <img src="{{ page.image }}" width="100%">
+        {%endif%}
+    </div>
+</div>

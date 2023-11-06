@@ -4,8 +4,14 @@ description: |
 
 # disabled because we are using a custom domain
 #baseurl: /business-frontpage
-
 color-scheme: "mediumseagreen" # the scheme can be any HEX code like "#00aa55"
+
+plugins:
+- jekyll-seo-tag
+- jekyll-sitemap
+
+news:
+  front_page_limit: 5
 
 sass:
   sass_dir: /assets/css/_sass

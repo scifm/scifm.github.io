@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<!-- /.row -->
+<div class="row">
+    {% for p in site.projects %}
+    {% include project-card.html project=p %}
+    {% endfor %}
+</div>
+
+<!-- /.row -->
+
+<div id="news" class="container mb-5">
+    <h2>News</h2>
+    <ul class="news list-unstyled">
+        {% for post in site.posts limit: site.news.front_page_limit %}
+        {% include news-item.html item=post %}
+        {% endfor %}
+    </ul>
+    {% assign numposts = site.posts | size %}
+    {% if numposts >= 1 %}
+    <p>
+        <span class="fa fa-fw fa-history"></span>
+        <a href="{{ site.baseurl }}/news.html">Older posts&hellip;</a>
+    </p>
+    {% endif %}
+</div>

@@ -1,0 +1,42 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-added-large-files
+        args: ['--maxkb=100', '--enforce-all']
+        types: ['image']
+      - id: check-yaml
+      - id: check-xml
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-case-conflict
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.10
+    hooks:
+      - id: remove-crlf
+      - id: remove-tabs
+  - repo: https://github.com/sirosen/check-jsonschema
+    rev: 0.3.0
+    hooks:
+      - id: check-github-workflows
+  - repo: local
+    hooks:
+      - id: images-in-img
+        name: Check for images outside of img/
+        entry: Images go in /img
+        language: fail
+        exclude: ^assets/img/
+        types: ['image']
+      - id: no-binary-files
+        name: Check for binary files
+        entry: Binary files are not allowed, please remove them
+        language: fail
+        exclude_types: ['image', 'text']
+      - id: valid-post-filename
+        name: Checks that post have valid filenames
+        entry: "Files in _posts/ must be named: YYYY-MM-DD-name_with_underscore.md"
+        language: fail
+        files: _posts/
+        exclude: '_posts/\d{4}-\d{2}-\d{2}-\w*\.md'
