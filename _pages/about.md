@@ -4,6 +4,7 @@ layout: default
 permalink: /about/
 people:
 - venkvis
+- bharath
 - abhutani
 - awadell
 - asebasti
