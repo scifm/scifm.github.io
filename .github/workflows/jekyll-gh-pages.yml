@@ -7,6 +7,10 @@ on:
     branches:
     - main
 
+  # Release new blog posts daily at 9am EST
+  schedule:
+  - cron: 0 14 * * *
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
