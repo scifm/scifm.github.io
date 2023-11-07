@@ -14,9 +14,10 @@ awadell:
 
 abhutani:
     display_name: "Anoushka Bhutani"
+    webpage: "https://www.linkedin.com/in/anoushka-bhutani/"
     image: assets/img/abhutani.png
     bio: Ph.D. Student, Mechanical Engineering, University of Michigan
-    email: "abhutani [at] unmich [dot] edu"
+    email: "abhutani [at] umich [dot] edu"
 
 asebasti:
     display_name: "Amal S Sebastian"

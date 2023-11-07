@@ -2,7 +2,7 @@
 title: Foundations Models for PDEs
 layout: default
 card-title: Fluid Dynamics
-card-content: Hello world!
+card-content: Foundations Models for PDEs
 people:
 - asebasti
 ---
