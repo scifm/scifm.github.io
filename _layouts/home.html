@@ -13,18 +13,18 @@ layout: default
 
 <!-- /.row -->
 
+{% assign numposts = site.posts | size %}
+{% if numposts >= 1 %}
 <div id="news" class="container mb-5">
-    <h2>News</h2>
+    <hr>
     <ul class="news list-unstyled">
         {% for post in site.posts limit: site.news.front_page_limit %}
         {% include news-item.html item=post %}
         {% endfor %}
     </ul>
-    {% assign numposts = site.posts | size %}
-    {% if numposts >= 1 %}
     <p>
         <span class="fa fa-fw fa-history"></span>
         <a href="{{ site.baseurl }}/news.html">Older posts&hellip;</a>
     </p>
-    {% endif %}
 </div>
+{% endif %}

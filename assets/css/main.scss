@@ -36,6 +36,20 @@ $on-laptop: 800px;
     }
 }
 
+// Ensure hyperlinks are readable on dark backgrounds
+.text-white {
+    a {
+        color: #FFCB05
+
+    }
+}
+// Change link color in paragraphs to be noticeable
+p {
+    a{
+        color: #2F65A7;
+    }
+}
+
 //@import "bootstrap/bootstrap/bootstrap.css";
 @import "bootstrap/functions";
 @import "bootstrap/variables";
