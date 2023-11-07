@@ -7,7 +7,7 @@ people:
 - bharath
 - abhutani
 - awadell
-- asebasti
+- amalss
 - shangzhu
 ---
 
