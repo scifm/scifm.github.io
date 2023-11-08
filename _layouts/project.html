@@ -3,15 +3,8 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-md-8 mb-5">
-    {{ content }}
-  </div>
+    <div class="col-md-8 mb-5">
+        {{ content }}
+    </div>
+    {% include sidebar.html people=page.people%}
 </div>
-
-<h2> The Team </h2>
-<section class="people project-people">
-    {% for uname in page.people %}
-        {% assign person = site.data.people[uname] %}
-        {% include person.html person=person image=true%}
-    {% endfor %}
-</section>
