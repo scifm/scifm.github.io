@@ -13,5 +13,5 @@ micde:
 microsoft:
   display_name: Microsoft Research
   webpage: https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/
-  image: assets/img/Microsoft.svg
+  image: assets/img/microsoft.svg
   public: true
