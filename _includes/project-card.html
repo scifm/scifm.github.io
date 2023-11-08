@@ -1,16 +1,15 @@
-
 {% assign project = include.project %}
 
 {% if project.link %}
-    {% assign proj-url = project.link %}
+{% assign proj-url = project.link %}
 {% else %}
-    {% capture proj-url %}{{site.baseurl}}{{project.url}}{% endcapture %}
+{% capture proj-url %}{{site.baseurl}}{{project.url}}{% endcapture %}
 {% endif %}
 
 {% if project.card-image %}
-    {% assign card-image = project.card-image %}
+{% assign card-image = project.card-image %}
 {% else %}
-    {% assign card-image = "http://placeholder.pics/svg/400x300/3cb371-3cb371/3cb371-3cb371" %}
+{% assign card-image = "http://placeholder.pics/svg/400x300/3cb371-3cb371/3cb371-3cb371" %}
 {% endif %}
 
 {% if project.card-title %}
@@ -23,11 +22,11 @@
     <div class="card border-0 shadow h-100">
         <img class="card-img-top" width=400 height=200 src="{{ card-image }}" alt="" />
         <div class="card-body">
-        <h4 class="card-title"> {{ card-title }}</h4>
-        <p class="card-text">{{ project.card-content }}</p>
+            <h4 class="card-title"> {{ card-title }}</h4>
+            <p class="card-text">{{ project.card-content }}</p>
         </div>
         <div class="card-footer">
-        <a href="{{ proj-url }}" class="btn btn-primary">Learn More!</a>
+            <a href="{{ proj-url }}" class="btn btn-primary">Learn More!</a>
         </div>
     </div>
 </div>

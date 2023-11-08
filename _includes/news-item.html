@@ -28,7 +28,8 @@
     {% if post.image %}
 
     {% capture img %}
-    <img class="img-fluid d-block mx-auto" style="{{ post.image_style }}" src="{{ post.image }}">
+    <img class="img-fluid d-block mx-auto" style="{{ post.image_style }}" alt="{{ post.image_alt }}"
+        src="{{ post.image }}">
     {% endcapture %}
 
     <div class="row">
