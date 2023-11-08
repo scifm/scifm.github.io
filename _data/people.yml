@@ -16,6 +16,14 @@ bharath:
   org: Deep Forest Sciences
 
 ## Core Team
+abhutani:
+  role: team
+  display_name: "Anoushka Bhutani"
+  webpage: "https://www.linkedin.com/in/anoushka-bhutani/"
+  image: assets/img/abhutani.png
+  bio: Ph.D. Student, Mechanical Engineering
+  email: "abhutani [at] umich [dot] edu"
+  org: University of Michigan
 
 awadell:
   role: team
@@ -26,19 +34,9 @@ awadell:
   email: "awadell [at] umich [dot] edu"
   org: University of Michigan
 
-abhutani:
-  role: team
-  display_name: "Anoushka Bhutani"
-  webpage: "https://www.linkedin.com/in/anoushka-bhutani/"
-  image: assets/img/abhutani.png
-  bio: Ph.D. Student, Mechanical Engineering
-  email: "abhutani [at] umich [dot] edu"
-  org: University of Michigan
-
 amalss:
   role: team
   display_name: "Amal S Sebastian"
-  role: phd
   image: assets/img/asebasti.jpeg
   bio: Ph.D. Student, Aerospace Engineering
   webpage: "https://amalss18.github.io/"
@@ -128,4 +126,12 @@ karthic:
   image: assets/img/karthik.jpg
   bio: Director of MICDE
   website: https://aero.engin.umich.edu/people/duraisamy-karthik/
+  org: University of Michigan
+
+gavini:
+  role: colab
+  display_name: Vikram Gavini
+  image: assets/img/gavini.jpg
+  bio: Professor, Mechanical Engineering
+  webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
   org: University of Michigan
