@@ -121,3 +121,11 @@ natalia:
   webpage: https://www.linkedin.com/in/nataliavassilieva/
   image: assets/img/natalia.jpeg
   org: Cerebras Systems Inc.
+
+karthic:
+  role: colab
+  display_name: Karthik Duraisamy
+  image: assets/img/karthik.jpg
+  bio: Director of MICDE
+  website: https://aero.engin.umich.edu/people/duraisamy-karthik/
+  org: University of Michigan
