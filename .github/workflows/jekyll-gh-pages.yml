@@ -4,8 +4,7 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches:
-    - main
+  pull_request:
 
   # Release new blog posts daily at 9am EST
   schedule:
@@ -49,6 +48,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
