@@ -3,7 +3,7 @@ title: Foundation Models for Molecular Discovery
 layout: project
 card-title: Molecular Discovery
 card-content: |
-    We're training a BERT-based model on 49B molecules to accelerate material discovery and enable Generative AI for molecular design.
+    We’re training BERT-based models to accelerate material discovery and enable Generative AI for molecular design.
 
 card-image: assets/img/incite_image_mb.png
 people:
@@ -13,7 +13,7 @@ people:
 
 ## Traversing High Dimensional Chemical Design Space with Foundation Models
 
-![]({% link assets/img/incite_image_mb.png %})
+![Flowchart of our proposed workflow]({% link assets/img/incite_image_mb.png %})
 
 Current energy storage materials development is hindered by expensive experiments that limit exploration to the vast space of known synthesizable materials. Therefore, current research has only focused on a very limited design space space hindering the effective development of batteries for electric vehicles, grid storage, and electric aircraft applications. To address the unique demands of these applications, such as high energy density, safety, scalability, and power density, it is essential to explore a much larger chemical space than the few hundred that are currently considered due to the high cost of experiments and physics simulations.
 

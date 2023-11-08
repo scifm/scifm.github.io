@@ -1,6 +1,6 @@
 title: Scientific Foundation Models
 navtitle: Scientific Foundation Models
-description: |
+url: scifm.ai
 
 plugins:
 - jekyll-seo-tag
@@ -13,10 +13,6 @@ sass:
   sass_dir: /assets/css/_sass
   style: compressed
 
-include:
-  - _pages
-  - _projects
-
 exclude:
   - .sass-cache
 
@@ -25,7 +21,7 @@ analytics:
 
 roles:
   - key: pi
-    name: Principle Investigators
+    name: Principal Investigators
   - key: team
     name: Core Team
   - key: colab

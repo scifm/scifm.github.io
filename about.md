@@ -1,7 +1,7 @@
 ---
-title: About Us
+title: Team
 layout: default
-permalink: /about/
+permalink: /team/
 people:
 - venkvis
 - bharath
