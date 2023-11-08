@@ -99,6 +99,12 @@ div#news {
     justify-content: space-evenly;
 }
 
+.row{
+    img{
+        max-width: 100%;
+    }
+}
+
 //@import "bootstrap/bootstrap/bootstrap.css";
 @import "bootstrap/functions";
 @import "bootstrap/variables";
