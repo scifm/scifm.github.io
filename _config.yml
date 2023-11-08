@@ -2,10 +2,6 @@ title: Scientific Foundation Models
 navtitle: Scientific Foundation Models
 description: |
 
-# disabled because we are using a custom domain
-#baseurl: /business-frontpage
-color-scheme: "mediumseagreen" # the scheme can be any HEX code like "#00aa55"
-
 plugins:
 - jekyll-seo-tag
 - jekyll-sitemap
@@ -26,6 +22,14 @@ exclude:
 
 analytics:
   gtag: G-DGCRY7J6T8
+
+roles:
+  - key: pi
+    name: Principle Investigators
+  - key: team
+    name: Core Team
+  - key: colab
+    name: Collaborators
 
 # make pages for the _projects folder
 collections:

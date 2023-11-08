@@ -1,41 +1,114 @@
 venkvis:
-    display_name: "Venkat Viswanathan"
-    webpage: "https://www.andrew.cmu.edu/user/venkatv/index.html#"
-    image: assets/img/venkvis.png
-    bio: Associate Professor of Mechanical Engineering, Carnegie Mellon University
-    email: "venkvis [at] umich [dot] edu"
-
-awadell:
-    display_name: "Alex Wadell"
-    webpage: "https://www.linkedin.com/in/alexiuswadell/"
-    bio: Ph.D. Student, Mechanical Engineering, University of Michigan
-    image: assets/img/awadell.jpg
-    email: "awadell [at] umich [dot] edu"
-
-abhutani:
-    display_name: "Anoushka Bhutani"
-    webpage: "https://www.linkedin.com/in/anoushka-bhutani/"
-    image: assets/img/abhutani.png
-    bio: Ph.D. Student, Mechanical Engineering, University of Michigan
-    email: "abhutani [at] umich [dot] edu"
-
-amalss:
-    display_name: "Amal S Sebastian"
-    role: phd
-    image: assets/img/asebasti.jpeg
-    bio: Ph.D. Student, Aerospace Engineering, University of Michigan
-    webpage: "https://amalss18.github.io/"
-    email: amalss [at] umich [dot] edu
-
-shangzhu:
-  display_name: "Shang Zhu"
-  image: assets/img/shangzhu.jpeg
-  bio: Ph.D. Candidate, Mechanical Engineering, University of Michigan
-  webpage: "https://www.linkedin.com/in/shang-zhu-0935a4153/"
-  email: shangzhu [at] umich [dot] edu
+  role: pi
+  display_name: "Venkat Viswanathan"
+  webpage: https://www.linkedin.com/in/venkat-viswanathan/
+  image: assets/img/venkvis.png
+  bio: Associate Professor of Mechanical Engineering
+  email: "venkvis [at] umich [dot] edu"
+  org: University of Michigan
 
 bharath:
+  role: pi
   display_name: Bharath Ramsundar
   image: assets/img/bharath.png
-  bio: Founder and CEO at Deep Forest Sciences
+  bio: Founder and CEO
   webpage: https://www.linkedin.com/in/bharath-ramsundar-13275230/
+  org: Deep Forest Sciences
+
+## Core Team
+
+awadell:
+  role: team
+  display_name: "Alex Wadell"
+  webpage: "https://www.linkedin.com/in/alexiuswadell/"
+  bio: Ph.D. Student, Mechanical Engineering
+  image: assets/img/awadell.jpg
+  email: "awadell [at] umich [dot] edu"
+  org: University of Michigan
+
+abhutani:
+  role: team
+  display_name: "Anoushka Bhutani"
+  webpage: "https://www.linkedin.com/in/anoushka-bhutani/"
+  image: assets/img/abhutani.png
+  bio: Ph.D. Student, Mechanical Engineering
+  email: "abhutani [at] umich [dot] edu"
+  org: University of Michigan
+
+amalss:
+  role: team
+  display_name: "Amal S Sebastian"
+  role: phd
+  image: assets/img/asebasti.jpeg
+  bio: Ph.D. Student, Aerospace Engineering
+  webpage: "https://amalss18.github.io/"
+  email: amalss [at] umich [dot] edu
+  org: University of Michigan
+
+shangzhu:
+  role: team
+  display_name: "Shang Zhu"
+  image: assets/img/shangzhu.jpeg
+  bio: Ph.D. Candidate, Mechanical Engineering
+  webpage: "https://www.linkedin.com/in/shang-zhu-0935a4153/"
+  email: shangzhu [at] umich [dot] edu
+  org: University of Michigan
+
+changwex:
+  display_name: "Changwen Xu"
+  role: team
+  bio: Ph.D. Student, Mechanical Engineering
+  image: assets/img/changwex.jpg
+  webpage: "https://changwenxu98.github.io"
+  email: "changwex [at] umich [dot] com"
+
+chenyanh:
+  display_name: "Chenyang Huang"
+  role: team
+  image: assets/img/chenyanh.JPG
+  webpage: "https://cyhuang514.github.io"
+  email: "chyhuang [at] umich [dot] com"
+  bio: Ph.D. Student, Mechanical Engineering
+  org: University of Michigan
+
+arunppsg:
+  role: team
+  display_name: Arun Pa Thiagarajan
+  image: assets/img/arunppsg.png
+  bio: Software Engineer
+  webpage: https://www.arunppsg.in
+  email: arunppsg AT GoogleEmailService DOT com
+  org: Deep Forest Sciences
+
+aravind:
+  role: team
+  display_name: Sudharsan Aravind V
+  image: assets/img/aravind.jpeg
+  bio: Full-Stack Developer
+  webpage: https://www.linkedin.com/in/sudharsan-aravind-v-18826a1aa/
+  org: Deep Forest Sciences
+
+## Collaborators
+arvind:
+  role: colab
+  display_name: Arvind Ramanathan
+  image: assets/img/Arvind_Ramanathan_400x400.jpg
+  bio: Computational Science Leader 1
+  webpage: https://www.linkedin.com/in/ramanathanarvind/
+  org: Argonne National Laboratory
+
+abrace:
+  role: colab
+  display_name: Alexander Brace
+  image: assets/img/abrace.jpeg
+  bio: Research Associate
+  webpage: https://www.linkedin.com/in/alexander-brace/
+  org: Argonne National Laboratory
+
+natalia:
+  role: colab
+  display_name: Natalia Vassilieva
+  bio: Senior Director of Product, Machine Learning and Software
+  webpage: https://www.linkedin.com/in/nataliavassilieva/
+  image: assets/img/natalia.jpeg
+  org: Cerebras Systems Inc.

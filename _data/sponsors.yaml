@@ -1,0 +1,17 @@
+incite:
+  display_name: "U.S. Department of Energy: INCITE Leadership Computing"
+  webpage: https://www.doeleadershipcomputing.org
+  image: assets/img/incite_logo.png
+  public: false
+
+micde:
+  display_name: Michigan Institute for Computational Discovery & Engineering
+  webpage: https://micde.umich.edu
+  image: assets/img/micde.png
+  public: true
+
+microsoft:
+  display_name: Microsoft Research
+  webpage: https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/
+  image: assets/img/Microsoft.svg
+  public: true

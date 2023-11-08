@@ -1,0 +1,16 @@
+{% assign sponsor = include.sponsor %}
+
+{% if sponsor.webpage %}
+{% capture name %}
+<a href="{{ sponsor.webpage | escape }}"> {{ sponsor.display_name }} </a>
+{% endcapture %}
+{% else %}
+{% assign name = sponsor.display_name %}
+{% endif %}
+
+<div class="sponsor-item">
+    <a href="{{ sponsor.webpage | escape }}">
+        <img alt="{{ sponsor.display_name }}" title="{{ sponsor.display_name }}"
+            src="{{ sponsor.image | relative_url }}" height="100%">
+    </a>
+</div>

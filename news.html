@@ -2,8 +2,10 @@
 layout: default
 title: News
 ---
-<ul class="news list-unstyled">
-    {% for post in site.posts %}
-    {% include news-item.html item=post %}
-    {% endfor %}
-</ul>
+<div id="news" class="container mb-5">
+    <ul class="news list-unstyled">
+        {% for post in site.posts %}
+        {% include news-item.html item=post %}
+        {% endfor %}
+    </ul>
+</div>

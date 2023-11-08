@@ -25,7 +25,19 @@ $on-laptop: 800px;
   }
 }
 
+.people {
+    .role{
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        width: 100%;
+    }
+}
+
+
 .person {
+    width: 90%;
+    max-width: 500px;
     margin-bottom: 10px;
     .profile {
         height: 100px
@@ -47,6 +59,39 @@ $on-laptop: 800px;
 p {
     a{
         color: #2F65A7;
+    }
+}
+.news {
+    a{
+        color: #2F65A7;
+    }
+}
+
+
+.sponsor-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.sponsor-item {
+    text-align: center;
+    float: center;
+    height: 100px;
+    max-width: 300px;
+}
+
+// Make space between news articles nicer
+div#news {
+    .col-sm-10{
+        margin-bottom: 10px;
+    }
+    .row{
+        h5{
+            margin-bottom: 0px;
+        }
     }
 }
 

@@ -11,10 +11,24 @@ people:
 - shangzhu
 ---
 
-## The Team
-<section class="people project-people">
-    {% for uname in page.people %}
-        {% assign person = site.data.people[uname] %}
-        {% include person.html person=person image=true%}
+<section class="people">
+    {% include role-people.html role="pi" image=true%}
+</section>
+<section class="people">
+    {% include role-people.html role="team" image=true%}
+</section>
+<section class="people">
+    {% include role-people.html role="colab" image=true%}
+</section>
+
+<hr>
+
+## Sponsors
+<section class="sponsor-container">
+    {% for item in site.data.sponsors %}
+    {% assign sponsor = item[1] %}
+    {% if sponsor.public %}
+    {% include sponsor.html sponsor=sponsor %}
+    {% endif %}
     {% endfor %}
 </section>
