@@ -71,16 +71,17 @@ p {
 .sponsor-container {
     display: flex;
     width: 100%;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: baseline;
     justify-content: space-evenly;
+    align-content: flex-start;
+    gap: 10px;
 }
 
 .sponsor-item {
     text-align: center;
     float: center;
     height: 100px;
-    max-width: 300px;
 }
 
 // Make space between news articles nicer
