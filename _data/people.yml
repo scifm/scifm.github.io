@@ -61,6 +61,7 @@ changwex:
   image: assets/img/changwex.jpg
   webpage: "https://changwenxu98.github.io"
   email: "changwex [at] umich [dot] com"
+  org: University of Michigan
 
 chenyanh:
   display_name: "Chenyang Huang"
@@ -69,6 +70,14 @@ chenyanh:
   webpage: "https://cyhuang514.github.io"
   email: "chyhuang [at] umich [dot] com"
   bio: Ph.D. Student, Mechanical Engineering
+  org: University of Michigan
+
+varunm:
+  display_name: Varun Madhavan
+  role: team
+  image: assets/img/varunm.jpeg
+  webpage: https://www.linkedin.com/in/varun-madhavan/
+  bio: Research Intern
   org: University of Michigan
 
 arunppsg:
