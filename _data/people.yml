@@ -135,3 +135,11 @@ gavini:
   bio: Professor, Mechanical Engineering
   webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
   org: University of Michigan
+
+oymak:
+  role: colab
+  display_name: Samet Oymak
+  image: assets/img/oymak.jpg
+  bio: Assistant Professor of Electrical Engineering and Computer Science
+  org: University of Michigan
+  webpage: https://sota.engin.umich.edu
