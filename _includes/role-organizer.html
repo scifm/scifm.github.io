@@ -1,0 +1,8 @@
+{% for item in site.data.people %}
+{% if item[1].organizer == true %}
+<div>
+    {% assign person = item[1] %}
+    {% include person.html person=person image=include.image %}
+</div>
+{% endif %}
+{% endfor %}

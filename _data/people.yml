@@ -1,5 +1,6 @@
 venkvis:
   role: pi
+  organizer: true
   display_name: "Venkat Viswanathan"
   webpage: https://www.linkedin.com/in/venkat-viswanathan/
   image: assets/img/venkvis.png
@@ -98,6 +99,7 @@ aravind:
 ## Collaborators
 arvind:
   role: colab
+  organizer: true
   display_name: Arvind Ramanathan
   image: assets/img/Arvind_Ramanathan_400x400.jpg
   bio: Computational Science Leader 1
@@ -122,6 +124,7 @@ natalia:
 
 karthic:
   role: colab
+  organizer: true
   display_name: Karthik Duraisamy
   image: assets/img/karthik.jpg
   bio: Director of MICDE
