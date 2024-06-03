@@ -1,10 +1,20 @@
 {% assign item = include.item %}
-
+{% if item.title %}
+<h2> {{item.title}} </h2>
+  <hr>
+{% endif %}
 <div class="row">
   <div class="col-md-8 mb-5">
     {{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}
+    {% if item.list %}
+    <ol>
+      {% for domain in item.list %}
+      <li> <b> {{ domain.name }} </b> - {{domain.description | markdownify}} </li> 
+      {% endfor %}
+    </ol>
+    {% endif %}
   </div>
   <div class="col-md-4 mb-5">
-    <img src="{{ item.image | relative_url }}" width="200px" height="200px">
+    <img src="{{ item.image | relative_url }}" width="80%" height="80%">
 </div>
 </div>

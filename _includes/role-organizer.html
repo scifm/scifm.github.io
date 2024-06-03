@@ -1,8 +1,15 @@
+
+{% for org_name in site.organizations %}
+<h3 class="pt-3"> {{ org_name.name }} </h3>
 {% for item in site.data.people %}
+{% if item[1].org == {{org_name.name}} %}
 {% if item[1].organizer == true %}
 <div>
     {% assign person = item[1] %}
     {% include person.html person=person image=include.image %}
 </div>
 {% endif %}
+{% endif %}
 {% endfor %}
+{% endfor %}
+

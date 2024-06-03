@@ -27,6 +27,12 @@ roles:
   - key: colab
     name: Collaborators
 
+organizations:
+  - key: um
+    name: University of Michigan
+  - key: anl
+    name: Argonne National Laboratory
+
 # make pages for the _projects folder
 collections:
   projects:
