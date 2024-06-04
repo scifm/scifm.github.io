@@ -1,7 +1,6 @@
 title: Scientific Foundation Models
 navtitle: Scientific Foundation Models
-url: http://abhutani2000.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: https://scifm.github.io/scifm.github.io    # place folder name if the site is served in a subfolder
+url: abhutani2000.github.io/scifm.github.io    # the base hostname and protocol for your site, e.g. http://example.com
 
 plugins:
 - jekyll-seo-tag
