@@ -12,4 +12,4 @@ gem "jekyll-seo-tag", "~> 2.8"
 
 gem "html-proofer", "~> 5.0"
 
-gem "github-pages"
+gem "github-pages", "~> 231", group: :jekyll_plugins
