@@ -1,5 +1,5 @@
 ---
-title: Summer School
+title: Summer School 2024
 layout: tabs
 card-title: SciFM Summer School
 card-content: SciFM Summer School 2024 organized by the University of Michigan (UM) and Argonne National Laboratory (ANL).
