@@ -5,7 +5,7 @@ card-title: Computational Science
 card-content: |
     Intelligent agents for automatic code and workflow generation ready for deployment on exascale computational resources
 
-card-image: assets/img/compsci_inner_loop.png
+card-image: assets/img/comp_sci_card.svg
 people:
 - venkvis
 - arvind
