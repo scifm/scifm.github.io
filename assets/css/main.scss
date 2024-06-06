@@ -216,8 +216,8 @@ div#news {
 
 .image-container {
     position: relative; /* Makes the position of the 'img' absolute relative to this container */
-    width: 100%;
-    padding-top: 100%; /* Height of the container equals its width */
+    width: 70%;
+    padding-top: 70%; /* Height of the container equals its width */
     overflow: hidden; /* Clip the image if it overflows */
 }
 

@@ -14,7 +14,9 @@
     <h5> <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> </h5>
     {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
     <br>
+    {% if post.readmore %}
     <a href="{{ site.baseurl }}{{ post.url }}"> Read more &raquo;</a>
+    {% endif %}
     {% endif %}
 </div>
 {% endcapture %}
