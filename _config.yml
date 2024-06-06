@@ -1,6 +1,7 @@
 title: Center for Scientific Foundation Models
 navtitle: Center for Scientific Foundation Models
-url: scifm.ai
+url: abhutani2000.github.io  
+baseurl: /scifm.github.io    com
 
 plugins:
 - jekyll-seo-tag
