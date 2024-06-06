@@ -170,18 +170,18 @@ p {
             }
         }
 
-        .col-1 {
-            display: block;
-            padding: 10px 0;
+        // .col-1 {
+        //     display: block;
+        //     padding: 10px 0;
 
-            &:before {
-                content: none;
-            }
-        }
+        //     &:before {
+        //         content: none;
+        //     }
+        // }
 
-        .col-2 {
-            text-align: left;
-        }
+        // .col-2 {
+        //     text-align: left;
+        // }
     }
 
 // Make space between news articles nicer
@@ -198,6 +198,20 @@ div#news {
 
 .row#projects {
     justify-content: space-evenly;
+}
+
+.project-card {
+    width: 25%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    .card-title {
+        text-align: center;
+    }
+    .fcard-img-top{
+         width: 400px;
+         max-height: 200px;
+    }
 }
 
 .row{
