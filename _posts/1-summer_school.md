@@ -1,9 +1,7 @@
 ---
-title: Summer School 2024
 layout: tabs
-card-title: SciFM Summer School
-card-content: SciFM Summer School 2024 organized by the University of Michigan (UM) and Argonne National Laboratory (ANL).
-card-image: assets/img/SciFM24_summer_school.svg
+title: "Summer School 2024"
+image: assets/img/SciFM24_summer_school.svg
 ---
 
 <div class="tab-content" id="pills-tabContent">
