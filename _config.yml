@@ -8,7 +8,7 @@ plugins:
 - jekyll-sitemap
 
 news:
-  front_page_limit: 5
+  front_page_limit: 1
 
 sass:
   sass_dir: /assets/css/_sass
