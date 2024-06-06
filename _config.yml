@@ -23,6 +23,10 @@ analytics:
 roles:
   - key: pi
     name: Principal Investigators
+  - key: director
+    name: Director
+  - key: faculty
+    name: Faculty
   - key: team
     name: Core Team
   - key: colab

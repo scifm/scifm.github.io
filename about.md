@@ -12,7 +12,10 @@ people:
 ---
 
 <section class="people">
-    {% include role-people.html role="pi" image=true%}
+    {% include role-people.html role="director" image=true%}
+</section>
+<section class="people">
+    {% include role-people.html role="faculty" image=true%}
 </section>
 <section class="people">
     {% include role-people.html role="team" image=true%}

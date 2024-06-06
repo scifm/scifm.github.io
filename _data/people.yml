@@ -1,5 +1,5 @@
 venkvis:
-  role: pi
+  role: director
   organizer: true
   display_name: "Venkat Viswanathan"
   webpage: https://www.linkedin.com/in/venkat-viswanathan/
@@ -123,7 +123,7 @@ natalia:
   org: Cerebras Systems Inc.
 
 karthic:
-  role: colab
+  role: faculty
   organizer: true
   display_name: Karthik Duraisamy
   image: assets/img/karthik.jpg
@@ -132,7 +132,7 @@ karthic:
   org: University of Michigan
 
 gavini:
-  role: colab
+  role: faculty
   display_name: Vikram Gavini
   image: assets/img/gavini.jpg
   bio: Professor, Mechanical Engineering
@@ -140,9 +140,25 @@ gavini:
   org: University of Michigan
 
 oymak:
-  role: colab
+  role: faculty
   display_name: Samet Oymak
   image: assets/img/oymak.jpg
   bio: Assistant Professor of Electrical Engineering and Computer Science
   org: University of Michigan
   webpage: https://sota.engin.umich.edu
+
+raman:
+  role: faculty
+  display_name: Venkat Raman
+  image: assets/img/raman.jpg
+  bio: Assistant Professor of Aerospace Engineering
+  org: University of Michigan
+  webpage: https://aero.engin.umich.edu/people/gorodetsky-alex/
+
+gorodetsky:
+  role: faculty
+  display_name: Alex Gorodetsky
+  image: assets/img/gorodetsky.jpg
+  bio: Assistant Professor of Aerospace Engineering
+  org: University of Michigan
+  webpage: https://aero.engin.umich.edu/people/raman-venkat/
