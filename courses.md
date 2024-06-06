@@ -1,5 +1,5 @@
 ---
-title: Team
+title: Courses
 layout: default
 permalink: /courses/
 people:
