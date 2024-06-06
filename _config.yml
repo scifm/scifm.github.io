@@ -27,7 +27,7 @@ roles:
   - key: faculty
     name: Faculty
   - key: team
-    name: Core Team
+    name: Students
   - key: colab
     name: Collaborators
 
