@@ -80,7 +80,7 @@ varunm:
   org: University of Michigan
 
 arunppsg:
-  role: team
+  role: dfs
   display_name: Arun Pa Thiagarajan
   image: assets/img/arunppsg.png
   bio: Software Engineer
@@ -89,7 +89,7 @@ arunppsg:
   org: Deep Forest Sciences
 
 aravind:
-  role: team
+  role: dfs
   display_name: Sudharsan Aravind V
   image: assets/img/aravind.jpeg
   bio: Full-Stack Developer
