@@ -1,22 +1,6 @@
 ---
-layout: tabs
+layout: post
 title: "Summer School 2024"
 image: assets/img/SciFM24_summer_school.svg
 ---
-
-<div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="pills-about-tab"> 
-        {% include blurb.html item=site.data.descriptions.summer_school %}
-    </div>
-    <div class="tab-pane fade" id="organizers" role="tabpanel" aria-labelledby="pills-organizers-tab">
-        <section>
-        {% include role-organizer.html image=true%}
-        </section>
-    </div>
-    <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="pills-schedule-tab">
-        {% include schedule.html %}
-    </div>
-    <div class="tab-pane fade" id="hackathon" role="tabpanel" aria-labelledby="pills-hackathon-tab">
-        {% include  blurb.html item=site.data.descriptions.hackathon %}
-    </div>
-</div>
+We are excited to organize the SciFM Summer School from July 8 to July 26. The focus will be on developing technical plans for specific instances for SciFMs; a hackathon to jumpstart the construction of SciFMs; as an incubator for ideas; a training ground for researchers and students; and to further a vision for a national SciFM ecosystem. For more information click [here]({% link summer_school.md %}).
