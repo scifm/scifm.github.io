@@ -100,6 +100,20 @@ div#news {
     justify-content: space-evenly;
 }
 
+.project-card {
+    width: 25%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    .card-title {
+        text-align: center;
+    }
+    .fcard-img-top{
+         width: 400px;
+         max-height: 200px;
+    }
+}
+
 .row{
     img{
         max-width: 100%;
