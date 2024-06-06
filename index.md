@@ -1,5 +1,5 @@
 ---
-title: Scientific Foundation Models
+title: The Center for Scientific Foundation Models
 layout: home
 ---
 
