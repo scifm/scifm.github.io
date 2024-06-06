@@ -5,7 +5,7 @@ card-title: Courses
 card-content: Academic courses to learn about SciFMs.
 people:
 - oymak
-card-image: assets/img/FFM.png
+card-image: assets/img/Michigan_Wolverines_logo.svg
 ---
 
 ## Winter 2024: Foundations of Large Language Models
