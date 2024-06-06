@@ -18,15 +18,17 @@
 {% assign card-title = project.title %}
 {% endif %}
 
-<div class="project-card">
-    <div class="card border-0 shadow h-100">
-        <div class="card-body">
-            <h4 class="card-title"> {{ card-title }}</h4>
-            <!-- <p class="card-text">{{ project.card-content }}</p> -->
-        </div>
+<!-- <div class="col-md-4 mb-5"> -->
+<div class="card border-0 shadow h-100">
+    <div class="image-container"> 
         <img class="card-img-top" src="{{ card-image }}" alt="" />
-        <div class="card-footer">
-            <a href="{{ proj-url }}" class="btn btn-primary">Learn More!</a>
-        </div>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> {{ card-title }}</h4>
+        <p class="card-text">{{ project.card-content }}</p>
+    </div>
+    <div class="card-footer">
+        <a href="{{ proj-url }}" class="btn btn-primary">Learn More!</a>
     </div>
 </div>
+<!-- </div> -->
