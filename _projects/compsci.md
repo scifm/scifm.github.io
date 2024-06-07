@@ -11,10 +11,6 @@ people:
 - arvind
 ---
 
-
-![CompSci Agent Workflow]({% link assets/img/compsci_inner_loop.png %})
-
-
 In the context of foundation models for science, transformer-based methods have shown potential in utilizing structured computational and experimental data to build surrogates that are approaching the accuracy of the methods used to generate those results. In a practical computational science setting, however, there are other significant unstructured computational and experimental data and meta-data available that have previously been unused/unusable. This proposal aims to develop a foundation model for computational science that can utilize large-scale unlabelled/unstructured computational simulation data and metadata (workflows, scripts, log files, etc.), computational data (multi-modal, multi-fidelity), experimental data and metadata, literature, using self-supervised learning.
 We're building a CompSciFM that will be knowledgeable in computational sciences—encompassing computational mathematics, algorithms, and workflows—serving as a personal assistant that can significantly enhance productivity and the value of any computational or experimental data generated.
 The focus of this project will be on the inner loop of computational sciences, which includes hypothesis creation and evaluation, carried out using various high-fidelity simulation codes and workflows. This process iteratively generates detailed and accurate computational models to evaluate hypotheses, ensuring precise and reliable results through repeated, fine-grained calculations and data processing.

@@ -7,7 +7,7 @@ plugins:
 - jekyll-sitemap
 
 news:
-  front_page_limit: 1
+  front_page_limit: 2
 
 sass:
   sass_dir: /assets/css/_sass
@@ -27,7 +27,9 @@ roles:
   - key: faculty
     name: Faculty
   - key: team
-    name: Students
+    name: Students  
+  - key: postdoc
+    name: Postdoctoral Scholar
   - key: colab
     name: Collaborators
 

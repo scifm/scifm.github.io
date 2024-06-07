@@ -71,6 +71,90 @@ chenyanh:
   bio: Ph.D. Student, Mechanical Engineering
   org: University of Michigan
 
+jasminlim:
+  display_name: "Jasmin Lim"
+  role: team
+  email: "jaslim [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+niloygupta:
+  display_name: "Niloy Gupta"
+  role: team
+  email: "niloy [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+sahil:
+  display_name: "Sahil Bhola"
+  role: team
+  email: "sbhola [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+daisuke:
+  display_name: "Daisuke Uchida"
+  role: team
+  email: "duchida [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+noah:
+  display_name: "Noah Zambrano"
+  role: team
+  email: "nzamb [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+yilin:
+  display_name: "Yilin Zhuang"
+  role: team
+  email: "nzamb [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+amirpasha:
+  display_name: "Amirpasha Hedayat"
+  role: team
+  email: "ahedayat [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+moon:
+  display_name: "Moon Hazarika"
+  role: team
+  email: "moonbh [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+yhtoh:
+  display_name: "Yi Han Toh"
+  role: team
+  email: "yhtoh [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+william:
+  display_name: "William Curtis Maxon"
+  role: team
+  email: "wcurtmaxon [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+pratikkumar:
+  display_name: "Pratikkumar Raje"
+  role: postdoc
+  email: "praje [at] umich [dot] com"
+  bio: Postdoctoral Scholar, Aerospace Engineering
+  org: University of Michigan
+
+jame:
+  display_name: "James Duvall"
+  role: postdoc
+  email: "jamesduv [at] umich [dot] com"
+  bio: Postdoctoral Scholar, Aerospace Engineering
+  org: University of Michigan
+
 varunm:
   display_name: Varun Madhavan
   role: team
@@ -107,7 +191,7 @@ arvind:
   org: Argonne National Laboratory
 
 abrace:
-  role: colab
+  role: other
   display_name: Alexander Brace
   image: assets/img/abrace.jpeg
   bio: Research Associate
@@ -115,7 +199,7 @@ abrace:
   org: Argonne National Laboratory
 
 natalia:
-  role: colab
+  role: other
   display_name: Natalia Vassilieva
   bio: Senior Director of Product, Machine Learning and Software
   webpage: https://www.linkedin.com/in/nataliavassilieva/
@@ -151,7 +235,7 @@ raman:
   role: faculty
   display_name: Venkat Raman
   image: assets/img/raman.jpg
-  bio: Assistant Professor of Aerospace Engineering
+  bio: Professor of Aerospace Engineering
   org: University of Michigan
   webpage: https://aero.engin.umich.edu/people/gorodetsky-alex/
 

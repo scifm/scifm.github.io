@@ -1,5 +1,5 @@
 ---
-title: Foundation Models for Molecular Discovery
+title: Foundation Models for Molecules
 layout: project
 card-title: Molecular Discovery
 card-content: |

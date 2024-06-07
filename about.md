@@ -18,20 +18,13 @@ people:
     {% include role-people.html role="faculty" image=true%}
 </section>
 <section class="people">
-    {% include role-people.html role="team" image=true%}
+    {% include role-people.html role="team" image=false%}
+</section>
+<section class="people">
+    {% include role-people.html role="postdoc" image=false%}
 </section>
 <section class="people">
     {% include role-people.html role="colab" image=true%}
 </section>
 
 <hr>
-
-## Sponsors
-<section class="sponsor-container">
-    {% for item in site.data.sponsors %}
-    {% assign sponsor = item[1] %}
-    {% if sponsor.public %}
-    {% include sponsor.html sponsor=sponsor %}
-    {% endif %}
-    {% endfor %}
-</section>
