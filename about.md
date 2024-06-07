@@ -16,6 +16,9 @@ people:
     {% include role-people.html role="director" image=true%}
 </section>
 <section class="people">
+    {% include role-people.html role="assoc_director" image=true%}
+</section>
+<section class="people">
     {% include role-people.html role="faculty" image=true%}
 </section>
 <section class="people">

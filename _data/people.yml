@@ -207,7 +207,7 @@ natalia:
   org: Cerebras Systems Inc.
 
 karthic:
-  role: faculty
+  role: assoc_director
   organizer: true
   display_name: Karthik Duraisamy
   image: assets/img/karthik.jpg
@@ -223,8 +223,16 @@ gavini:
   webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
   org: University of Michigan
 
-oymak:
+ozat:
   role: faculty
+  display_name: Necmiye Ozay
+  image: assets/img/ozay.jpg
+  bio: Associate Professor, Robotics & Electrical and Computer Engineering
+  webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
+  org: University of Michigan
+
+oymak:
+  role: assoc_director
   display_name: Samet Oymak
   image: assets/img/oymak.jpg
   bio: Assistant Professor of Electrical Engineering and Computer Science
