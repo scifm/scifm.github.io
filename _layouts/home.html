@@ -9,11 +9,12 @@ layout: default
     <ul class="news list-unstyled">
         {% for post in site.posts limit: site.news.front_page_limit %}
         {% include news-item.html item=post %}
+        <hr>
         {% endfor %}
     </ul>
     <p>
         <span class="fa fa-fw fa-history"></span>
-        <a href="{{ site.baseurl }}/news.html">Older posts&hellip;</a>
+        <a href="{{ site.baseurl }}/news.html">More News Posts &hellip;</a>
     </p>
 </div>
 {% endif %}
