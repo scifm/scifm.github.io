@@ -5,6 +5,7 @@ permalink: /courses/
 people:
 - oymak
 ---
+<hr>
 
 ## Winter 2024: Foundations of Large Language Models
 - **Course No** : EECS 498-016 / EECS 598-016

@@ -1,7 +1,11 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}/">{{ site.navtitle }}</a>
+            <!-- Website Title Inclusion -->
+            {% unless page.url == "/" %}
+            <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}/">{{ site.navtitle }}</a>
+            {% endunless %}
+
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

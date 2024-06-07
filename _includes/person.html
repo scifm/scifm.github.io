@@ -43,9 +43,9 @@ there by default by Bootstrap columns.
 </div>
 {% else %}
 <div class="person person-without-image">
-    {{ name }}
+    {{ name | strip }},
     {% if person.bio %}
-    <span class="bio">{{person.bio}}</span>
+    <span class="bio">{{person.bio | strip }}</span>
     {% endif %}
 </div>
 {% endif %}

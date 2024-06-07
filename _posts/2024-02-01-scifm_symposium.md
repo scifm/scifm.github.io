@@ -2,6 +2,7 @@
 layout: post
 title: "2024 MICDE Conference: Scientific Foundation Models"
 image: assets/img/SciFM24_logo.svg
+readmore: true
 ---
 
 For the first time ever, the [2024 MICDE Symposium](https://micde.umich.edu/news-events/annual-symposia/2024-symposium/) will focus on Scientific Foundation Models!

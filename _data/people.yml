@@ -22,7 +22,7 @@ abhutani:
   display_name: "Anoushka Bhutani"
   webpage: "https://www.linkedin.com/in/anoushka-bhutani/"
   image: assets/img/abhutani.png
-  bio: Ph.D. Student, Mechanical Engineering
+  bio: Ph.D. Candidate, Mechanical Engineering
   email: "abhutani [at] umich [dot] edu"
   org: University of Michigan
 
@@ -30,7 +30,7 @@ awadell:
   role: team
   display_name: "Alex Wadell"
   webpage: "https://www.linkedin.com/in/alexiuswadell/"
-  bio: Ph.D. Student, Mechanical Engineering
+  bio: Ph.D. Candidate, Mechanical Engineering
   image: assets/img/awadell.jpg
   email: "awadell [at] umich [dot] edu"
   org: University of Michigan
@@ -39,7 +39,7 @@ amalss:
   role: team
   display_name: "Amal S Sebastian"
   image: assets/img/asebasti.jpeg
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   webpage: "https://amalss18.github.io/"
   email: amalss [at] umich [dot] edu
   org: University of Michigan
@@ -75,35 +75,35 @@ jasminlim:
   display_name: "Jasmin Lim"
   role: team
   email: "jaslim [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 niloygupta:
   display_name: "Niloy Gupta"
   role: team
   email: "niloy [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 sahil:
   display_name: "Sahil Bhola"
   role: team
   email: "sbhola [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 daisuke:
   display_name: "Daisuke Uchida"
   role: team
   email: "duchida [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 noah:
   display_name: "Noah Zambrano"
   role: team
   email: "nzamb [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 yilin:
@@ -117,28 +117,28 @@ amirpasha:
   display_name: "Amirpasha Hedayat"
   role: team
   email: "ahedayat [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 moon:
   display_name: "Moon Hazarika"
   role: team
   email: "moonbh [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 yhtoh:
   display_name: "Yi Han Toh"
   role: team
   email: "yhtoh [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 william:
   display_name: "William Curtis Maxon"
   role: team
   email: "wcurtmaxon [at] umich [dot] com"
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 pratikkumar:

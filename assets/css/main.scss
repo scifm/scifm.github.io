@@ -239,6 +239,33 @@ div#news {
     }
 }
 
+/* Header text styling */
+.header-text .h1, .header-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+}
+  
+/* Navigation Links styling */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 24px; /* Adjust to your preference */
+    width: 1px;
+    background-color: #fff;
+}
+
+/* Modify padding for nav links to adjust space around the line */
+.navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
 //@import "bootstrap/bootstrap/bootstrap.css";
 @import "bootstrap/functions";

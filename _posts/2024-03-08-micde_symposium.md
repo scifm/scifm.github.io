@@ -3,6 +3,7 @@ layout: post
 title: "2024 MICDE Anual Symposium: Scientific Foundation Models"
 image: "assets/img/micde.png"
 project: catalyst
+readmore: true
 ---
 
 Join us for the [2024 MICDE Annual Symposium](https://micde.umich.edu/news-events/annual-symposia/2024-symposium/) at the University of Michigan on April 2nd and 3rd 2024!

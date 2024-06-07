@@ -6,7 +6,7 @@ image: assets/img/SciFM24_summer_school.svg
 
 <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="pills-about-tab"> 
-        {% include blurb.html item=site.data.descriptions.summer_school %}
+        {% include blurb.html item=site.data.descriptions.summer_school%}
     </div>
     <div class="tab-pane fade" id="organizers" role="tabpanel" aria-labelledby="pills-organizers-tab">
         <section>

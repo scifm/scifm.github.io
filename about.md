@@ -10,6 +10,7 @@ people:
 - amalss
 - shangzhu
 ---
+<hr>
 
 <section class="people">
     {% include role-people.html role="director" image=true%}
