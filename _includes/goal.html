@@ -1,0 +1,15 @@
+{% assign goal = include.goal %}
+
+<div class="row" style="padding-top: 5px; padding-bottom: 5px;">
+    <div class="col-auto d-flex align-items-center">
+        <img 
+            class="profile"
+            src="{{ goal.image }}"
+            height="30px"
+            alt="Profile Image"
+        >
+    </div>
+    <div class="col pl-0 d-flex align-items-center">
+        <h6>{{ goal.text }}</h6>
+    </div>
+</div>

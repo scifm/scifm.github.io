@@ -1,0 +1,15 @@
+<div style="width: 80%;">
+    <ul class="schedule-table" style="margin-left: 0;">
+        <li class="table-header">
+            <div class="col col-date">Date</div>
+            <div class="col col-agenda">Agenda</div>
+        </li>
+
+        {% for event in site.data.agenda %}
+        <li class="table-row table-row-assignment">
+            {% include schedule_row_raw_event.html event=event %}
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
