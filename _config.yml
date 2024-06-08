@@ -31,7 +31,7 @@ roles:
   - key: team
     name: Students  
   - key: postdoc
-    name: Postdoctoral Scholar
+    name: Postdoctoral Scholars
   - key: colab
     name: Collaborators
 
@@ -40,6 +40,12 @@ organizations:
     name: University of Michigan
   - key: anl
     name: Argonne National Laboratory
+  - key: eth
+    name: ETH Zurich
+  - key: max_planck
+    name: Max Planck Institute for Sustainable Materials
+  - key: penn_state
+    name: Pennsylvania State University
 
 # make pages for the _projects folder
 collections:

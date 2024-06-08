@@ -8,14 +8,6 @@ venkvis:
   email: "venkvis [at] umich [dot] edu"
   org: University of Michigan
 
-bharath:
-  role: pi
-  display_name: Bharath Ramsundar
-  image: assets/img/bharath.png
-  bio: Founder and CEO
-  webpage: https://www.linkedin.com/in/bharath-ramsundar-13275230/
-  org: Deep Forest Sciences
-
 ## Core Team
 abhutani:
   role: team
@@ -71,16 +63,23 @@ chenyanh:
   bio: Ph.D. Student, Mechanical Engineering
   org: University of Michigan
 
+chenyanh:
+  display_name: "Vansh Sharma"
+  role: team
+  email: "vanshs [at] umich [dot] com"
+  bio: Ph.D. Candidate, Mechanical Engineering
+  org: University of Michigan
+
 jasminlim:
   display_name: "Jasmin Lim"
-  role: team
+  role: other
   email: "jaslim [at] umich [dot] com"
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 niloygupta:
   display_name: "Niloy Gupta"
-  role: team
+  role: other
   email: "niloy [at] umich [dot] com"
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
@@ -94,14 +93,14 @@ sahil:
 
 daisuke:
   display_name: "Daisuke Uchida"
-  role: team
+  role: other
   email: "duchida [at] umich [dot] com"
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 noah:
   display_name: "Noah Zambrano"
-  role: team
+  role: other
   email: "nzamb [at] umich [dot] com"
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
@@ -122,21 +121,21 @@ amirpasha:
 
 moon:
   display_name: "Moon Hazarika"
-  role: team
+  role: other
   email: "moonbh [at] umich [dot] com"
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 yhtoh:
   display_name: "Yi Han Toh"
-  role: team
+  role: other
   email: "yhtoh [at] umich [dot] com"
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 william:
   display_name: "William Curtis Maxon"
-  role: team
+  role: other
   email: "wcurtmaxon [at] umich [dot] com"
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
@@ -190,6 +189,44 @@ arvind:
   webpage: https://ramanathanlab.org
   org: Argonne National Laboratory
 
+bharath:
+  role: colab
+  display_name: Bharath Ramsundar
+  image: assets/img/bharath.png
+  bio: Founder and CEO
+  webpage: https://www.linkedin.com/in/bharath-ramsundar-13275230/
+  org: Deep Forest Sciences
+
+janssen:
+  role: colab
+  display_name: Jan Janssen 
+  image: assets/img/janssen.jpg
+  bio: Group Leader for Materials Informatics
+  webpage:  https://jan-janssen.com/
+  org: Max Planck Institute for Sustainable Materials
+
+mishra:
+  role: colab
+  display_name: Siddhartha Mishra
+  image: assets/img/mishra.jpg
+  webpage: https://camlab.ethz.ch/the-group/group-head.html
+  bio: Professor at the Department of Mathematics
+  org: ETH Zurich
+
+maulik:
+  role: colab
+  display_name: Romit Maulik
+  image: assets/img/maulik.jpg
+  bio: Principal Investigator
+  webpage: https://romit-maulik.github.io/
+  org: Pennsylvania State University
+
+barwey:
+  role: colab
+  display_name: Shivam Barwey
+  bio: AETS Fellow
+  org: Argonne National Laboratory
+
 abrace:
   role: other
   display_name: Alexander Brace
@@ -223,12 +260,12 @@ gavini:
   webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
   org: University of Michigan
 
-ozat:
+ozay:
   role: faculty
   display_name: Necmiye Ozay
-  image: assets/img/ozay.jpg
+  image: assets/img/necmiye.jpg
   bio: Associate Professor, Robotics & Electrical and Computer Engineering
-  webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
+  webpage: https://web.eecs.umich.edu/~necmiye/
   org: University of Michigan
 
 oymak:
