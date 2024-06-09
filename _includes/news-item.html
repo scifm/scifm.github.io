@@ -9,6 +9,7 @@
 {% capture news %}
 <div style="padding-top: 10px;">
     {% if post.shortnews %}
+    <h5> <a href="{{ site.baseurl }}{{ post.aux_link }}"> {{ post.title }} </a> </h5>
     {{ post.content | markdownify | remove: '<p>' | remove: '</p>' }}
     {% else %}
     <h5> <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> </h5>
