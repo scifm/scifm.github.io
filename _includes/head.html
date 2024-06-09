@@ -5,12 +5,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="description" content="{{ site.description }}" />
     <meta name="author" content="" />
-    <meta property="og:url" content="https://scifm.ai/"/>
-    <meta property="og:title" content="MICDE's Center for Scientific Foundation Models will serve as a hub for the infrastucture, knowledge and resources required to innovate, train and deploy SciFMs."/>
-    <meta property="og:description" content="MICDE's Center for Scientific Foundation Models will serve as a hub for the infrastucture, knowledge and resources required to innovate, train and deploy SciFMs."/>
-    <meta property="og:site_name" content="Center for Scientific Foundation Models"/>
-    <meta property="og:image" content="{{ site.baseurl }}/assets/img/scifm_header_logo.png"/>
-
+    {% if page.url == "/" %}
+        <meta property="og:url" content="https://scifm.ai/"/>
+        <meta property="og:title" content="MICDE Center for Scientific Foundation Models"/>
+        <meta property="og:description" content="MICDE's Center for Scientific Foundation Models will serve as a hub for the infrastucture, knowledge and resources required to innovate, train and deploy SciFMs."/>
+        <meta property="og:site_name" content="Center for Scientific Foundation Models"/>
+        <meta property="og:image" content="{{ site.baseurl }}/assets/img/scifm_header_logo.png"/>
+    {% endif %}
+    {% if page.url == "/summer_school.html" %}
+        <meta property="og:url" content="https://scifm.ai/summer_school.html"/>
+        <meta property="og:title" content="SciFM Summer School"/>
+        <meta property="og:description" content="We are excited to organize the SciFM Summer School from July 8 to July 26."/>
+        <meta property="og:site_name" content="Center for Scientific Foundation Models Summer School"/>
+        <meta property="og:image" content="{{ site.baseurl }}/assets/img/SciFM24_summer_school.svg"/>
+    {% endif %}
     <title>{{ site.title }}</title>
 
 
