@@ -1,15 +1,16 @@
+{% assign role-key = include.role %}
 
-{% for org_name in site.organizations %}
-<h3 class="pt-3"> {{ org_name.name }} </h3>
-{% for item in site.data.people %}
-{% if item[1].org == {{org_name.name}} %}
-{% if item[1].organizer == true %}
-<div>
+{% for role in site.summer_school_roles %}
+{% if role.key == role-key %}
+<h3 class="pt-3"> {{ role.name }} </h3>
+<div class="role {{ role.key }}">
+    {% for item in site.data.people %}
     {% assign person = item[1] %}
+    {% if person.summer_school_role == role.key %}
     {% include person.html person=person image=include.image %}
+    {% endif %}
+    {% endfor %}
 </div>
 {% endif %}
-{% endif %}
-{% endfor %}
 {% endfor %}
 

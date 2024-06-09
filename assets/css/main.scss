@@ -274,10 +274,14 @@ div#news {
     .header-text h1 {
       font-size: 1.25rem; /* Reduce header text size */
     }
-    
+
     .header-text p {
       font-size: 1rem; /* Reduce paragraph text size */
     }
+
+    .img-mobile-small {
+        max-width: 50%; /* Reduce to 50% of the container's width on mobile */
+      }
   }
 
 //@import "bootstrap/bootstrap/bootstrap.css";
