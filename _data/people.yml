@@ -291,3 +291,23 @@ gorodetsky:
   bio: Assistant Professor of Aerospace Engineering
   org: University of Michigan
   webpage: https://aero.engin.umich.edu/people/raman-venkat/
+
+## Summer School Organizers
+
+anandkumar:
+  role: other
+  organizer: true
+  display_name: Anima Anandkumar
+  image: assets/img/anandkumar.jpg
+  bio: Bren Professor of Computing and Mathematical Sciences
+  org: California Institute of Technology
+  webpage: http://tensorlab.cms.caltech.edu/users/anima/
+
+mahoney:
+  role: other
+  organizer: true
+  display_name: Michael Mahoney
+  image: assets/img/mahoney.png
+  bio: Group Lead Machine Learning and Analytics
+  org: Lawrence Berkeley National Laboratory
+  webpage: https://crd.lbl.gov/divisions/scidata/mla/staff/michael-mahoney/
