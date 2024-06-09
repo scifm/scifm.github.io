@@ -40,12 +40,12 @@ organizations:
     name: University of Michigan
   - key: anl
     name: Argonne National Laboratory
-  - key: eth
-    name: ETH Zurich
-  - key: max_planck
-    name: Max Planck Institute for Sustainable Materials
-  - key: penn_state
-    name: Pennsylvania State University
+  # - key: lanl
+  #   name: Los Almos National Laboratory
+  # - key: caltech
+  #   name: California Institute of Technology
+  # - key: lbnl
+  #   name: Lawrence Berkeley National Laboratory
 
 # make pages for the _projects folder
 collections:
