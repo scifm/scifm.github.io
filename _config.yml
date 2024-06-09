@@ -35,17 +35,11 @@ roles:
   - key: colab
     name: Collaborators
 
-organizations:
-  - key: um
-    name: University of Michigan
-  - key: anl
-    name: Argonne National Laboratory
-  # - key: lanl
-  #   name: Los Almos National Laboratory
-  # - key: caltech
-  #   name: California Institute of Technology
-  # - key: lbnl
-  #   name: Lawrence Berkeley National Laboratory
+summer_school_roles:
+  - key: organizer
+    name: Core Organizers
+  - key: hack
+    name: Hackathon Leads
 
 # make pages for the _projects folder
 collections:

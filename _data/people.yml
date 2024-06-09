@@ -1,6 +1,6 @@
 venkvis:
   role: director
-  organizer: true
+  summer_school_role: organizer
   display_name: "Venkat Viswanathan"
   webpage: https://www.linkedin.com/in/venkat-viswanathan/
   image: assets/img/venkvis.png
@@ -8,6 +8,15 @@ venkvis:
   email: "venkvis [at] umich [dot] edu"
   org: University of Michigan
 
+karthic:
+  role: assoc_director
+  summer_school_role: organizer
+  display_name: Karthik Duraisamy
+  image: assets/img/karthik.jpg
+  bio: Director of MICDE
+  website: https://aero.engin.umich.edu/people/duraisamy-karthik/
+  org: University of Michigan
+  
 ## Core Team
 abhutani:
   role: team
@@ -182,7 +191,7 @@ aravind:
 ## Collaborators
 arvind:
   role: colab
-  organizer: true
+  summer_school_role: organizer
   display_name: Arvind Ramanathan
   image: assets/img/Arvind_Ramanathan_400x400.jpg
   bio: Computational Science Leader 1
@@ -243,14 +252,6 @@ natalia:
   image: assets/img/natalia.jpeg
   org: Cerebras Systems Inc.
 
-karthic:
-  role: assoc_director
-  organizer: true
-  display_name: Karthik Duraisamy
-  image: assets/img/karthik.jpg
-  bio: Director of MICDE
-  website: https://aero.engin.umich.edu/people/duraisamy-karthik/
-  org: University of Michigan
 
 gavini:
   role: faculty
@@ -296,7 +297,7 @@ gorodetsky:
 
 anandkumar:
   role: other
-  organizer: true
+  summer_school_role: hack
   display_name: Anima Anandkumar
   image: assets/img/anandkumar.jpg
   bio: Bren Professor of Computing and Mathematical Sciences
@@ -305,9 +306,16 @@ anandkumar:
 
 mahoney:
   role: other
-  organizer: true
+  summer_school_role: hack
   display_name: Michael Mahoney
   image: assets/img/mahoney.png
   bio: Group Lead Machine Learning and Analytics
   org: Lawrence Berkeley National Laboratory
   webpage: https://crd.lbl.gov/divisions/scidata/mla/staff/michael-mahoney/
+
+lanl:
+  role: other
+  summer_school_role: hack
+  display_name: Los Alamos National Laboratory
+  image: assets/img/lanl.png
+  webpage: https://www.lanl.gov/

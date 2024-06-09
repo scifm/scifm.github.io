@@ -10,7 +10,10 @@ image: assets/img/SciFM24_summer_school.svg
     </div>
     <div class="tab-pane fade" id="organizers" role="tabpanel" aria-labelledby="pills-organizers-tab">
         <section>
-        {% include role-organizer.html image=true%}
+        {% include role-organizer.html role="organizer" image=true%}
+        </section>
+        <section>
+        {% include role-organizer.html role="hack" image=true%}
         </section>
     </div>
     <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="pills-schedule-tab">
