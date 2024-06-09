@@ -267,6 +267,19 @@ div#news {
     padding-right: 1rem;
 }
 
+@media (max-width: 768px) { /* Adjust for mobile screens */
+    .logo-l, .logo-r {
+      max-height: 60px; /* Reduce the size of images on smaller screens */
+    }
+    .header-text h1 {
+      font-size: 1.25rem; /* Reduce header text size */
+    }
+    
+    .header-text p {
+      font-size: 1rem; /* Reduce paragraph text size */
+    }
+  }
+
 //@import "bootstrap/bootstrap/bootstrap.css";
 @import "bootstrap/functions";
 @import "bootstrap/variables";
