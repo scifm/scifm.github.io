@@ -39,7 +39,7 @@ summer_school_roles:
   - key: organizer
     name: Core Organizers
   - key: hack
-    name: Hackathon Leads
+    name: Hackathon Organizers
 
 # make pages for the _projects folder
 collections:

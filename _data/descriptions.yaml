@@ -31,10 +31,10 @@ hackathon:
       description: >
         In Biology, Foundation Models have enable numerous breakthroughs including protein structure prediction 
         and the classfication of emergent variants of viruses.
-    - name: Computation Science
+    - name: Computational Science
       description: >
-        A computation science Foundation Model capable of designing and orchestrating computational research 
+        A Computational Science Foundation Model capable of designing and orchestrating computational research 
         campaigns will enable scientists to focus on domain science through the creative specification of hypotheses 
         and greatly accelerate scientific discovery.
     - name: Partial Differential Equations
-      description: The Foundation Models may be the route to enabling data efficient, general purpose PDE solvers.
+      description: Foundation Models may be the route to enabling data efficient, general purpose PDE solvers.
