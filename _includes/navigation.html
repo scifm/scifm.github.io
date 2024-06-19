@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="height: 6rex;"> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="height: 6rem;"> 
     <div class="container">
         <!-- Website Title Inclusion -->
         {% unless page.url == "/" %}
@@ -10,7 +10,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse navbar-expanded-bg" id="navbarResponsive" style="padding-left:2rex; background-color: #343A40;">
+        <div class="collapse navbar-collapse navbar-expanded-bg" id="navbarResponsive" style="padding-left:2rem; background-color: #343A40;">
             <ul class="navbar-nav ml-auto">
                 {% for item in site.data.menu %}
                 <li class="nav-item{% if item.link == page.url %} active {% endif %}">
