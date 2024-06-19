@@ -1,8 +1,9 @@
 summer_school:
   title: WELCOME TO THE SciFM SUMMER SCHOOL
   image: assets/img/SciFM24_summer_school.svg
-  image_width: 80
-  image_height: 80
+  image_width: 50
+  image_height: 70
+  height: 30
   text: >
     MICDE recently organized the [SciFM conference](https://micde.umich.edu/event/conference-symposiumscifm24-conference-2/) and had an incredible reception for the event.  
     Based on the feedback from that meeting and further discussions with National Lab and academic partners, 
@@ -13,17 +14,12 @@ summer_school:
     a hackathon to jumpstart the construction of SciFMs; 
     as an incubator for ideas; a training ground for researchers and students; 
     and to further a vision for a national SciFM ecosystem.
-    <br>
-    <br>
-    **Participate** <br>
-    If you are interested in joining us for the summer school, 
-    please contact the organizers, Venkat Viswanathan and Karthik Duraisamy, (micde-contact@umich.edu) 
-    indicating your thrust preference and experience.
 
 hackathon:
   image: assets/img/hackathon.svg
-  image_width: 80
-  image_height: 80
+  image_width: 100
+  image_height: 50
+  height: 90
   text: >
     Participants will explore innovative applications of Foundation Model in four application domains\:
   list:
@@ -45,8 +41,9 @@ hackathon:
 
 vision:
   image: assets/img/vision.svg
-  image_width: 100
+  image_width: 70
   image_height: 100
+  height: 30
   text: >
     The advent of Scientific Foundation Models (SciFMs) heralds a transformative era in research and 
     innovation, representing a paradigm shift in how scientific inquiry and application are conducted. 
