@@ -8,6 +8,7 @@ image: assets/img/SciFM24_summer_school.svg
         {% include blurb.html item=site.data.descriptions.summer_school%}
         <div>
         <h2> Apply to Participate! </h2>
+            <p> Fill in the google form below or access it <a href="https://forms.gle/vvFfDUnd93nMyKi36"> here.</a> </p>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdLoh_ETU7P8R36OT-hjgWnTHwiIl8UFIrH4hOhwWocdwKLCg/viewform?embedded=true" width="640" height="1812" frameborder="0" marginheight="0" marginwidth="0">Loading…
             </iframe>
         </div>
