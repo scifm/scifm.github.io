@@ -13,5 +13,7 @@ layout: home
 
 <hr>
 
+## Research Thrusts
+
 [micde]: https://micde.umich.edu
 [DFS]: https://deepforestsci.com
