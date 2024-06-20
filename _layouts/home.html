@@ -22,9 +22,9 @@ layout: default
 {{ content }}
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row align-items-center">
     {% for p in site.projects %}
-        <div class="col-md-4 mb-4 d-flex" style="padding: 0px; margin: 0px 0px 10px 10px;">
+        <div class="col-md-6 mb-4 d-flex" style="padding: 0px; margin: 0px 0px 0px 0px;">
             {% include project-card.html project=p %}
         </div>
     {% endfor %}
