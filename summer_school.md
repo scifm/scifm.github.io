@@ -28,5 +28,3 @@ image: assets/img/SciFM24_summer_school.svg
         {% include  blurb.html item=site.data.descriptions.hackathon %}
     </div>
 </div>
-
-## Research Thrusts
