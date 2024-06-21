@@ -6,14 +6,16 @@
 - date: July 9
   list:
     - title: FoundSci DARPA program
-    - title: Vision for SciFM institute
+    - title: Vision for SciFM Institute
 - date: July 10
+  is_tutorial: true
   list:
     - time: "09:30"
       title: Tutorial 1a - Data Modalities
     - time: "01:30"
       title: Tutorial 1b -  Tokenization
 - date: July 11
+  is_tutorial: true
   list:
     - time: "09:30"
       title: Tutorial 2a - Training Models
@@ -22,6 +24,7 @@
     - time: "03:00"
       title: Tutorial 2c - Scaling Laws
 - date: July 12 
+  is_tutorial: true
   list:
     - time: "09:30"
       title: Tutorial 3a - Retrieval-Augmented Generation (RAG)
@@ -36,9 +39,11 @@
   list:
     - title: Hackathon
 - date: July 17
+  is_tutorial: true
   list:
     - title: Tutorial 4 - AI Accelerators - GPUs and Specialized Hardware
 - date: July 18
+  is_tutorial: true
   list:
     - title: Tutorial 5 - Federated Learning
 - date: Week 3
