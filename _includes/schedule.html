@@ -6,9 +6,16 @@
         </li>
 
         {% for event in site.data.agenda %}
-        <li class="row table-row table-row-assignment">
-            {% include schedule_row_raw_event.html event=event %}
-        </li>
+            {% if event.is_tutorial %}
+            {% assign class = "table-row-tutorial" %}
+            {% else %}
+            {% assign class = "table-row-assignment" %}
+            {% endif %}
+            {% assign project = site.projects[page.project] %}
+            {% assign project-title = project.link %}
+            <li class="row table-row {{ class }}">
+                {% include schedule_row_raw_event.html event=event %}
+            </li>
         {% endfor %}
 
     </ul>
