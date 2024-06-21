@@ -1,12 +1,56 @@
 - date: July 8
-  name: Overview of workshop goals and activities, Team forming
+  list:
+    - title: Welcome and Summer School Goals
+    - title: Successes of SciFM
+    - title: FoundSci DARPA program
 - date: July 9
-  name: Discussion of project plans for 3 weeks
+  list:
+    - title: FoundSci DARPA program
+    - title: Vision for SciFM institute
 - date: July 10
-  name: Tutorial 1
+  list:
+    - time: "09:30"
+      title: Tutorial 1a - Data Modalities
+    - time: "01:30"
+      title: Tutorial 1b -  Tokenization
 - date: July 11
-  name: Planning next steps for National SciFM ecosystem / SciFM collective
-- date: July 11 - 25
-  name: Project work & Hackathon
+  list:
+    - time: "09:30"
+      title: Tutorial 2a - Training Models
+    - time: "01:30"
+      title: Tutorial 2b - Diffusion Models
+    - time: "03:00"
+      title: Tutorial 2c - Scaling Laws
+- date: July 12 
+  list:
+    - time: "09:30"
+      title: Tutorial 3a - Retrieval-Augmented Generation (RAG)
+    - time: "01:30"
+      title: Tutorial 3b - Agents for Biology
+    - time: "03:00"
+      title: Tutorial 3c - Agents for Chemistry
+- date: July 15
+  list:
+    - title: Goal Setting for Hackathon
+- date: July 16
+  list:
+    - title: Hackathon
+- date: July 17
+  list:
+    - title: Tutorial 4 - AI Accelerators - GPUs and Specialized Hardware
+- date: July 18
+  list:
+    - title: Tutorial 5 - Federated Learning
+- date: Week 3
+  list:
+    - title: Hackathon
+- date: July 25
+  list:
+    - title: Hackathon Team Presentations
 - date: July 26
-  name: Final presentations and plans for continued collaboration
+  list:
+    - title: Keynote - Open questions for Foundation Models for Science
+    - title: Panel - Security, Equity, Safety
+    - title: Ecosystem Gathering (Academia, National Labs, Venture Funding, Philanthropy)
+    - title: Future Outlook
+ 
