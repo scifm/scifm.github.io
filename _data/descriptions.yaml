@@ -10,11 +10,18 @@ summer_school:
     we are excited to organize the SciFM Summer School from July 8 to July 26. 
     We wish for this to be a recurring event hosted at different locations across the country. 
     The first instance is going to be run in parallel at the University of Michigan (UM) and at Argonne National Laboratory (ANL). 
-    The focus will be on developing technical plans for specific instances for SciFMs; 
-    a hackathon to jumpstart the construction of SciFMs; 
-    as an incubator for ideas; 
-    a training ground for researchers and students; 
-    and to further a vision for a national SciFM ecosystem.
+    
+    The summer school will:
+
+    - Develop technical **plans for specific instances** of SciFMs; 
+
+    - Involve a **hackathon** to jumpstart the construction of SciFMs; 
+
+    - Act as an **incubator** for ideas; 
+
+    - Serve as a **training ground for researchers and students**; 
+
+    - Further a vision for a **national SciFM ecosystem**.
 
 hackathon:
   image: assets/img/hackathon.svg
