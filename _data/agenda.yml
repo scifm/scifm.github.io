@@ -2,7 +2,6 @@
   list:
     - title: Welcome and Summer School Goals
     - title: Successes of SciFM
-    - title: FoundSci DARPA program
 - date: July 9
   list:
     - title: FoundSci DARPA program
@@ -10,27 +9,27 @@
 - date: July 10
   is_tutorial: true
   list:
-    - time: "09:30"
+    - time: "09:30 am"
       title: Tutorial 1a - Data Modalities
-    - time: "01:30"
+    - time: "01:30 pm"
       title: Tutorial 1b -  Tokenization
 - date: July 11
   is_tutorial: true
   list:
-    - time: "09:30"
+    - time: "09:30 am"
       title: Tutorial 2a - Training Models
-    - time: "01:30"
+    - time: "01:30 pm"
       title: Tutorial 2b - Diffusion Models
-    - time: "03:00"
+    - time: "03:00 pm"
       title: Tutorial 2c - Scaling Laws
 - date: July 12 
   is_tutorial: true
   list:
-    - time: "09:30"
+    - time: "09:30 am"
       title: Tutorial 3a - Retrieval-Augmented Generation (RAG)
-    - time: "01:30"
+    - time: "01:30 pm"
       title: Tutorial 3b - Agents for Biology
-    - time: "03:00"
+    - time: "03:00 pm"
       title: Tutorial 3c - Agents for Chemistry
 - date: July 15
   list:
