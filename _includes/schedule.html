@@ -1,22 +1,277 @@
-<div style="width: 100%;">
-    <ul class="schedule-table" style="margin-left: 0;">
-        <li class="table-header">
-            <div class="col col-date">Date</div>
-            <div class="col col-agenda">Agenda</div>
-        </li>
+<style>
+    .schedule-header {
+        background-color: #00274C;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .day-header {
+        background-color: #e6e6e6;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+    }
+    .day-header::after {
+        content: '\25BC'; /* Downward arrow */
+        position: absolute;
+        right: 10px;
+        transition: transform 0.3s;
+    }
+    .collapsed .day-header::after {
+        transform: rotate(-90deg); /* Rotate arrow */
+    }
+    .card-header.active {
+        background-color: #d3d3d3;
+    }
+    .session {
+        padding: 10px;
+    }
+    .closed-group {
+        color: #00274C;
+        font-weight: bold;
+    }
+</style>
 
-        {% for event in site.data.agenda %}
-            {% if event.is_tutorial %}
-            {% assign class = "table-row-tutorial" %}
-            {% else %}
-            {% assign class = "table-row-assignment" %}
-            {% endif %}
-            {% assign project = site.projects[page.project] %}
-            {% assign project-title = project.link %}
-            <li class="row table-row {{ class }}">
-                {% include schedule_row_raw_event.html event=event %}
-            </li>
-        {% endfor %}
+<div class="container">
+    <div class="schedule-header">Week 1</div>
+    
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header day-header" id="headingMonday" data-toggle="collapse" data-target="#collapseMonday" aria-expanded="true" aria-controls="collapseMonday">
+                Monday, July 8
+            </div>
 
-    </ul>
+            <div id="collapseMonday" class="collapse show" aria-labelledby="headingMonday" data-parent="#accordion">
+                <div class="card-body session">
+                    <div>10:00 am - Welcome & Opening Remarks - <b> Karthik Duraisamy </b> (UM)</div>
+                    <div>10:10 am - Summer School Goals - <b> Venkat Viswanathan </b> (UM) </div>
+                    <div>10:30 am - Foundation Models for Science - <b> Ian Foster </b> (ANL)</div>
+                    <div>12:00 pm - Successes of SciFM -  Open Discussion moderated by <b> Arvind Ramanathan </b> (ANL)</div>
+                    <div>1:30 pm - Evo: DNA Foundation Model - <b> Brian Hie </b> (Stanford)</div>
+                    <div>2:00 pm - Materials Foundation Models - <b> Philippe Schwaller </b>  (EPFL)</div>
+                    <div>2:30 pm - Foundation Models for Computational Science - <b>  Jan Jansen </b> (Max Planck Inst.)</div>
+                    <div>3:00 pm - BREAK</div>
+                    <div>3:30 pm - Scientific Literature</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingTuesday" data-toggle="collapse" data-target="#collapseTuesday" aria-expanded="false" aria-controls="collapseTuesday">
+                Tuesday, July 9
+            </div>
+
+            <div id="collapseTuesday" class="collapse" aria-labelledby="headingTuesday" data-parent="#accordion">
+                <div class="card-body session">
+                    <div class="closed-group">FoundSci Session</div>
+                    <div>10:00 am - FoundSci Program Vision - <b>  Alvaro Velasquez </b> (DARPA) </div>
+                    <div>10:20 am - <b>  Jia Deng </b>  (Princeton)</div>
+                    <div>10:40 am - <b>  Wei Wang </b>  (UCLA)</div>
+                    <div>11:00 am - Creativity - <b> Lav Varshney </b>  (UIUC)</div>
+                    <div>11:20 am - Robotics - <b>  Boyuan Chen </b>  (Duke)</div>
+                    <div>11:40 am - <b> Rose Yu </b> (UCSD)</div>
+
+                    <div class="closed-group mt-3">Visioning Session (Closed group)</div>
+                    <div>1:30 pm (ARC Institute)</div>
+                    <div>2:00 pm (Scripps Institute)</div>
+                    <div>3:00 pm - SciFM Institute: Proposed Structure - <b> Venkat Viswanathan </b> (UM)</div>
+                    <div>3:30 pm - Working Breakout Session - Prompt: Produce a blueprint for SciFM Institute: Resources, Personnel, Structure</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingWednesday" data-toggle="collapse" data-target="#collapseWednesday" aria-expanded="false" aria-controls="collapseWednesday">
+                Wednesday, July 10
+            </div>
+
+            <div id="collapseWednesday" class="collapse" aria-labelledby="headingWednesday" data-parent="#accordion">
+                <div class="card-body session">
+                    <div><b style="color: #00274C;">Tutorial 1</b></div>
+                    <div>9:00 am - Climate Foundation Models - <b> Paris Perdikaris </b> (Microsoft/UPenn)  </div>
+                    <div><b style="color: #00274C;">Tutorial 2</b></div>
+                    <div>10:30 am - <b>  Data </b> </div>
+                    <div>Sequence data: Omics + Molecular (SMILES, SELFIES) - ANL Team</div>
+                    <div>Image/Video data: Microscopy, Tomography, Astronomy - LANL Team</div>
+                    <div>Geospatial data - Weather Foundation Model Team</div>
+                    <div>BREAK</div>
+                    <div>1:30 pm - <b> Tokenization </b> </div>
+                    <div>Sequence - Arvind Ramanathan's & Venkat Viswanathan's Team</div>
+                    <div>Image/Video - Weather Foundation Model Team</div>
+                    <div>Geospatial</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingThursday" data-toggle="collapse" data-target="#collapseThursday" aria-expanded="false" aria-controls="collapseThursday">
+                Thursday, July 11
+            </div>
+
+            <div id="collapseThursday" class="collapse" aria-labelledby="headingThursday" data-parent="#accordion">
+                <div class="card-body session">
+                    <div><b style="color: #00274C;">Tutorial 3</b></div>
+                    <div>9:30 am - Training Models</div>
+                    <div>Basics of sequence transformer</div>
+                    <div>Basics of vision transformer</div>
+                    <div>Neural operators + other PDE architectures</div>
+                    <div>1:30 pm - <b> Diffusion Models </b> </div>
+                    <div>3:00 pm - <b> Scaling Laws </b> </div>
+                    <div>Overview of Scaling Laws</div>
+                    <div>Scaling sequence models + compute optimal scaling</div>
+                    <div>Vision scaling laws + compute optimal</div>
+                    <div>Scaling laws of FNO, PDE</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingFriday" data-toggle="collapse" data-target="#collapseFriday" aria-expanded="false" aria-controls="collapseFriday">
+                Friday, July 12
+            </div>
+
+            <div id="collapseFriday" class="collapse" aria-labelledby="headingFriday" data-parent="#accordion">
+                <div class="card-body session">
+                    <div><b style="color: #00274C;">Tutorial 4</b></div>
+                    <div>9:30 am - Retrieval Augmented Generation</div>
+                    <div>11:00 am - <b> Agents: Part 1 (Biology) </b> LangChain - ANL Team</div>
+                    <div>1:30 pm - <b> Agents: Part 2 (Chemistry) </b> Domain-specific agents - ANL Team</div>
+                    <div>Integrate external tooling + experimental data observation</div>
+                    <div>3:00 pm - Fine-tuning + preference:</div>
+                    <div>4:00 pm - Hackathon - Goal Setting for Hackathon</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="schedule-header mt-4">Week 2</div>
+    
+    <div id="accordionWeek2">
+        <div class="card">
+            <div class="card-header day-header" id="headingMondayTuesday" data-toggle="collapse" data-target="#collapseMondayTuesday" aria-expanded="true" aria-controls="collapseMondayTuesday">
+                Monday, July 15 & Tuesday, July 16
+            </div>
+
+            <div id="collapseMondayTuesday" class="collapse" aria-labelledby="headingMondayTuesday" data-parent="#accordionWeek2">
+                <div class="card-body session">
+                    <div>Hackathon</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingWednesdayWeek2" data-toggle="collapse" data-target="#collapseWednesdayWeek2" aria-expanded="false" aria-controls="collapseWednesdayWeek2">
+                Wednesday, July 17
+            </div>
+
+            <div id="collapseWednesdayWeek2" class="collapse" aria-labelledby="headingWednesdayWeek2" data-parent="#accordionWeek2">
+                <div class="card-body session">
+                    <div>Hackathon</div>
+                    <div><b style="color: #00274C;">Tutorial 5</b></div>
+                    <div>AI Accelerator</div>
+                    <div>Cerebras</div>
+                    <div>Groq</div>
+                    <div>Sambanova</div>
+                    <div>Nvidia</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingThursdayWeek2" data-toggle="collapse" data-target="#collapseThursdayWeek2" aria-expanded="false" aria-controls="collapseThursdayWeek2">
+                Thursday, July 18
+            </div>
+
+            <div id="collapseThursdayWeek2" class="collapse" aria-labelledby="headingThursdayWeek2" data-parent="#accordionWeek2">
+                <div class="card-body session">
+                    <div>Hackathon</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingFridayWeek2" data-toggle="collapse" data-target="#collapseFridayWeek2" aria-expanded="false" aria-controls="collapseFridayWeek2">
+                Friday, July 19
+            </div>
+
+            <div id="collapseFridayWeek2" class="collapse" aria-labelledby="headingFridayWeek2" data-parent="#accordionWeek2">
+                <div class="card-body session">
+                    <div><b style="color: #00274C;">Tutorial 6</b></div>
+                    <div>Federated Learning - <b>Ravi Madduri </b>(ANL)</div>
+                    <div>Hackathon</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="schedule-header mt-4">Week 3</div>
+    
+    <div id="accordionWeek3">
+        <div class="card">
+            <div class="card-header day-header" id="headingMondayTuesdayWednesday" data-toggle="collapse" data-target="#collapseMondayTuesdayWednesday" aria-expanded="true" aria-controls="collapseMondayTuesdayWednesday">
+                Monday, July 22 - Wednesday, July 24
+            </div>
+
+            <div id="collapseMondayTuesdayWednesday" class="collapse" aria-labelledby="headingMondayTuesdayWednesday" data-parent="#accordionWeek3">
+                <div class="card-body session">
+                    <div>Hackathon</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingThursdayWeek3" data-toggle="collapse" data-target="#collapseThursdayWeek3" aria-expanded="false" aria-controls="collapseThursdayWeek3">
+                Thursday, July 25
+            </div>
+
+            <div id="collapseThursdayWeek3" class="collapse" aria-labelledby="headingThursdayWeek3" data-parent="#accordionWeek3">
+                <div class="card-body session">
+                    <div><b>Hackathon teams presentation (industry present)</b></div>
+                    <div>Materials</div>
+                    <div>Biology</div>
+                    <div>Agents</div>
+                    <div>PDEs</div>
+                    <div>Outlook for AI-assisted science in non-research settings</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header day-header" id="headingFridayWeek3" data-toggle="collapse" data-target="#collapseFridayWeek3" aria-expanded="false" aria-controls="collapseFridayWeek3">
+                Friday, July 26
+            </div>
+
+            <div id="collapseFridayWeek3" class="collapse" aria-labelledby="headingFridayWeek3" data-parent="#accordionWeek3">
+                <div class="card-body session">
+                    <div>Open questions for Foundation Models for Science</div>
+                    <div>Panel: Security, Equity, Safety</div>
+                    <div>Ecosystem Gathering (University, Lab, DoD, Venture, Philanthropy)</div>
+                    <div>Next steps and Closing discussion</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+    
+<script>
+    $(document).ready(function(){
+        $('#accordion .card-header').click(function() {
+            $('#accordion .card-header').not(this).removeClass('active');
+            $(this).toggleClass('active');
+        });
+
+        $('#accordionWeek2 .card-header').click(function() {
+            $('#accordionWeek2 .card-header').not(this).removeClass('active');
+            $(this).toggleClass('active');
+        });
+
+        $('#accordionWeek3 .card-header').click(function() {
+            $('#accordionWeek3 .card-header').not(this).removeClass('active');
+            $(this).toggleClass('active');
+        });
+    });
+</script>
+
