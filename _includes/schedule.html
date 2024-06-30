@@ -19,9 +19,7 @@
         right: 10px;
         transition: transform 0.3s;
     }
-    .collapsed .day-header::after {
-        transform: rotate(-90deg); /* Rotate arrow */
-    }
+    
     .card-header.active {
         background-color: #d3d3d3;
     }
@@ -152,7 +150,7 @@
     <div id="accordionWeek2">
 
         <div class="card">
-            <div class="card-header day-header" id="headingMondayWeek2" data-toggle="collapse" data-target="#collapseMondayWeek2" aria-expanded="true" aria-controls="collapseMondayTuesday">
+            <div class="card-header day-header" id="headingMondayWeek2" data-toggle="collapse" data-target="#collapseMondayWeek2" aria-expanded="true" aria-controls="collapseMondayWeek2">
                 Monday, July 15
             </div>
 
@@ -164,10 +162,11 @@
         </div>
 
         <div class="card">
-            <div class="card-header day-header" id="headingTuesdayWeek2" data-toggle="collapse" data-target="#collapseTuesdayWeek2" aria-expanded="true" aria-controls="collapseMondayTuesday">
+            <div class="card-header day-header" id="headingTuesdayWeek2" data-toggle="collapse" data-target="#collapseTuesdayWeek2" aria-expanded="false" aria-controls="collapseTuesdayWeek2">
                 Tuesday, July 16
             </div>
-            <div id="collapseyTuesdayWeek2" class="collapse" aria-labelledby="headingTuesdayWeek2" data-parent="#accordionWeek2">
+
+            <div id="collapseTuesdayWeek2" class="collapse" aria-labelledby="headingTuesdayWeek2" data-parent="#accordionWeek2">
                 <div class="card-body session">
                     <div>Hackathon</div>
                 </div>
@@ -293,7 +292,9 @@
     </div>
 </div>
 
-    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function(){
         $('#accordion .card-header').click(function() {
@@ -312,4 +313,3 @@
         });
     });
 </script>
-
