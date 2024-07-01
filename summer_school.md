@@ -23,17 +23,6 @@ image: assets/img/SciFM24_summer_school.svg
     </div>
     <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="pills-schedule-tab">
         {% include schedule.html %}
-        <!-- <div class="container-fluid"> -->
-        <!-- <h2 style="text-align: center; background-color: green; color: white; padding: 0.2rem;"> Week 1 </h2> -->
-        <!-- <h3 class="text-white mb-0" 
-        style="text-align: center; background-color: green; padding: 0.2rem;"> 
-              Week 1
-        </h3> -->
-        <!-- <img src="{{ site.baseurl }}/assets/img/SciFM_1.png" width = "800rem"> -->
-        <!-- </div> -->
-        <!-- <img src="{{ site.baseurl }}/assets/img/SciFM_2.png" width = "800rem"> -->
-        <!-- <hr> -->
-        <!-- <img src="{{ site.baseurl }}/assets/img/SciFM_3.png" width = "800rem"> -->
     </div>
     <div class="tab-pane fade" id="hackathon" role="tabpanel" aria-labelledby="pills-hackathon-tab">
         {% include  blurb.html item=site.data.descriptions.hackathon %}
