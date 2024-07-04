@@ -39,7 +39,7 @@ hackathon:
       description: >
         In Biology, Foundation Models have enable numerous breakthroughs including protein structure prediction 
         and the classfication of emergent variants of viruses.
-    - name: Computational Science
+    - name: Computational Science Agents
       description: >
         A Computational Science Foundation Model capable of designing and orchestrating computational research 
         campaigns will enable scientists to focus on domain science through the creative specification of hypotheses 
