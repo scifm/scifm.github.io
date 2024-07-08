@@ -21,10 +21,10 @@ image: assets/img/SciFM24_summer_school.svg
         {% include role-organizer.html role="hack" image=true%}
         </section>
     </div>
-    <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="pills-schedule-tab">
-        {% include schedule.html %}
-    </div>
     <div class="tab-pane fade" id="hackathon" role="tabpanel" aria-labelledby="pills-hackathon-tab">
         {% include  blurb.html item=site.data.descriptions.hackathon %}
+    </div>
+    <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="pills-schedule-tab">
+        {% include schedule.html %}
     </div>
 </div>
