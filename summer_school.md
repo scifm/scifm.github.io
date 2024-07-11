@@ -9,7 +9,7 @@ image: assets/img/SciFM24_summer_school.svg
         <div style="overflow-x: scroll;">
         <h2> Tutorials </h2>
         <p>
-            We've made our course content available on GitHub at <a href="https://github.com/scifm/summer-school-2024">scifm/summer-school-2024]</a>, licensed under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
+            We've made our course content available on GitHub at <a href="https://github.com/scifm/summer-school-2024">scifm/summer-school-2024</a>, licensed under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
             You'll find pre-worked examples covering topics such as tokenization and neural scaling laws, along with demonstrations of vision transformers and diffusion models tailored for scientific applications.
         </p>
         <h2> Apply to Participate! </h2>
