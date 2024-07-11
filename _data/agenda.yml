@@ -1,0 +1,60 @@
+- date: July 8
+  list:
+    - title: Welcome and Summer School Goals
+    - title: Successes of SciFM
+- date: July 9
+  list:
+    - title: FoundSci DARPA program
+    - title: Vision for SciFM Institute
+- date: July 10
+  is_tutorial: true
+  list:
+    - time: "09:30 am"
+      title: Tutorial 1a - Data Modalities
+    - time: "01:30 pm"
+      title: Tutorial 1b -  Tokenization
+- date: July 11
+  is_tutorial: true
+  list:
+    - time: "09:30 am"
+      title: Tutorial 2a - Training Models
+    - time: "01:30 pm"
+      title: Tutorial 2b - Diffusion Models
+    - time: "03:00 pm"
+      title: Tutorial 2c - Scaling Laws
+- date: July 12 
+  is_tutorial: true
+  list:
+    - time: "09:30 am"
+      title: Tutorial 3a - Retrieval-Augmented Generation (RAG)
+    - time: "01:30 pm"
+      title: Tutorial 3b - Agents for Biology
+    - time: "03:00 pm"
+      title: Tutorial 3c - Agents for Chemistry
+- date: July 15
+  list:
+    - title: Goal Setting for Hackathon
+- date: July 16
+  list:
+    - title: Hackathon
+- date: July 17
+  is_tutorial: true
+  list:
+    - title: Tutorial 4 - AI Accelerators - GPUs and Specialized Hardware
+- date: July 18
+  is_tutorial: true
+  list:
+    - title: Tutorial 5 - Federated Learning
+- date: Week 3
+  list:
+    - title: Hackathon
+- date: July 25
+  list:
+    - title: Hackathon Team Presentations
+- date: July 26
+  list:
+    - title: Keynote - Open questions for Foundation Models for Science
+    - title: Panel - Security, Equity, Safety
+    - title: Ecosystem Gathering (Academia, National Labs, Venture Funding, Philanthropy)
+    - title: Future Outlook
+ 

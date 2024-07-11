@@ -7,14 +7,17 @@
 {% endif %}
 
 {% capture news %}
-<div>
+<div style="padding-top: 10px;">
     {% if post.shortnews %}
+    <h5> <a href="{{ site.baseurl }}{{ post.aux_link }}"> {{ post.title }} </a> </h5>
     {{ post.content | markdownify | remove: '<p>' | remove: '</p>' }}
     {% else %}
     <h5> <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> </h5>
     {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
     <br>
+    {% if post.readmore %}
     <a href="{{ site.baseurl }}{{ post.url }}"> Read more &raquo;</a>
+    {% endif %}
     {% endif %}
 </div>
 {% endcapture %}
@@ -24,14 +27,14 @@
 <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
 {% endcapture %}
 
-<li class="{{ class }}">
+<li class="{{ class }}" style="padding: 10px;">
     {% if post.image %}
 
     {% capture img %}
-    <img class="img-fluid d-block mx-auto" style="{{ post.image_style }}" alt="{{ post.image_alt }}"
+    <img class="img-fluid d-block mx-auto img-mobile-small" style="width: 16rem" alt="{{ post.image_alt }}"
         src="{{ post.image }}">
     {% endcapture %}
-
+    
     <div class="row">
         <div class="col-sm-10">
             {{ header }}

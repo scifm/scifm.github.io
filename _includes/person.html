@@ -20,7 +20,7 @@ there by default by Bootstrap columns.
 
 {% if person.webpage %}
 {% capture name %}
-<a href="{{ person.webpage | escape }}"> {{ person.display_name }} </a>
+<a href="{{ person.webpage | escape }}">{{ person.display_name }}</a>
 {% endcapture %}
 {% else %}
 {% assign name = person.display_name %}
@@ -43,9 +43,9 @@ there by default by Bootstrap columns.
 </div>
 {% else %}
 <div class="person person-without-image">
-    {{ name }}
+    {{ name | strip }},
     {% if person.bio %}
-    <span class="bio">{{person.bio}}</span>
+    <span class="bio">{{person.bio | strip }}</span>
     {% endif %}
 </div>
 {% endif %}

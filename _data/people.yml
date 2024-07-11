@@ -1,5 +1,6 @@
 venkvis:
-  role: pi
+  role: director
+  summer_school_role: organizer
   display_name: "Venkat Viswanathan"
   webpage: https://www.linkedin.com/in/venkat-viswanathan/
   image: assets/img/venkvis.png
@@ -7,13 +8,14 @@ venkvis:
   email: "venkvis [at] umich [dot] edu"
   org: University of Michigan
 
-bharath:
-  role: pi
-  display_name: Bharath Ramsundar
-  image: assets/img/bharath.png
-  bio: Founder and CEO
-  webpage: https://www.linkedin.com/in/bharath-ramsundar-13275230/
-  org: Deep Forest Sciences
+karthic:
+  role: faculty
+  summer_school_role: organizer
+  display_name: Karthik Duraisamy
+  image: assets/img/karthik.jpg
+  bio: Director of MICDE
+  website: https://aero.engin.umich.edu/people/duraisamy-karthik/
+  org: University of Michigan
 
 ## Core Team
 abhutani:
@@ -21,7 +23,7 @@ abhutani:
   display_name: "Anoushka Bhutani"
   webpage: "https://www.linkedin.com/in/anoushka-bhutani/"
   image: assets/img/abhutani.png
-  bio: Ph.D. Student, Mechanical Engineering
+  bio: Ph.D. Candidate, Mechanical Engineering
   email: "abhutani [at] umich [dot] edu"
   org: University of Michigan
 
@@ -29,7 +31,7 @@ awadell:
   role: team
   display_name: "Alex Wadell"
   webpage: "https://www.linkedin.com/in/alexiuswadell/"
-  bio: Ph.D. Student, Mechanical Engineering
+  bio: Ph.D. Candidate, Mechanical Engineering
   image: assets/img/awadell.jpg
   email: "awadell [at] umich [dot] edu"
   org: University of Michigan
@@ -38,7 +40,7 @@ amalss:
   role: team
   display_name: "Amal S Sebastian"
   image: assets/img/asebasti.jpeg
-  bio: Ph.D. Student, Aerospace Engineering
+  bio: Ph.D. Candidate, Aerospace Engineering
   webpage: "https://amalss18.github.io/"
   email: amalss [at] umich [dot] edu
   org: University of Michigan
@@ -70,6 +72,97 @@ chenyanh:
   bio: Ph.D. Student, Mechanical Engineering
   org: University of Michigan
 
+vansh:
+  display_name: "Vansh Sharma"
+  role: team
+  email: "vanshs [at] umich [dot] com"
+  bio: Ph.D. Candidate, Mechanical Engineering
+  org: University of Michigan
+
+jasminlim:
+  display_name: "Jasmin Lim"
+  role: other
+  email: "jaslim [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+niloygupta:
+  display_name: "Niloy Gupta"
+  role: other
+  email: "niloy [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+sahil:
+  display_name: "Sahil Bhola"
+  role: team
+  email: "sbhola [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+daisuke:
+  display_name: "Daisuke Uchida"
+  role: other
+  email: "duchida [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+noah:
+  display_name: "Noah Zambrano"
+  role: other
+  email: "nzamb [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+yilin:
+  display_name: "Yilin Zhuang"
+  role: team
+  email: "nzamb [at] umich [dot] com"
+  bio: Ph.D. Student, Aerospace Engineering
+  org: University of Michigan
+
+amirpasha:
+  display_name: "Amirpasha Hedayat"
+  role: team
+  email: "ahedayat [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+moon:
+  display_name: "Moon Hazarika"
+  role: other
+  email: "moonbh [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+yhtoh:
+  display_name: "Yi Han Toh"
+  role: other
+  email: "yhtoh [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+william:
+  display_name: "William Curtis Maxon"
+  role: other
+  email: "wcurtmaxon [at] umich [dot] com"
+  bio: Ph.D. Candidate, Aerospace Engineering
+  org: University of Michigan
+
+pratikkumar:
+  display_name: "Pratikkumar Raje"
+  role: postdoc
+  email: "praje [at] umich [dot] com"
+  bio: Postdoctoral Scholar, Aerospace Engineering
+  org: University of Michigan
+
+jame:
+  display_name: "James Duvall"
+  role: postdoc
+  email: "jamesduv [at] umich [dot] com"
+  bio: Postdoctoral Scholar, Aerospace Engineering
+  org: University of Michigan
+
 varunm:
   display_name: Varun Madhavan
   role: team
@@ -79,7 +172,7 @@ varunm:
   org: University of Michigan
 
 arunppsg:
-  role: team
+  role: dfs
   display_name: Arun Pa Thiagarajan
   image: assets/img/arunppsg.png
   bio: Software Engineer
@@ -88,7 +181,7 @@ arunppsg:
   org: Deep Forest Sciences
 
 aravind:
-  role: team
+  role: dfs
   display_name: Sudharsan Aravind V
   image: assets/img/aravind.jpeg
   bio: Full-Stack Developer
@@ -98,14 +191,53 @@ aravind:
 ## Collaborators
 arvind:
   role: colab
+  summer_school_role: organizer
   display_name: Arvind Ramanathan
   image: assets/img/Arvind_Ramanathan_400x400.jpg
   bio: Computational Science Leader 1
   webpage: https://ramanathanlab.org
   org: Argonne National Laboratory
 
-abrace:
+bharath:
   role: colab
+  display_name: Bharath Ramsundar
+  image: assets/img/bharath.png
+  bio: Founder and CEO
+  webpage: https://www.linkedin.com/in/bharath-ramsundar-13275230/
+  org: Deep Forest Sciences
+
+janssen:
+  role: colab
+  display_name: Jan Janssen 
+  image: assets/img/janssen.jpg
+  bio: Group Leader for Materials Informatics
+  webpage:  https://jan-janssen.com/
+  org: Max Planck Institute for Sustainable Materials
+
+mishra:
+  role: colab
+  display_name: Siddhartha Mishra
+  image: assets/img/mishra.jpg
+  webpage: https://camlab.ethz.ch/the-group/group-head.html
+  bio: Professor at the Department of Mathematics
+  org: ETH Zurich
+
+maulik:
+  role: colab
+  display_name: Romit Maulik
+  image: assets/img/maulik.jpg
+  bio: Principal Investigator
+  webpage: https://romit-maulik.github.io/
+  org: Pennsylvania State University
+
+barwey:
+  role: colab
+  display_name: Shivam Barwey
+  bio: AETS Fellow
+  org: Argonne National Laboratory
+
+abrace:
+  role: other
   display_name: Alexander Brace
   image: assets/img/abrace.jpeg
   bio: Research Associate
@@ -113,33 +245,77 @@ abrace:
   org: Argonne National Laboratory
 
 natalia:
-  role: colab
+  role: other
   display_name: Natalia Vassilieva
   bio: Senior Director of Product, Machine Learning and Software
   webpage: https://www.linkedin.com/in/nataliavassilieva/
   image: assets/img/natalia.jpeg
   org: Cerebras Systems Inc.
 
-karthic:
-  role: colab
-  display_name: Karthik Duraisamy
-  image: assets/img/karthik.jpg
-  bio: Director of MICDE
-  website: https://aero.engin.umich.edu/people/duraisamy-karthik/
-  org: University of Michigan
 
 gavini:
-  role: colab
+  role: faculty
   display_name: Vikram Gavini
   image: assets/img/gavini.jpg
   bio: Professor, Mechanical Engineering
   webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
   org: University of Michigan
 
+ozay:
+  role: faculty
+  display_name: Necmiye Ozay
+  image: assets/img/necmiye.jpg
+  bio: Associate Professor, Robotics & Electrical and Computer Engineering
+  webpage: https://web.eecs.umich.edu/~necmiye/
+  org: University of Michigan
+
 oymak:
-  role: colab
+  role: assoc_director
   display_name: Samet Oymak
   image: assets/img/oymak.jpg
   bio: Assistant Professor of Electrical Engineering and Computer Science
   org: University of Michigan
   webpage: https://sota.engin.umich.edu
+
+raman:
+  role: faculty
+  display_name: Venkat Raman
+  image: assets/img/raman.jpg
+  bio: Professor of Aerospace Engineering
+  org: University of Michigan
+  webpage: https://aero.engin.umich.edu/people/gorodetsky-alex/
+
+gorodetsky:
+  role: faculty
+  display_name: Alex Gorodetsky
+  image: assets/img/gorodetsky.jpg
+  bio: Assistant Professor of Aerospace Engineering
+  org: University of Michigan
+  webpage: https://aero.engin.umich.edu/people/raman-venkat/
+
+## Summer School Organizers
+
+anandkumar:
+  role: other
+  summer_school_role: hack
+  display_name: Anima Anandkumar
+  image: assets/img/anandkumar.jpg
+  bio: Bren Professor of Computing and Mathematical Sciences
+  org: California Institute of Technology
+  webpage: https://www.eas.caltech.edu/people/anima
+
+mahoney:
+  role: other
+  summer_school_role: hack
+  display_name: Michael Mahoney
+  image: assets/img/mahoney.png
+  bio: Group Lead Machine Learning and Analytics
+  org: Lawrence Berkeley National Laboratory
+  webpage: https://crd.lbl.gov/divisions/scidata/mla/staff/michael-mahoney/
+
+lanl:
+  role: other
+  summer_school_role: hack
+  display_name: Los Alamos National Laboratory
+  image: assets/img/lanl.png
+  webpage: https://www.lanl.gov/

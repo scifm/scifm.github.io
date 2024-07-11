@@ -1,0 +1,22 @@
+{% assign item = include.item %}
+{% if item.title %}
+  <h2> {{ item.title }} </h2>
+  <hr>
+{% endif %}
+<div class="row">
+  <div class="col-md-8 mb-1">
+    {{ item.text | markdownify }}
+    {% if item.list %}
+    <ol>
+      {% for domain in item.list %}
+      <li><b>{{ domain.name }}</b> - {{ domain.description | markdownify }}</li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+  </div>
+  {% if item.image %}
+  <div class="col-md-4 mb-1">
+    <img class="img-fluid" src="{{ item.image | relative_url }}" alt="{{ domain.name }}" style="max-width: {{ item.image_width }}%; height: auto;">
+  </div>
+  {% endif %}
+</div>

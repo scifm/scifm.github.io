@@ -1,5 +1,5 @@
-title: Scientific Foundation Models
-navtitle: Scientific Foundation Models
+title: Center for Scientific Foundation Models
+navtitle: Center for Scientific Foundation Models
 url: scifm.ai
 
 plugins:
@@ -7,7 +7,7 @@ plugins:
 - jekyll-sitemap
 
 news:
-  front_page_limit: 5
+  front_page_limit: 2
 
 sass:
   sass_dir: /assets/css/_sass
@@ -22,10 +22,24 @@ analytics:
 roles:
   - key: pi
     name: Principal Investigators
+  - key: director
+    name: Director
+  - key: assoc_director
+    name: Associate Directors
+  - key: faculty
+    name: Faculty
   - key: team
-    name: Core Team
+    name: Students  
+  - key: postdoc
+    name: Postdoctoral Scholars
   - key: colab
     name: Collaborators
+
+summer_school_roles:
+  - key: organizer
+    name: Core Organizers
+  - key: hack
+    name: Hackathon Organizers
 
 # make pages for the _projects folder
 collections:

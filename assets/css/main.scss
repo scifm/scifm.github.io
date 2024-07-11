@@ -12,13 +12,6 @@ $content-width: 800px;
 $on-palm: 600px;
 $on-laptop: 800px;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
@@ -84,6 +77,103 @@ p {
     height: 100px;
 }
 
+.schedule-table {
+
+    li {
+        border-radius: 15px;
+        padding: 2px 15px;
+        display: flex;
+    }
+
+    .raw_li {
+        display: list-item !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .table-header {
+        color: "primary";
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .table-row {
+        background-color: #ffffff;
+        border-color: whitesmoke;
+        border-width: 0.1em;
+        border-style: solid;
+        border-bottom: none;
+    }
+
+    .table-row-assignment {
+        background-color: #d9edf7;
+    }
+
+    .table-row-tutorial {
+        background-color: #fff8c6;
+    }
+
+    .col-date {
+        text-align: left;
+        padding: 2px;
+        flex-grow: 0;
+        width: 35%;
+        min-width: 120px;
+    }
+
+    .col-agenda {
+        text-align: left;
+        padding: 2px;
+        flex-grow: 1;
+        width: 40%;
+    }
+
+   ul {
+            margin-bottom: 0;
+        }
+    }
+
+    .date-spliter {}
+
+    @media all and (max-width: 767px) {
+        .table-header {
+            display: none;
+        }
+
+        .table-row {}
+
+        li {
+            display: block;
+        }
+
+        .col {
+
+            flex-basis: 100%;
+
+        }
+
+        .col-agenda {
+            text-align: left;
+            padding: 2px;
+            flex-grow: 1;
+        }
+        
+        .col {
+            display: block;
+            padding: 10px 0;
+
+            &:before {
+                color: #6C7A89;
+                padding-right: 10px;
+                content: attr(data-label);
+                width: 50%;
+                text-align: right;
+            }
+        }
+    }
+
 // Make space between news articles nicer
 div#news {
     .col-sm-10{
@@ -100,11 +190,89 @@ div#news {
     justify-content: space-evenly;
 }
 
+.project-card {
+    width: 25%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    .card-title {
+        text-align: center;
+    }
+    // .fcard-img-top{
+    //      width: 400px;
+    //      max-height: 200px;
+    // }
+}
+
+.image-container {
+    position: relative; /* Makes the position of the 'img' absolute relative to this container */
+    width: 70%;
+    padding-top: 70%; /* Height of the container equals its width */
+    overflow: hidden; /* Clip the image if it overflows */
+}
+
+.image-container .card-img-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
 .row{
     img{
         max-width: 100%;
     }
 }
+
+/* Header text styling */
+.header-text .h1, .header-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+}
+  
+/* Navigation Links styling */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 24px; /* Adjust to your preference */
+    width: 1px;
+    background-color: #fff;
+}
+
+/* Modify padding for nav links to adjust space around the line */
+.navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 768px) { /* Adjust for mobile screens */
+    .logo-l, .logo-r {
+      max-height: 60px; /* Reduce the size of images on smaller screens */
+    }
+    .header-text h1 {
+      font-size: 1.25rem; /* Reduce header text size */
+    }
+
+    .header-text p {
+      font-size: 1rem; /* Reduce paragraph text size */
+    }
+
+    .img-mobile-small {
+        max-width: 50%; /* Reduce to 50% of the container's width on mobile */
+      }
+  }
 
 //@import "bootstrap/bootstrap/bootstrap.css";
 @import "bootstrap/functions";

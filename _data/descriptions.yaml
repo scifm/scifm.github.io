@@ -1,0 +1,65 @@
+summer_school:
+  title: WELCOME TO THE SciFM SUMMER SCHOOL
+  image: assets/img/SciFM24_summer_school.svg
+  image_width: 50
+  image_height: 70
+  height: 30
+  text: >
+    MICDE recently organized the [SciFM conference](https://micde.umich.edu/event/conference-symposiumscifm24-conference-2/) and had an incredible reception for the event.  
+    Based on the feedback from that meeting and further discussions with National Lab and academic partners, 
+    we are excited to organize the SciFM Summer School from July 8 to July 26. 
+    We wish for this to be a recurring event hosted at different locations across the country. 
+    The first instance is going to be run in parallel at the University of Michigan (UM) and at Argonne National Laboratory (ANL). 
+    
+    The summer school will:
+
+    - Develop technical **plans for specific instances** of SciFMs; 
+
+    - Involve a **hackathon** to jumpstart the construction of SciFMs; 
+
+    - Act as an **incubator** for ideas; 
+
+    - Serve as a **training ground for researchers and students**; 
+
+    - Further a vision for a **national SciFM ecosystem**.
+
+hackathon:
+  image: assets/img/hackathon.svg
+  image_width: 100
+  image_height: 50
+  height: 90
+  text: >
+    Participants will explore innovative applications of Foundation Model in four application domains\:
+  list:
+    - name: Materials
+      description: >
+        Foundation Models for material science have been used for a range of material property prediction, 
+        retrosysnthesis and structure search tasks.
+    - name: Biology
+      description: >
+        In Biology, Foundation Models have enable numerous breakthroughs including protein structure prediction 
+        and the classfication of emergent variants of viruses.
+    - name: Computational Science Agents
+      description: >
+        A Computational Science Foundation Model capable of designing and orchestrating computational research 
+        campaigns will enable scientists to focus on domain science through the creative specification of hypotheses 
+        and greatly accelerate scientific discovery.
+    - name: Partial Differential Equations
+      description: Foundation Models may be the route to enabling data efficient, general purpose PDE solvers.
+
+vision:
+  image: assets/img/vision.svg
+  image_width: 70
+  image_height: 100
+  height: 30
+  text: >
+    The advent of Scientific Foundation Models (SciFMs) heralds a transformative era in research and 
+    innovation, representing a paradigm shift in how scientific inquiry and application are conducted. 
+    SciFMs are based on large-scale generative AI models that can be adapted to several downstream tasks
+    in scientific discovery, and medical and engineering innovations. 
+    The opportunity presented by SciFMs lies in their potential to serve as comprehensive platforms  
+    for interdisciplinary collaboration, seamlessly integrating diverse knowledge domains and enabling 
+    unprecedented levels of cooperation across the global scientific community. 
+    These models have the potential to accelerate discoveries and technological advancements, 
+    bridging gaps between theoretical research and practical applications, 
+    and catalyzing progress in addressing some of the most pressing challenges of our time.

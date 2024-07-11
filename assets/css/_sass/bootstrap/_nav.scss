@@ -76,6 +76,7 @@
 .nav-pills {
   .nav-link {
     @include border-radius($nav-pills-border-radius);
+    font-weight: bold;
   }
 
   .nav-link.active,

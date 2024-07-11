@@ -1,14 +1,35 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="description" content="{{ site.description }}" />
     <meta name="author" content="" />
-
+    {% if page.url == "/" %}
+        <!-- facebook open graph tags -->
+        <meta property="og:url" content="https://scifm.ai/"/>
+        <meta property="og:title" content="MICDE Center for Scientific Foundation Models"/>
+        <meta property="og:description" content="MICDE's Center for Scientific Foundation Models will serve as a hub for the infrastucture, knowledge and resources required to innovate, train and deploy SciFMs."/>
+        <meta property="og:site_name" content="Center for Scientific Foundation Models"/>
+        <meta property="og:image" content="{{ site.baseurl }}/assets/img/scifm_header_logo.png"/>
+    {% endif %}
+    {% if page.url == "/summer_school.html" %}
+        <!-- facebook open graph tags -->
+        <meta property="og:url" content="https://scifm.ai/summer_school.html"/>
+        <meta property="og:title" content="SciFM Summer School"/>
+        <meta property="og:description" content="We are excited to organize the SciFM Summer School from July 8 to July 26."/>
+        <meta property="og:site_name" content="Center for Scientific Foundation Models Summer School"/>
+        <meta property="og:image" content="{{ site.baseurl }}/assets/img/SciFM24_summer_school.png"/>
+    {% endif %}
     <title>{{ site.title }}</title>
+
 
     <!-- Bootstrap core CSS -->
     <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">

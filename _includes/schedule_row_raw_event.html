@@ -1,0 +1,13 @@
+
+<div class="col col-date" style="font-weight: bold">{{ include.event.date }}</div>
+<div class="col col-agenda">
+    <ol>
+        {% for session in include.event.list %}
+        {% if session.time%}
+            <li>{{ session.time | markdownify}}&nbsp;-&nbsp;{{ session.title | markdownify }}</li>
+        {% else %}
+            <li>{{ session.title | markdownify }}</li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+</div>
