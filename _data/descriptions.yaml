@@ -7,21 +7,17 @@ summer_school:
   text: >
     MICDE recently organized the [SciFM conference](https://micde.umich.edu/event/conference-symposiumscifm24-conference-2/) and had an incredible reception for the event.  
     Based on the feedback from that meeting and further discussions with National Lab and academic partners, 
-    we are excited to organize the SciFM Summer School from July 8 to July 26. 
+    we organized the SciFM Summer School 2024. 
     We wish for this to be a recurring event hosted at different locations across the country. 
-    The first instance is going to be run in parallel at the University of Michigan (UM) and at Argonne National Laboratory (ANL). 
+    The first instance was run in parallel at the University of Michigan (UM) and at Argonne National Laboratory (ANL). 
     
-    The summer school will:
+    The summer school involved:
 
-    - Develop technical **plans for specific instances** of SciFMs; 
+    - Developing technical **plans for specific instances** of SciFMs; 
 
-    - Involve a **hackathon** to jumpstart the construction of SciFMs; 
+    - A  **hackathon** to jumpstart the construction of SciFMs; 
 
-    - Act as an **incubator** for ideas; 
-
-    - Serve as a **training ground for researchers and students**; 
-
-    - Further a vision for a **national SciFM ecosystem**.
+    - Furthering a vision for a **national SciFM ecosystem**.
 
 hackathon:
   image: assets/img/hackathon.svg
@@ -29,7 +25,7 @@ hackathon:
   image_height: 50
   height: 90
   text: >
-    Participants will explore innovative applications of Foundation Model in four application domains\:
+    Participants explored innovative applications of Foundation Model in four application domains\:
   list:
     - name: Materials
       description: >
