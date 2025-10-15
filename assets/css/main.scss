@@ -391,12 +391,21 @@ div#news {
     .logo-img { height: 40px; }
 }
 
-/* Ensure main page content is not covered by the sticky header. Adjust as needed. */
-body {
-    padding-top: 64px; /* reserve space for header */
+/* Make sticky header sit in the normal flow (it already does via position:sticky)
+   and avoid adding extra top padding. Ensure the hero header sits flush below
+   the navigation. */
+.site-header {
+    margin-bottom: 0;
+}
+
+/* Hero header (the large title area) should not add top margin so it sits
+   directly beneath the navigation bar. */
+.site-hero {
+    margin: 0;
+    padding: 1.25rem 0; /* vertical padding for breathing room */
 }
 
 @media (max-width: 768px) {
-    body { padding-top: 56px; }
+    .site-hero { padding: 0.75rem 0; }
 }
 
