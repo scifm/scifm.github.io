@@ -1,0 +1,20 @@
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+/opt/hostedtoolcache/Ruby/3.2.2/x64/bin/ruby extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+checking for rb_reg_onig_match() in ruby.h... no
+creating Makefile
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-fe60dw sitelibdir\=./.gem.20251015-2088-fe60dw clean
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-fe60dw sitelibdir\=./.gem.20251015-2088-fe60dw
+compiling strscan.c
+linking shared-object strscan.so
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-fe60dw sitelibdir\=./.gem.20251015-2088-fe60dw install
+/usr/bin/install -c -m 0755 strscan.so ./.gem.20251015-2088-fe60dw
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-fe60dw sitelibdir\=./.gem.20251015-2088-fe60dw clean

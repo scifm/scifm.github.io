@@ -1,0 +1,18 @@
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+/opt/hostedtoolcache/Ruby/3.2.2/x64/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-4m3090 sitelibdir\=./.gem.20251015-2088-4m3090 clean
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-4m3090 sitelibdir\=./.gem.20251015-2088-4m3090
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-4m3090 sitelibdir\=./.gem.20251015-2088-4m3090 install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20251015-2088-4m3090/racc
+
+current directory: /home/runner/work/scifm.github.io/scifm.github.io/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251015-2088-4m3090 sitelibdir\=./.gem.20251015-2088-4m3090 clean
