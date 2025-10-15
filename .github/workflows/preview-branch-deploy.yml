@@ -1,0 +1,81 @@
+name: Preview site (preview/<branch>)
+
+on:
+  push:
+    # Ignore pushes to main — previews should not affect production
+    branches-ignore:
+      - main
+  pull_request:
+
+permissions:
+  contents: write     # needed to push preview branches
+  pages: read
+
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-push-preview:
+    runs-on: ubuntu-latest
+    name: Build site and push to preview branch
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --destination _site
+        env:
+          JEKYLL_ENV: development
+
+      - name: Push built site to preview branch
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_ACTOR: ${{ github.actor }}
+        run: |
+          set -e
+          # Determine source branch name (for pushes it's refs/heads/<branch>; for PRs use head ref)
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            SRC_BRANCH=${{ github.head_ref }}
+          else
+            SRC_BRANCH=${GITHUB_REF#refs/heads/}
+          fi
+
+          PREVIEW_BRANCH="preview/${SRC_BRANCH}"
+
+          echo "Preparing preview branch: ${PREVIEW_BRANCH}"
+
+          # Create a temporary git repo containing the generated site
+          rm -rf out || true
+          mkdir out
+          git -C out init
+          git -C out config user.name "github-actions[bot]"
+          git -C out config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Copy built site into out/
+          cp -a _site/. out/
+
+          # Commit and push to preview branch
+          cd out
+          git add --all
+          if git commit -m "Preview: ${PREVIEW_BRANCH} (source ${SRC_BRANCH} @ ${GITHUB_SHA})"; then
+            echo "Committed preview site"
+          else
+            echo "No changes to commit"
+          fi
+
+          # Push to the preview branch (force update)
+          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:refs/heads/${PREVIEW_BRANCH}
+
+      - name: Output preview branch
+        run: echo "Preview branch pushed: preview/${{ github.ref_name || github.head_ref }}"
