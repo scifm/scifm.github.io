@@ -2,22 +2,12 @@
 layout: default
 ---
 
-{% assign numposts = site.posts | size %}
-{% if numposts >= 1 %}
-<div id="news" class="container mb-5">
-    <hr>
-    <ul class="news list-unstyled">
-        {% for post in site.posts limit: site.news.front_page_limit %}
-        {% include news-item.html item=post %}
-        <hr>
-        {% endfor %}
-    </ul>
-    <p>
-        <span class="fa fa-fw fa-history"></span>
-        <a href="{{ site.baseurl }}/news.html">More News Posts &hellip;</a>
-    </p>
+{%- comment -%} Insert a hero figure at the top of the home page. Replace `vision.png` with the desired hero image. {%- endcomment -%}
+<div class="container mb-4 hero-figure">
+    <figure style="margin:0; padding:0; text-align:center;">
+        <img src="{% link assets/img/bigPic.png %}" alt="Hero figure" style="max-width:80%; height:auto;">
+    </figure>
 </div>
-{% endif %}
 
 {{ content }}
 
