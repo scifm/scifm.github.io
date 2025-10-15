@@ -8,17 +8,13 @@
             </a>
         </div>
 
-        <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
-            <ul class="primary-nav__list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Research</a></li>
-                <li><a href="#">Publications</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+            <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
+                <ul class="primary-nav__list">
+                    {% for item in site.data.menu %}
+                    <li class="primary-nav__item"><a href="{{ site.baseurl }}{{ item.link }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
 
         <div class="site-cta">
             <!-- Prominent CTA button placeholder -->
