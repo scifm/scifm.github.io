@@ -11,6 +11,7 @@ people:
 - venkvis
 - janssen
 - ziqi
+- hongshuo
 ---
 
 <!-- DREAMS — page following the style of material_discovery.md -->
