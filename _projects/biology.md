@@ -2,6 +2,7 @@
 title: Foundation Models for Biology
 layout: project
 card-title: Biology
+published: false
 card-content: |
     GenSLMs, a genome-scale language model, is probing the evolutionary dynamics of SARS-CoV-2
 

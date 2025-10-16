@@ -1,7 +1,8 @@
 ---
-title: Foundation Models for Computational Science
+title: LLM Agents
 layout: project
-card-title: Computational Science
+card-title: LLM Agents
+weight: 20
 card-content: |
     Intelligent agents for automatic code and workflow generation ready for deployment on exascale computational resources
 
