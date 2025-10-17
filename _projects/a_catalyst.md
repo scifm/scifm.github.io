@@ -5,7 +5,7 @@ card-title: Molecular Discovery
 card-content: |
     We’re training BERT-based models to accelerate material discovery and enable Generative AI for molecular design.
 
-card-image: assets/img/incite_image_mb.png
+card-image: /assets/img/incite_image_mb.png
 people:
 - abhutani
 - awadell

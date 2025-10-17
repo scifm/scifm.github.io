@@ -20,7 +20,9 @@
 
 <div class="card border-0 shadow h-100 d-flex flex-column" style="padding: 0px;">
     <div class="image-container"> 
-        <img class="card-img-top" style="padding: 0px;" src="{{ card-image }}" alt="" />
+        {% capture img_src %}{{ site.baseurl }}{{ card-image }}{% endcapture %}
+        {% assign img_src = img_src | replace: '//', '/' %}
+        <img class="card-img-top" style="padding: 0px;" src="{{ img_src }}" alt="{{ card-title }}" />
     </div>
     <div class="card-body flex-grow-1 d-flex align-items-center justify-content-center">
         <h4 class="card-title text-center">{{ card-title }}</h4>

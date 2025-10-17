@@ -6,7 +6,7 @@ weight: 10
 card-content: |
     (Placeholder) Material discovery project — content to be added.
 
-card-image: assets/img/vision.png
+card-image: /assets/img/cloud_cover.png
 people:
 - 
 ---
