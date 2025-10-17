@@ -6,7 +6,7 @@ card-content: Creating surrogate physics models by finetuning a foundation model
 people:
 - amalss
 - bharath
-card-image: assets/img/cocogen.png
+card-image: /assets/img/cocogen.png
 ---
 
 ![Diagram of a Fluid Foundation Model]({% link assets/img/cocogen.png %})
