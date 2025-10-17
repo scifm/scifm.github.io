@@ -27,7 +27,7 @@ permalink: /contact/
 	<div class="col-md-5 mb-5">
 		<!-- Coordinates-based embed URL so iframe reliably loads -->
 		<div style="width:100%;height:420px;overflow:hidden;border-radius:6px;">
-			<iframe src="https://maps.google.com/maps?q=42.3006352,-83.6914312&z=17&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.963925218471!2d-83.69400612390267!3d42.30063517119853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cad002d69aff9%3A0x3c7b916a6e7f6618!2sMichigan%20Institute%20for%20Computational%20Discovery%20and%20Engineering%20(MICDE)!5e0!3m2!1sen!2sus!4v1760717130294!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 	</div>
 </div>
