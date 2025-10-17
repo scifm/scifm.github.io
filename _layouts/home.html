@@ -6,9 +6,11 @@ layout: default
 <section class="quote-band">
     <div class="container py-4">
         <p class="quote-text mb-2">
-            “In a 2024 Guardian column, John Naughton reflects on Leopold Aschenbrenner’s essay ‘Situational Awareness: The Decade Ahead,’ arguing the U.S. should approach AI with Manhattan Project urgency.”
+            “From Manhattan Project to 2.0 — scaling AI for science's next era.”
         </p>
-        <p class="quote-attrib mb-0">John Naughton, The Guardian (June 2024)</p>
+        <p class="quote-attrib mb-0">
+            U.S. Department of Energy, 2024
+        </p>
     </div>
     <hr class="m-0"/>
 </section>
@@ -16,20 +18,23 @@ layout: default
 {%- comment -%} Split hero: concise copy + CTAs (left), hero figure (right). {%- endcomment -%}
 <section class="container hero-split mb-5">
         <div class="row align-items-center">
-                <div class="col-lg-6 hero-copy">
-                        <h1 class="display-5 fw-bold mb-3">AI for Scientific Discovery</h1>
-                        <p class="lead mb-4">AI is reshaping how we ask and answer scientific questions—turning data, simulation, and theory into a continuous engine for discovery. Scientific Foundation Models (SciFMs) promise to learn across modalities and domains, to accelerate experiments, and to help scientists reason at scale. Below is a small sketch of SciFM to set the tone.</p>
-
-                        <pre style="font-family:monospace; font-size:0.9rem; line-height:1; background:transparent; border:none; padding:0; margin:0;"> 
-    ____  _  _ ___ _____ __  __ 
- / ___|| |/ |_ _|_   _|  \/  |
- \___ \| ' / | |  | | | |\/| |
-    ___) | . \ | |  | | | |  | |
- |____/|_|\_\___| |_| |_|  |_|
-                        </pre>
+    <div class="col-lg-6 hero-copy">
+      <h1 class="display-5 fw-bold mb-3">Why It Matters?</h1>
+      <p class="lead mb-4">
+        AI is transforming how we ask and answer scientific questions—connecting data, simulation, and theory into a continuous engine of discovery. 
+        Breakthroughs will simply come not from bigger datasets, but from 
+        <strong>foundation models that understand science</strong>.
+      </p>
+      <p class="lead mb-4">
+        At <strong>SciFM</strong>, we integrate computation, experimentation, and reasoning into a unified framework. 
+        Foundation models accelerate simulation and analysis, autonomous agents coordinate large-scale HPC campaigns, 
+        and validated insights feed back to strengthen the models. 
+        Our mission is simple: <strong>shorten the path from idea to insight</strong>—reliably and at scale.
+      </p>
+                       
                 </div>
                 <div class="col-lg-6 text-center">
-                        <img class="img-fluid hero-img" src="{% link assets/img/bigPic.png %}" alt="SciFM overview diagram">
+                        <img class="img-fluid hero-img" src="{% link assets/img/scifm_fancy.png %}" alt="SciFM overview diagram">
                 </div>
         </div>
         </section>
@@ -38,26 +43,22 @@ layout: default
 <section class="container mb-5">
     <div class="row">
         <div class="col-12">
-            <h2 class="mt-3">Development of scientific foundation model</h2>
+            <h2 class="mt-3">SciFM at Michgan</h2>
         </div>
     </div>
     <div class="row align-items-start">
-        <div class="col-lg-8">
-            <p>SciFMs are large, pre-trained scientific AI models that learn from multimodal scientific data — text, images, spectra, graphs, and simulations. By embedding physical laws and domain knowledge, they provide a reusable foundation across materials, chemistry, and physics to speed discovery, tighten the loop between theory and experiment, and enable automated scientific reasoning.</p>
+        <div class="col-lg-6">
+            <h3>Who are we?</h3>
+            <p>We are a multidisciplinary team combining expertise in physics, chemistry, materials science, and computer science. Our group brings together PIs, postdocs, and students from Michigan, along with our collaborators across the globe, to build foundation models that are scalable and practically useful. We collaborate closely with domain experts to ensure models respect scientific constraints, are interpretible, and can be integrated directly into experimental and simulation workflows.</p>
 
             <h3>Vision</h3>
-            <p>We envision SciFMs as collaborative scientific partners: models that suggest hypotheses, design experiments, and synthesize knowledge across disciplines. They should reduce repetition, reveal hidden patterns, and empower researchers to explore bolder ideas faster.</p>
-
-            <h3>Goals</h3>
-            <ul>
-                <li>Build robust multimodal models grounded in physics and first principles.</li>
-                <li>Integrate models into experiment and simulation workflows for rapid iteration.</li>
-                <li>Foster open, reproducible tools and datasets for the community.</li>
-            </ul>
+            <p>At SciFM, we envision a future where scientific discovery is accelerated by foundation models and AI — where computations don’t just support research, but actively generate new knowledge and deliver direct solutions to today’s most pressing challenges.</p>
         </div>
-        <div class="col-lg-4 text-center">
-            <!-- Placeholder for the existing hero figure or additional visuals -->
-            <img class="img-fluid" src="{% link assets/img/bigPic.png %}" alt="SciFM diagram placeholder">
+        <div class="col-lg-6 text-center">
+            <!-- Even larger visual for the Development section -->
+            <div style="overflow:hidden; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                <img class="img-fluid" src="{% link assets/img/scifm_bigpic.png %}" alt="SciFM diagram placeholder" style="width:100%; height:auto; object-fit:contain; display:block;">
+            </div>
         </div>
     </div>
 </section>
@@ -73,7 +74,7 @@ layout: default
         <div class="col-12 col-md-6 col-lg-3">
             <a class="quick-tile" href="{{ site.baseurl }}/research/">
                 <h4>Research</h4>
-                <p>Neural operators, agents, and scientific FM systems.</p>
+                <p>Material Foundation Models, PDE Foundation Models, and Agents.</p>
             </a>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
