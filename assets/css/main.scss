@@ -254,6 +254,16 @@ div#news {
     max-width: var(--research-tile-size);
     padding: 8px; /* tightened breathing room so images sit closer to the card edge */
     box-sizing: border-box;
+    /* center the grey image block inside the card column */
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+
+.image-container {
+    /* ensure the neutral background stays centered and doesn't shift vertically */
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 1200px) {
@@ -290,6 +300,13 @@ div#news {
 
 .card .card-body {
     padding: 1rem;
+}
+
+.card .card-body.d-flex {
+    /* ensure vertical centering of the title and consistent spacing */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .card .card-footer {
@@ -587,7 +604,7 @@ div#news {
     margin-right: auto;
 }
 
-/* Material Discovery CTAs */
+/* Materials Intelligence CTAs */
 .md-ctas {
     display: inline-flex;
     gap: 0.5rem;

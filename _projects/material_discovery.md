@@ -1,17 +1,17 @@
 ---
-title: Material Discovery
+title: Materials Intelligence
 layout: project
-card-title: Material Discovery
+card-title: Materials Intelligence
 weight: 10
 card-content: |
-    (Placeholder) Material discovery project — content to be added.
+    (Placeholder) Materials Intelligence project — content to be added.
 
 card-image: /assets/img/cloud_cover.png
 people:
 - 
 ---
 
-<!-- Material Discovery — page scaffold / placeholders -->
+<!-- Materials Intelligence — page scaffold / placeholders -->
 
 <section class="container my-5">
     <!-- Fancy intro figure -->
@@ -19,7 +19,7 @@ people:
         <div class="col-lg-6 order-lg-2 text-center">
             <!-- Large hero image placeholder: make the image fill the box to remove white padding -->
             <div class="placeholder-hero" style="background:transparent; border-radius:12px; padding:0; height:520px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-                <img src="{% link assets/img/cloud_bigpic.png %}" alt="Material discovery visual placeholder" style="width:100%; height:75%; object-fit:cover; display:block; border-radius:12px;">
+                <img src="{% link assets/img/cloud_bigpic.png %}" alt="Materials Intelligence visual placeholder" style="width:100%; height:75%; object-fit:cover; display:block; border-radius:12px;">
             </div>
         </div>
         <div class="col-lg-6 order-lg-1">
