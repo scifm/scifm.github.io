@@ -56,7 +56,7 @@ people:
              The src here points to the PDF as a fallback so authors can preview; browsers will generally show nothing for img->pdf, so consider rasterizing. -->
         <div class="text-center mt-3">
             <img class="figure-full" src="{{ '/assets/img/scope.png' | relative_url }}" alt="SCOPE figure (cropped)" style="width:92%; max-width:900px;" />
-            <div class="figure-caption text-muted small mt-2">Figure 2: Illustration of SCOPE representation. SCOPE consists of space group generator strings, Wyckoff position symbols, and material compositions.</div>
+            <div class="figure-caption text-muted small mt-2">Figure 1: Illustration of SCOPE representation. SCOPE consists of space group generator strings, Wyckoff position symbols, and material compositions.</div>
         </div>
     </section>
 
@@ -75,7 +75,7 @@ people:
 
         <div class="text-center mt-3">
             <img class="figure-full" src="{{ '/assets/img/cloud_results.png' | relative_url }}" alt="CLOUD figure placeholder" style="width:92%; max-width:900px;" />
-            <div class="figure-caption text-muted small mt-2">Figure 3: Summary of fine-tuning results on benchmark datasets.</div>
+            <div class="figure-caption text-muted small mt-2">Figure 2: Summary of fine-tuning results on benchmark datasets.</div>
         </div>
     </section>
 
@@ -96,8 +96,19 @@ people:
         </div>
 
         <div class="text-center mt-3">
-            <img class="figure-full" src="{{ '/assets/img/cloud_debye.png' | relative_url }}" alt="CLOUD-DEBYE figure placeholder" style="width:92%; max-width:900px;" />
-            <div class="figure-caption text-muted small mt-2" style="text-align:left; max-width:900px; margin-left:auto; margin-right:auto;">Figure 4: (a) Integration of physics laws with CLOUD model. The example exhibits the prediction for constant-volume heat capacity (C<sub>v</sub>) where CLOUD outputs the Debye temperature (&Theta;) and the Debye model predicts C<sub>v</sub> using &Theta; as input under different temperatures. (b) The violin plot of the prediction errors in C<sub>v</sub> by CGCNN, ALIGNN, CLOUD, and CLOUD-DEBYE. (c) C<sub>v</sub> predictions by CLOUD-DEBYE for Al<sub>2</sub>O<sub>3</sub>. Model predictions are compared against experimental and DFT-calculated results.</div>
+            <img class="figure-full" src="{{ '/assets/img/cloud_debye_new.png' | relative_url }}" alt="CLOUD-DEBYE figure placeholder" style="width:92%; max-width:900px;" />
+            <div class="figure-caption text-muted small mt-2" style="text-align:left; max-width:900px; margin-left:auto; margin-right:auto;">Figure 3: Integration of physics laws with CLOUD model. The example exhibits the prediction for constant-volume heat capacity (C<sub>v</sub>) where CLOUD outputs the Debye temperature (&Theta;) and the Debye model predicts C<sub>v</sub> using &Theta; as input under different temperatures.</div>
+        </div>
+
+        <div class="mt-4">
+            <iframe
+                src="{{ '/cloud_debye_interactive.html' | relative_url }}"
+                title="CLOUD-DEBYE interactive heat capacity explorer"
+                width="100%"
+                height="640"
+                loading="lazy"
+                style="border: 0; border-radius: 12px; box-shadow: 0 12px 24px rgba(0,0,0,0.08);">
+            </iframe>
         </div>
     </section>
 
