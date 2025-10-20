@@ -1,0 +1,17 @@
+<figure class="figure mb-0 {{ include.figure_class }}">
+    {% if include.link %}<a href="{{ include.link }}">{% endif %}
+    <img
+      src="{{ include.src | relative_url }}"
+      alt="{{ include.alt | default: '' }}"
+      class="img-fluid {{ include.img_class | default: 'rounded' }}"
+      style="width:100%;
+             object-fit:{{ include.object_fit | default: 'cover' }};
+             max-height:{{ include.max_height | default: '420px' }};
+             {{ include.style }}">
+    {% if include.link %}</a>{% endif %}
+    {% if include.caption %}
+      <figcaption class="figure-caption text-muted small mt-2">
+        {{ include.caption }}
+      </figcaption>
+    {% endif %}
+</figure>  
