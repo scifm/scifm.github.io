@@ -1,0 +1,74 @@
+{%- assign image_position = include.image_position | default: 'right' -%}
+{%- assign copy_col = include.copy_col | default: 'col-lg-7' -%}
+{%- assign media_col = include.media_col | default: 'col-lg-5' -%}
+<section class="sfm-hero {{ include.class | default: '' }}">
+  <div class="container">
+  <div class="row align-items-center gy-4">
+      {%- if image_position == 'left' -%}
+        {%- if include.image -%}
+          <div class="{{ media_col }}">
+            <figure class="sfm-hero__media text-center text-lg-left">
+              <img src="{{ include.image | relative_url }}" alt="{{ include.image_alt | default: '' }}" class="img-fluid" loading="lazy" />
+              {%- if include.image_caption -%}
+                <figcaption class="sfm-hero__caption text-muted small mt-2">{{ include.image_caption | markdownify | strip_newlines }}</figcaption>
+              {%- endif -%}
+            </figure>
+          </div>
+        {%- endif -%}
+        <div class="{{ copy_col }}">
+          <div class="sfm-hero__copy">
+            {%- if include.eyebrow %}<p class="sfm-hero__eyebrow">{{ include.eyebrow }}</p>{% endif -%}
+            {%- if include.title %}<h1 class="sfm-hero__title">{{ include.title }}</h1>{% endif -%}
+            {%- if include.lead %}<p class="sfm-hero__lead">{{ include.lead }}</p>{% endif -%}
+            {%- if include.body %}{{ include.body | markdownify }}{% endif -%}
+            {%- assign hero_buttons = include.buttons -%}
+            {%- if hero_buttons == nil -%}
+              {%- assign hero_buttons = '' | split: '' -%}
+              {%- if include.cta -%}
+                {%- assign hero_buttons = hero_buttons | push: include.cta -%}
+              {%- endif -%}
+              {%- if include.cta_secondary -%}
+                {%- assign hero_buttons = hero_buttons | push: include.cta_secondary -%}
+              {%- endif -%}
+            {%- endif -%}
+            {%- if hero_buttons != empty -%}
+              {% include blocks/cta-group.html buttons=hero_buttons class="mt-4" %}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- else -%}
+        <div class="{{ copy_col }}">
+          <div class="sfm-hero__copy">
+            {%- if include.eyebrow %}<p class="sfm-hero__eyebrow">{{ include.eyebrow }}</p>{% endif -%}
+            {%- if include.title %}<h1 class="sfm-hero__title">{{ include.title }}</h1>{% endif -%}
+            {%- if include.lead %}<p class="sfm-hero__lead">{{ include.lead }}</p>{% endif -%}
+            {%- if include.body %}{{ include.body | markdownify }}{% endif -%}
+            {%- assign hero_buttons = include.buttons -%}
+            {%- if hero_buttons == nil -%}
+              {%- assign hero_buttons = '' | split: '' -%}
+              {%- if include.cta -%}
+                {%- assign hero_buttons = hero_buttons | push: include.cta -%}
+              {%- endif -%}
+              {%- if include.cta_secondary -%}
+                {%- assign hero_buttons = hero_buttons | push: include.cta_secondary -%}
+              {%- endif -%}
+            {%- endif -%}
+            {%- if hero_buttons != empty -%}
+              {% include blocks/cta-group.html buttons=hero_buttons class="mt-4" %}
+            {%- endif -%}
+          </div>
+        </div>
+        {%- if include.image -%}
+          <div class="{{ media_col }}">
+            <figure class="sfm-hero__media text-center text-lg-right">
+              <img src="{{ include.image | relative_url }}" alt="{{ include.image_alt | default: '' }}" class="img-fluid" loading="lazy" />
+              {%- if include.image_caption -%}
+                <figcaption class="sfm-hero__caption text-muted small mt-2">{{ include.image_caption | markdownify | strip_newlines }}</figcaption>
+              {%- endif -%}
+            </figure>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>

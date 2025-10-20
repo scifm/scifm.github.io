@@ -1,0 +1,22 @@
+{%- assign buttons = include.buttons -%}
+{%- if buttons == nil -%}
+  {%- assign buttons = '' | split: '' -%}
+  {%- if include.primary -%}
+    {%- assign buttons = buttons | push: include.primary -%}
+  {%- endif -%}
+  {%- if include.secondary -%}
+    {%- assign buttons = buttons | push: include.secondary -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if buttons and buttons != empty -%}
+  {%- assign group_classes = 'sfm-cta-group ' -%}
+  {%- if include.class -%}
+    {%- assign group_classes = group_classes | append: include.class -%}
+  {%- endif -%}
+  <div class="{{ group_classes | strip }}">
+    {%- for button in buttons -%}
+      {%- assign button_classes = 'btn ' | append: (button.style | default: 'btn-paper') -%}
+      <a class="{{ button_classes }}" href="{{ button.url }}"{% if button.target %} target="{{ button.target }}"{% endif %}{% if button.rel %} rel="{{ button.rel }}"{% endif %}>{{ button.label }}</a>
+    {%- endfor -%}
+  </div>
+{%- endif -%}

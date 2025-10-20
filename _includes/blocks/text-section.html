@@ -1,0 +1,32 @@
+<section class="sfm-section {{ include.class | default: '' }}">
+  {%- if include.eyebrow or include.title or include.subtitle -%}
+    <header class="sfm-section__header">
+      {%- if include.eyebrow -%}<p class="sfm-section__eyebrow">{{ include.eyebrow }}</p>{%- endif -%}
+      {%- if include.title -%}
+        {%- assign section_title = include.title | markdownify | strip -%}
+        {%- assign section_title = section_title | replace: '<p>', '' | replace: '</p>', '' -%}
+        <h2 class="sfm-section__title">{{ section_title }}</h2>
+      {%- endif -%}
+      {%- if include.subtitle -%}
+        {%- assign section_subtitle = include.subtitle | markdownify | strip -%}
+        {%- assign section_subtitle = section_subtitle | replace: '<p>', '' | replace: '</p>', '' -%}
+        <p class="sfm-section__subtitle text-muted">{{ section_subtitle }}</p>
+      {%- endif -%}
+    </header>
+  {%- endif -%}
+  {%- if include.body -%}
+    <div class="sfm-section__body">
+      {{ include.body | markdownify }}
+    </div>
+  {%- endif -%}
+  {%- if include.buttons -%}
+    <div class="sfm-cta-group mt-4">
+      {%- for button in include.buttons -%}
+        <a class="btn {{ button.style | default: 'btn-paper' }}" href="{{ button.url }}"{% if button.target %} target="{{ button.target }}"{% endif %}>{{ button.label }}</a>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+  {%- if include.children -%}
+    {{ include.children }}
+  {%- endif -%}
+</section>
