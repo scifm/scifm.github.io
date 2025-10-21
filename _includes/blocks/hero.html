@@ -6,8 +6,12 @@
   <div class="row align-items-center gy-4">
       {%- if image_position == 'left' -%}
         {%- if include.image -%}
+          {%- assign media_classes = 'sfm-hero__media text-center text-lg-left' -%}
+          {%- if include.media_offset -%}
+            {%- assign media_classes = media_classes | append: ' ' | append: include.media_offset -%}
+          {%- endif -%}
           <div class="{{ media_col }}">
-            <figure class="sfm-hero__media text-center text-lg-left">
+            <figure class="{{ media_classes }}">
               <img src="{{ include.image | relative_url }}" alt="{{ include.image_alt | default: '' }}" class="img-fluid" loading="lazy" />
               {%- if include.image_caption -%}
                 <figcaption class="sfm-hero__caption text-muted small mt-2">{{ include.image_caption | markdownify | strip_newlines }}</figcaption>
@@ -59,8 +63,12 @@
           </div>
         </div>
         {%- if include.image -%}
+          {%- assign media_classes = 'sfm-hero__media text-center text-lg-right' -%}
+          {%- if include.media_offset -%}
+            {%- assign media_classes = media_classes | append: ' ' | append: include.media_offset -%}
+          {%- endif -%}
           <div class="{{ media_col }}">
-            <figure class="sfm-hero__media text-center text-lg-right">
+            <figure class="{{ media_classes }}">
               <img src="{{ include.image | relative_url }}" alt="{{ include.image_alt | default: '' }}" class="img-fluid" loading="lazy" />
               {%- if include.image_caption -%}
                 <figcaption class="sfm-hero__caption text-muted small mt-2">{{ include.image_caption | markdownify | strip_newlines }}</figcaption>
