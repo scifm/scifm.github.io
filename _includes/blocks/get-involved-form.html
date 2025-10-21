@@ -1,0 +1,83 @@
+<form id="getInvolvedForm" action="#" method="post" novalidate>
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First name <span class="text-muted">(required)</span></label>
+    <input type="text" class="form-control" id="firstName" name="firstName" required autocomplete="given-name" aria-describedby="firstNameHelp">
+    <div class="invalid-feedback">Please provide your first name.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last name <span class="text-muted">(required)</span></label>
+    <input type="text" class="form-control" id="lastName" name="lastName" required autocomplete="family-name" aria-describedby="lastNameHelp">
+    <div class="invalid-feedback">Please provide your last name.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address <span class="text-muted">(required)</span></label>
+    <input type="email" class="form-control" id="email" name="email" required autocomplete="email" aria-describedby="emailHelp">
+    <div class="invalid-feedback">Please provide a valid email address.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="org" class="form-label">Organization</label>
+    <input type="text" class="form-control" id="org" name="organization" autocomplete="organization" aria-describedby="orgHelp">
+  </div>
+
+  <fieldset class="mb-3">
+    <legend class="col-form-label pt-0">Role (select one)</legend>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="role" id="roleStudent" value="student" checked>
+      <label class="form-check-label" for="roleStudent">Student</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="role" id="roleFaculty" value="faculty">
+      <label class="form-check-label" for="roleFaculty">Faculty</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="role" id="roleIndustry" value="industry">
+      <label class="form-check-label" for="roleIndustry">Industry</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="role" id="roleOther" value="other">
+      <label class="form-check-label" for="roleOther">Other</label>
+    </div>
+  </fieldset>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
+    <label class="form-check-label" for="consent">I agree to receive emails from SciFM about events and news.</label>
+    <div class="invalid-feedback">You must agree to receive emails to join.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" id="submitBtn">Sign Up</button>
+</form>
+
+<div id="successMessage" class="alert alert-success mt-4" role="status" hidden>
+  <h4 class="alert-heading">Thanks—you’re in!</h4>
+  <p>We've received your sign-up. Check your email for a confirmation message.</p>
+</div>
+
+<script>
+  (function() {
+    var form = document.getElementById('getInvolvedForm');
+    if (!form) return;
+    var success = document.getElementById('successMessage');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      var valid = form.checkValidity();
+      var elements = form.querySelectorAll('input,select');
+      elements.forEach(function(el) {
+        if (!el.checkValidity()) {
+          el.classList.add('is-invalid');
+          el.classList.remove('is-valid');
+        } else {
+          el.classList.remove('is-invalid');
+          el.classList.add('is-valid');
+        }
+      });
+      if (!valid) return;
+      form.setAttribute('hidden', 'hidden');
+      success.removeAttribute('hidden');
+    });
+  })();
+</script>
