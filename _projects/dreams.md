@@ -5,7 +5,7 @@ card-title: LLM Agents
 weight: 11
 card-content: |
     Accelerating high-fidelity materials discovery with autonomous LLM agents that think, plan, and compute like experts.
-card-image: /assets/img/comp_sci_card.svg
+card-image: /assets/img/dream_cover.png
 people: []
 cta_links:
   - label: Read the paper
