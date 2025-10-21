@@ -1,0 +1,14 @@
+{%- assign embed_classes = 'sfm-embed ' -%}
+{%- if include.class -%}
+  {%- assign embed_classes = embed_classes | append: include.class -%}
+{%- endif -%}
+{%- assign height = include.height | default: 560 -%}
+{%- assign src = include.src -%}
+{%- if src and src contains '://' -%}
+  {%- assign embed_src = src -%}
+{%- else -%}
+  {%- assign embed_src = src | relative_url -%}
+{%- endif -%}
+<div class="{{ embed_classes | strip }}">
+  <iframe src="{{ embed_src }}" title="{{ include.title | default: '' }}" loading="{{ include.loading | default: 'lazy' }}" height="{{ height }}" width="{{ include.width | default: '100%' }}" allow="{{ include.allow | default: 'accelerometer; ambient-light-sensor; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' }}"{% if include.allowfullscreen != false %} allowfullscreen{% endif %}{% if include.referrerpolicy %} referrerpolicy="{{ include.referrerpolicy }}"{% endif %}{% if include.sandbox %} sandbox="{{ include.sandbox }}"{% endif %}></iframe>
+</div>

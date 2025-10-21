@@ -2,31 +2,98 @@
 layout: default
 ---
 
-{% assign numposts = site.posts | size %}
-{% if numposts >= 1 %}
-<div id="news" class="container mb-5">
-    <hr>
-    <ul class="news list-unstyled">
-        {% for post in site.posts limit: site.news.front_page_limit %}
-        {% include news-item.html item=post %}
-        <hr>
-        {% endfor %}
-    </ul>
-    <p>
-        <span class="fa fa-fw fa-history"></span>
-        <a href="{{ site.baseurl }}/news.html">More News Posts &hellip;</a>
-    </p>
-</div>
-{% endif %}
-
-{{ content }}
-
-<div class="container">
-    <div class="row align-items-center">
-    {% for p in site.projects %}
-        <div class="col-md-6 mb-4 d-flex" style="padding: 0px; margin: 0px 0px 0px 0px;">
-            {% include project-card.html project=p %}
-        </div>
-    {% endfor %}
+{%- comment -%} Prominent quote band to set the stage. {%- endcomment -%}
+<section class="quote-band">
+    <div class="container py-4">
+        <p class="quote-text mb-2">
+            “From Manhattan Project to 2.0 — scaling AI for science's next era.”
+        </p>
+        <p class="quote-attrib mb-0">
+            U.S. Department of Energy, 2024
+        </p>
     </div>
-</div>
+    <hr class="m-0"/>
+</section>
+
+{%- comment -%} Split hero: concise copy + CTAs (left), hero figure (right). {%- endcomment -%}
+<section class="container hero-split mb-5">
+        <div class="row align-items-center">
+    <div class="col-lg-6 hero-copy">
+      <h1 class="display-5 fw-bold mb-3">SciFM - Why It Matters?</h1>
+      <p class="lead mb-4">
+        AI is transforming how we ask and answer scientific questions—connecting data, simulation, and theory into a continuous engine of discovery. 
+        Breakthroughs will not simply come from bigger datasets, but from 
+        <strong>foundation models that understand science</strong>.
+      </p>
+      <p class="lead mb-4">
+        We pioneer the concept of <strong>Scientific Foundation Models (SciFMs)</strong>—a transformative framework that redefines how science is done, connecting computation, experimentation, and reasoning into one intelligent system. 
+        Foundation models accelerate simulation and analysis, autonomous agents coordinate large-scale HPC campaigns, 
+        and validated insights feed back to strengthen the models. 
+        Our mission is simple: <strong>shorten the path from idea to insight</strong>—reliably and at scale.
+      </p>
+                       
+                </div>
+                <div class="col-lg-6 text-center">
+                        <img class="img-fluid hero-img" src="{% link assets/img/scifm_fancy_new.png %}" alt="SciFM overview diagram">
+                </div>
+        </div>
+        </section>
+
+<!-- Development section -->
+<section class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mt-3">SciFM at Michigan</h2>
+        </div>
+    </div>
+    <div class="row align-items-start">
+        <div class="col-lg-6">
+            <h3>Who are we?</h3>
+            <p>We are a multidisciplinary team combining expertise in physics, chemistry, materials science, and computer science. Our group brings together PIs, postdocs, and students from Michigan, along with our collaborators across the globe, to build foundation models that are scalable and practically useful. We collaborate closely with domain experts to ensure models respect scientific constraints, are interpretible, and can be integrated directly into experimental and simulation workflows.</p>
+
+            <h3>Vision</h3>
+            <p>At SciFM, we envision a future where scientific discovery is accelerated by foundation models and AI — where computations don’t just support research, but actively generate new knowledge and deliver direct solutions to today’s most pressing challenges.</p>
+        </div>
+        <div class="col-lg-6 text-center">
+            <!-- Even larger visual for the Development section -->
+            <div style="overflow:hidden; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                <img class="img-fluid" src="{% link assets/img/scifm_bigpic.png %}" alt="SciFM diagram placeholder" style="width:100%; height:auto; object-fit:contain; display:block;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Join the Adventure / CTAs -->
+<section class="container join-cta mb-5">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-3 fw-bold">Join the Adventure</h3>
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="quick-tile" href="{{ site.baseurl }}/research/">
+                <h4>Research</h4>
+                <p>Material Foundation Models, PDE Foundation Models, and Agents.</p>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="quick-tile" href="{{ site.baseurl }}/team/">
+                <h4>People</h4>
+                <p>Scientists and engineers behind SciFM.</p>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="quick-tile" href="{{ site.baseurl }}/publications/">
+                <h4>Publications</h4>
+                <p>Papers, preprints, and talks.</p>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a class="quick-tile" href="{{ site.baseurl }}/contact/">
+                <h4>Collaborate</h4>
+                <p>Work with us on SciFM for your domain.</p>
+            </a>
+        </div>
+    </div>
+</section>

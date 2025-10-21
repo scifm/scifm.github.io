@@ -1,11 +1,20 @@
-- title: Home
-  link: /
+ - title: Home
+   link: /
 
-- title: Team
-  link: /team/
+ - title: Research
+   link: /research/
 
-- title: News
-  link: /news
+ - title: Publications
+   link: /publications/
 
-- title: Courses
-  link: /courses/
+ - title: People
+   link: /team/
+
+ - title: News
+   link: /news
+
+ - title: Courses
+   link: /courses/
+
+ - title: Contact
+   link: /contact/

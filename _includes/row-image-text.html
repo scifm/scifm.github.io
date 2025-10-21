@@ -1,0 +1,33 @@
+<div class="row align-items-start mb-4">
+    <div class="col-lg-6 {% if include.image_side == 'right' %}order-lg-2{% endif %} text-center">
+      {% include figure.html
+         src=include.src
+         alt=include.alt
+         max_height=include.max_height
+         object_fit=include.object_fit
+         img_class=include.img_class
+         style=include.img_style
+         caption=include.caption
+         figure_class=include.figure_class
+         link=include.link %}
+    </div>
+  
+    <div class="col-lg-6 {% if include.image_side == 'right' %}order-lg-1{% endif %}">
+      {% if include.title %}
+        <h1 class="display-6 fw-bold">{{ include.title }}</h1>
+      {% endif %}
+      {% if include.lead %}
+        <p class="lead text-muted">{{ include.lead }}</p>
+      {% endif %}
+  
+      {% if include.body %}
+        {% if include.body_is_markdown == false %}
+          {{ include.body }}
+        {% else %}
+          {{ include.body | markdownify }}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+  
+  {% unless include.hr == false %}<hr />{% endunless %}

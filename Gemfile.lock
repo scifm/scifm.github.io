@@ -10,11 +10,14 @@ GEM
       fiber-annotation
       io-event (~> 1.1)
       timers (~> 4.1)
+    base64 (0.3.0)
+    bigdecimal (3.3.1)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     console (1.23.2)
       fiber-annotation
       fiber-local
+    csv (3.3.5)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -25,6 +28,7 @@ GEM
     fiber-annotation (0.2.0)
     fiber-local (1.0.0)
     forwardable-extended (2.6.0)
+    google-protobuf (3.25.5)
     google-protobuf (3.25.5-arm64-darwin)
     google-protobuf (3.25.5-x86_64-linux)
     hashery (2.1.2)
@@ -74,6 +78,10 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    mini_portile2 (2.8.9)
+    nokogiri (1.16.5)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.5-x86_64-linux)
@@ -89,6 +97,7 @@ GEM
     public_suffix (5.0.3)
     racc (1.7.3)
     rainbow (3.1.1)
+    rake (13.3.0)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -97,6 +106,9 @@ GEM
     rouge (4.2.0)
     ruby-rc4 (0.1.5)
     safe_yaml (1.0.5)
+    sass-embedded (1.69.5)
+      google-protobuf (~> 3.23)
+      rake (>= 13.0.0)
     sass-embedded (1.69.5-arm64-darwin)
       google-protobuf (~> 3.23)
     sass-embedded (1.69.5-x86_64-linux-gnu)
@@ -115,13 +127,18 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  ruby
   x86_64-linux
 
 DEPENDENCIES
+  base64 (~> 0.3.0)
+  bigdecimal (~> 3.3)
+  csv (~> 3.3)
   html-proofer (~> 5.0)
   jekyll (~> 4.3)
   jekyll-seo-tag (~> 2.8)
   jekyll-sitemap (~> 1.4)
+  rexml (~> 3.3)
 
 BUNDLED WITH
    2.4.10

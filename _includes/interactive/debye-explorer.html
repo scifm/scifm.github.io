@@ -1,0 +1,420 @@
+<div class="interactive-app" data-app="cloud-debye">
+  <header class="interactive-app__header">
+    <h1 class="interactive-app__title">CLOUD-DEBYE Heat Capacity Explorer</h1>
+    <p class="interactive-app__lead">Dynamically compare Debye-model predictions with experimental and DFT data. Choose a material, sweep the temperature, and watch the heat capacity response.</p>
+  </header>
+
+  <section class="interactive-app__controls" aria-label="Interactive controls">
+    <div class="interactive-app__card">
+      <label class="interactive-app__label" for="material-select">Material</label>
+      <select id="material-select" aria-describedby="material-note"></select>
+    </div>
+    <div class="interactive-app__card">
+      <label class="interactive-app__label" for="temperature-slider">Temperature (K)</label>
+      <input id="temperature-slider" type="range" min="0" max="2200" value="300" step="1" aria-describedby="temperature-value" />
+      <div class="interactive-app__slider-value">
+        <span id="temperature-min-label">0 K</span>
+        <strong id="temperature-value">300 K</strong>
+        <span id="temperature-max-label">2200 K</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Heat capacity chart">
+    <div id="plot" class="interactive-app__plot"></div>
+  </section>
+
+  <dl class="interactive-app__metrics">
+    <div class="interactive-app__metric">
+      <dt>Current prediction</dt>
+      <dd><span id="predicted-cv">—</span> J&nbsp;mol⁻¹&nbsp;K⁻¹</dd>
+    </div>
+    <div class="interactive-app__metric">
+      <dt>Atoms per cell (N)</dt>
+      <dd><span id="atoms-display">—</span></dd>
+    </div>
+    <div class="interactive-app__metric">
+      <dt>Dulong-Petit (3NR)</dt>
+      <dd><span id="dp-limit">—</span> J&nbsp;mol⁻¹&nbsp;K⁻¹</dd>
+    </div>
+  </dl>
+
+  <div class="interactive-app__toggle">
+    <button type="button" id="explain-toggle" class="interactive-app__toggle-button" aria-expanded="false" aria-controls="explain-card">Explain the Debye model</button>
+  </div>
+
+  <aside id="explain-card" class="interactive-app__explain" aria-hidden="true">
+    <h2>Debye model for heat capacity</h2>
+    <p>The Debye model estimates phonon contribution to the specific heat (heat capacity) in a solid. Given a Debye temperature $\Theta$ and number of atoms per primitive cell $N$, the constant-volume heat capacity is:</p>
+    <p>$$ C_V(T; \Theta) = 9 N R \left(\frac{T}{\Theta}\right)^3 \int_0^{\Theta/T} \frac{x^4 e^x}{(e^x - 1)^2}\,dx $$</p>
+    <p>The integral combines contributions from all phonon modes. As $T$ rises, $C_V$ saturates at the classical Dulong–Petit limit $3 N R$.</p>
+  </aside>
+</div>
+
+<script>
+(function() {
+  const R = 8.314; // Gas constant J/(mol·K)
+  const DEFAULT_RANGE = [0, 2200];
+  const SAMPLE_POINTS = 240;
+  const QUADRATURE_ORDER = 32;
+  const GAUSS_LEGENDRE = computeGaussLegendre(QUADRATURE_ORDER);
+
+  const MATERIAL_DATA = [
+    {
+      id: "al2o3",
+      label: "Al₂O₃ (mp-1143)",
+      N: 5,
+      theta: 956.61,
+      temperatureRange: [0, 2200],
+      exp: {
+        T: [0, 50, 100, 150, 200, 250, 300, 400],
+        Cv: [0.000, 1.492, 12.84, 31.98, 51.14, 67.01, 79.41, 96.18]
+      },
+      dft: {
+        T: [0, 75, 150, 300, 600],
+        Cv: [0.0, 13.19793445326656, 70.47834759925729, 163.98980479397414, 222.0788807616584].map(v => v / 2.0)
+      }
+    },
+    {
+      id: "li2o",
+      label: "Li₂O (mp-1960)",
+      N: 3,
+      theta: 853.77,
+      temperatureRange: [0, 1700],
+      exp: {
+        T: [0, 100, 200, 300],
+        Cv: [0.000, 10.447, 37.204, 54.379]
+      },
+      dft: {
+        T: [0, 75, 150, 300, 600],
+        Cv: [0.0, 4.849754246584986, 24.877771882792814, 52.91858359615675, 68.13866032838098]
+      }
+    },
+    {
+      id: "catio3",
+      label: "CaTiO₃ (mp-4019)",
+      N: 5,
+      theta: 679.11,
+      temperatureRange: [0, 2200],
+      exp: {
+        T: [0, 101.85, 202.74, 299.60, 398.33],
+        Cv: [0.000, 37.93, 78.10, 98.17, 109.7]
+      },
+      dft: {
+        T: [0, 75, 150, 300, 600],
+        Cv: [0.0, 105.72240826406072, 252.85342215376394, 394.8604423984298, 463.4079892044257].map(v => v / 4.0)
+      }
+    },
+    {
+      id: "gan",
+      label: "GaN (mp-804)",
+      N: 2,
+      theta: 824.9146728515625,
+      temperatureRange: [0, 1700],
+      exp: {
+        T: [0, 102.8, 200, 300, 400, 500],
+        Cv: [0.000, 15.1, 26.76, 35.962, 41.884, 45.480]
+      },
+      dft: {
+        T: [0, 75, 150, 300, 600],
+        Cv: [0.0, 18.13903662311012, 42.22117921542949, 72.44536185966722, 91.09870801943094].map(v => v / 2.0)
+      }
+    }
+  ];
+
+  const materialSelect = document.getElementById("material-select");
+  const temperatureSlider = document.getElementById("temperature-slider");
+  const temperatureValue = document.getElementById("temperature-value");
+  const temperatureMinLabel = document.getElementById("temperature-min-label");
+  const temperatureMaxLabel = document.getElementById("temperature-max-label");
+  const predictedCvEl = document.getElementById("predicted-cv");
+  const atomsDisplay = document.getElementById("atoms-display");
+  const dpLimitDisplay = document.getElementById("dp-limit");
+  const explainToggle = document.getElementById("explain-toggle");
+  const explainCard = document.getElementById("explain-card");
+
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+  function generateTemperatureSamples(range = DEFAULT_RANGE, count = SAMPLE_POINTS) {
+    const [rawStart, rawEnd] = range;
+    const start = Math.min(rawStart, rawEnd);
+    const end = Math.max(rawStart, rawEnd);
+    if (end === start) {
+      return [start];
+    }
+    const step = (end - start) / (count - 1);
+    return Array.from({ length: count }, (_, idx) => start + step * idx);
+  }
+
+  function populateMaterials() {
+    MATERIAL_DATA.forEach((material, index) => {
+      const option = document.createElement("option");
+      option.value = material.id;
+      option.textContent = material.label;
+      if (index === 0) option.selected = true;
+      materialSelect.append(option);
+    });
+  }
+
+  function getMaterialById(id) {
+    return MATERIAL_DATA.find(m => m.id === id) || MATERIAL_DATA[0];
+  }
+
+  function getMaterialRange(material) {
+    return material.temperatureRange || DEFAULT_RANGE;
+  }
+
+  function syncControls(material) {
+    const range = getMaterialRange(material);
+    const [rawMin, rawMax] = range;
+    const rangeMin = Math.max(0, Math.floor(Math.min(rawMin, rawMax)));
+    const rangeMax = Math.ceil(Math.max(rawMin, rawMax));
+
+    temperatureSlider.min = rangeMin;
+    temperatureSlider.max = rangeMax;
+    const clampedValue = clamp(Number(temperatureSlider.value) || 300, rangeMin, rangeMax);
+    temperatureSlider.value = clampedValue;
+
+    temperatureMinLabel.textContent = `${rangeMin} K`;
+    temperatureMaxLabel.textContent = `${rangeMax} K`;
+  }
+
+  function computeGaussLegendre(n) {
+    const EPS = 1e-14;
+    const nodes = new Array(n);
+    const weights = new Array(n);
+    const m = Math.floor((n + 1) / 2);
+
+    for (let i = 0; i < m; i++) {
+      let z = Math.cos(Math.PI * (i + 0.75) / (n + 0.5));
+      let z1;
+      let p1;
+      let p2;
+      let pp;
+
+      do {
+        p1 = 1;
+        p2 = 0;
+        for (let j = 1; j <= n; j++) {
+          const p3 = p2;
+          p2 = p1;
+          p1 = ((2 * j - 1) * z * p2 - (j - 1) * p3) / j;
+        }
+        pp = n * (z * p1 - p2) / (z * z - 1);
+        z1 = z;
+        z = z1 - p1 / pp;
+      } while (Math.abs(z - z1) > EPS);
+
+      const xi = z;
+      const wi = 2 / ((1 - xi * xi) * pp * pp);
+
+      nodes[i] = -xi;
+      nodes[n - 1 - i] = xi;
+      weights[i] = wi;
+      weights[n - 1 - i] = wi;
+    }
+
+    return { nodes, weights };
+  }
+
+  function evaluateDebyeIntegrand(t) {
+    if (t <= 0) {
+      return 0;
+    }
+
+    if (t < 1e-6) {
+      const t2 = t * t;
+      const t4 = t2 * t2;
+      return t2 + (t4 / 12);
+    }
+
+    if (t < 30) {
+      const expm1 = Math.expm1(t);
+      const denomSq = expm1 * expm1;
+      if (denomSq === 0) {
+        return 0;
+      }
+      const expT = expm1 + 1;
+      const t2 = t * t;
+      const t4 = t2 * t2;
+      return (t4 * expT) / denomSq;
+    }
+
+    const expNeg = Math.exp(-t);
+    const denom = 1 - expNeg;
+    if (denom === 0) {
+      return 0;
+    }
+    const t2 = t * t;
+    const t4 = t2 * t2;
+    return (t4 * expNeg) / (denom * denom);
+  }
+
+  function computeDebyeIntegral(upperLimit) {
+    if (!Number.isFinite(upperLimit) || upperLimit <= 0) {
+      return 0;
+    }
+
+    const halfSpan = upperLimit / 2;
+    if (halfSpan === 0) {
+      return 0;
+    }
+
+    let sum = 0;
+    const { nodes, weights } = GAUSS_LEGENDRE;
+    for (let i = 0; i < nodes.length; i++) {
+      const t = halfSpan * (nodes[i] + 1);
+      const integrand = evaluateDebyeIntegrand(t);
+      sum += weights[i] * integrand;
+    }
+
+    return halfSpan * sum;
+  }
+
+  function heatCapacity(material, T) {
+    if (!Number.isFinite(T) || T <= 0) {
+      return 0;
+    }
+    const theta = material.theta;
+    if (theta <= 0) return 0;
+    const ratio = T / theta;
+    const upper = theta / T;
+    const integral = computeDebyeIntegral(upper);
+    return 9 * material.N * R * Math.pow(ratio, 3) * integral;
+  }
+
+  function formatNumber(value, digits = 2) {
+    return Number(value).toLocaleString(undefined, { maximumFractionDigits: digits, minimumFractionDigits: digits });
+  }
+
+  function buildPlot(material, highlightTemperature, sampleTemps, range) {
+    const curveY = sampleTemps.map(t => heatCapacity(material, t));
+    const highlightCv = heatCapacity(material, highlightTemperature);
+    const dulongPetit = 3 * material.N * R;
+    const [rawMin, rawMax] = range;
+    const rangeMin = Math.min(rawMin, rawMax);
+    const rangeMax = Math.max(rawMin, rawMax);
+
+    const traces = [
+      {
+        name: "CLOUD-DEBYE model",
+        x: sampleTemps,
+        y: curveY,
+        mode: "lines",
+        line: { color: "#114b8a", width: 3 },
+        hovertemplate: "T = %{x:.0f} K<br>C_V = %{y:.2f} J/mol·K<extra></extra>"
+      },
+      {
+        name: "Model prediction",
+        x: [highlightTemperature],
+        y: [highlightCv],
+        mode: "markers",
+        marker: { size: 12, color: "#ff7a45", line: { color: "#ffffff", width: 1.5 } },
+        hovertemplate: "T = %{x:.0f} K<br>C_V = %{y:.2f} J/mol·K<extra></extra>",
+        showlegend: false
+      }
+    ];
+
+    if (material.exp && material.exp.T && material.exp.Cv) {
+      traces.push({
+        name: "Experiment",
+        x: material.exp.T,
+        y: material.exp.Cv,
+        mode: "markers",
+        marker: { symbol: "circle", size: 8, color: "#2ca02c" },
+        hovertemplate: "T = %{x:.0f} K<br>C_V = %{y:.2f} J/mol·K<extra></extra>"
+      });
+    }
+
+    if (material.dft && material.dft.T && material.dft.Cv) {
+      traces.push({
+        name: "DFT",
+        x: material.dft.T,
+        y: material.dft.Cv,
+        mode: "markers",
+        marker: { symbol: "diamond", size: 10, color: "#9467bd" },
+        hovertemplate: "T = %{x:.0f} K<br>C_V = %{y:.2f} J/mol·K<extra></extra>"
+      });
+    }
+
+    traces.push({
+      name: "Dulong–Petit (3NR)",
+      x: [rangeMin, rangeMax],
+      y: [dulongPetit, dulongPetit],
+      mode: "lines",
+      line: { color: "#848b9f", dash: "dash", width: 2 },
+      hovertemplate: "C_V = %{y:.2f} J/mol·K<extra></extra>"
+    });
+
+    const layout = {
+      margin: { l: 70, r: 24, t: 16, b: 60 },
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(0,0,0,0)",
+      hovermode: "x unified",
+      xaxis: {
+        title: "Temperature T (K)",
+        range: [rangeMin, rangeMax],
+        tickformat: ".0f"
+      },
+      yaxis: {
+        title: "C_V (J·mol⁻¹·K⁻¹)",
+        rangemode: "tozero"
+      },
+      legend: {
+        orientation: "h",
+        x: 0,
+        y: 1.1
+      }
+    };
+
+    return { traces, layout, highlightCv, dulongPetit };
+  }
+
+  function render() {
+    const material = getMaterialById(materialSelect.value);
+    const range = getMaterialRange(material);
+    const [rawMin, rawMax] = range;
+    const rangeMin = Math.min(rawMin, rawMax);
+    const rangeMax = Math.max(rawMin, rawMax);
+
+    const temperature = clamp(Number(temperatureSlider.value) || rangeMin, rangeMin, rangeMax);
+    if (Number(temperatureSlider.value) !== temperature) {
+      temperatureSlider.value = temperature;
+    }
+    temperatureValue.textContent = `${temperature} K`;
+
+    const sampleTemps = generateTemperatureSamples([rangeMin, rangeMax]);
+    const { traces, layout, highlightCv, dulongPetit } = buildPlot(material, temperature, sampleTemps, [rangeMin, rangeMax]);
+    Plotly.react("plot", traces, layout, { displayModeBar: false, responsive: true });
+
+    predictedCvEl.textContent = formatNumber(highlightCv, 2);
+    atomsDisplay.textContent = material.N;
+    dpLimitDisplay.textContent = formatNumber(dulongPetit, 2);
+  }
+
+  function toggleExplainCard() {
+    const willShow = !explainCard.classList.contains("interactive-app__explain--visible");
+    explainCard.classList.toggle("interactive-app__explain--visible");
+    explainCard.setAttribute("aria-hidden", willShow ? "false" : "true");
+    explainToggle.setAttribute("aria-expanded", willShow ? "true" : "false");
+    explainToggle.textContent = willShow ? "Hide explanation" : "Explain the Debye model";
+    if (willShow && window.MathJax && window.MathJax.typesetPromise) {
+      MathJax.typesetPromise();
+    }
+  }
+
+  populateMaterials();
+  syncControls(getMaterialById(materialSelect.value));
+
+  materialSelect.addEventListener("change", () => {
+    const material = getMaterialById(materialSelect.value);
+    syncControls(material);
+    render();
+  });
+
+  temperatureSlider.addEventListener("input", render);
+  explainToggle.addEventListener("click", toggleExplainCard);
+
+  render();
+})();
+</script>
