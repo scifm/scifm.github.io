@@ -4,7 +4,7 @@ layout: project
 card-title: Molecular Discovery
 card-content: |
     MIST: A Scientific Foundation Model for Molecules and Mixtures.
-card-image: /assets/img/incite_image_mb.png
+card-image: /assets/img/mist_cover.png
 people:
 - abhutani
 - awadell
