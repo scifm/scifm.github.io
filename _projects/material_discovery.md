@@ -22,9 +22,7 @@ hero_ctas:
 ---
 
 {% capture hero_body %}
-Materials science is standing at an inflection point. We know that the world’s next great battery, catalyst, or semiconductor hides somewhere in the endless space of possible crystals — but exploring that space atom by atom with density functional theory (DFT) or experiments is impossibly slow. What if we could give materials the same kind of foundation models that transformed natural language — models that learn the “grammar of crystals” and can generalize to new compounds, new conditions, and even new physics?
-
-That question led us to **CLOUD** (Crystal Language mOdel for Unified and Differentiable materials modeling) — a large-scale transformer built to understand the rules that nature writes in symmetry, composition, and structure. But to teach such a model, we first needed a new language for crystals themselves.
+We know that the world’s next great battery, catalyst, or semiconductor hides somewhere in the endless space of possible crystals — but exploring that space with density functional theory (DFT) or experiments is impossibly slow. What if we could give materials the foundation models that transformed natural language — models that learn the “grammar of crystals” and can generalize to new compounds, new conditions, and even new physics? That question led us to **CLOUD** — a large-scale transformer built to understand the rules that nature writes in symmetry and composition. But to teach such a model, we first needed a new language for crystals themselves.
 {% endcapture %}
 
 {% include blocks/hero.html
@@ -35,8 +33,8 @@ That question led us to **CLOUD** (Crystal Language mOdel for Unified and Differ
     image="/assets/img/cloud_bigpic.png"
     image_alt="Materials Intelligence visual"
     image_position="right"
-    copy_col="col-lg-7 col-xl-6"
-    media_col="col-lg-5 col-xl-6"
+    copy_col="col-lg-8 col-xl-7"
+  media_col="col-lg-4 col-xl-5"
 %}
 
 {% capture scope_body %}
