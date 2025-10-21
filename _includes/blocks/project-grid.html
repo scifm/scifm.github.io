@@ -1,0 +1,25 @@
+{%- assign projects = include.projects -%}
+{%- if projects == nil -%}
+  {%- assign visible = site.projects | where_exp: "p", "p.published != false" -%}
+  {%- assign weighted = visible | where_exp: "p", "p.weight != nil" | sort: 'weight' -%}
+  {%- assign unweighted = visible | where_exp: "p", "p.weight == nil" | sort: 'title' -%}
+  {%- assign projects = weighted | concat: unweighted -%}
+{%- endif -%}
+
+{%- if projects and projects != empty -%}
+<section class="section-research {{ include.class | default: '' }}">
+  {%- if include.title or include.description -%}
+    <header class="section-research__header mb-4">
+      {%- if include.title -%}<h1 class="section-title mb-2">{{ include.title }}</h1>{%- endif -%}
+      {%- if include.description -%}<p class="text-muted mb-0">{{ include.description }}</p>{%- endif -%}
+    </header>
+  {%- endif -%}
+  <div class="row g-4 align-items-stretch">
+    {%- for project in projects -%}
+      <div class="col-12 col-md-6 col-lg-6 d-flex">
+        {% include project-card.html project=project %}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
