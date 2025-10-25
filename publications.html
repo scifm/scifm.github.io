@@ -1,0 +1,53 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+
+<h2> Papers </h2>
+
+<p class="text-muted mb-4 mt-4">Selected publications from our research.</p>
+
+{% assign pubs_by_year = site.publications | group_by_exp: "pub", "pub.date | date: '%Y'" | sort: "name" | reverse %}
+
+{% for year in pubs_by_year %}
+  <h3>{{ year.name }}</h3>
+  <ol>
+    {% for pub in year.items %}
+      <li>
+        {{ pub.authors }}
+        {% if pub.paperurl %}
+          <a href="{{ pub.paperurl }}" target="_blank"><strong>{{ pub.title }}</strong></a>
+        {% else %}
+          <strong>{{ pub.title }}</strong>
+        {% endif %}
+        <em>{{ pub.venue }}</em> ({{ pub.date | date: "%Y" }})
+      </li>
+    {% endfor %}
+  </ol>
+{% endfor %}
+
+
+<h2> Talks & Posters </h2>
+
+<p class="text-muted mb-3 mt-4">Recent presentations and invited talks where our team shared work and insights.</p>
+
+<ul class="list-unstyled">
+  <li class="mb-2">Karthik Duraisamy — Scientific Reasoning Models, Invited talk, American Physical Society Division of Fluid Dynamics Meeting (2025).</li>
+  <li class="mb-2">Karthik Duraisamy — Spatio-temporal Foundation Models, Invited talk, 61st Allerton Conference on Communication, Control & Computing, Champaign-Urbana, IL (2025).</li>
+  <li class="mb-2">Karthik Duraisamy — Active Inference AI Systems for Scientific Discovery, Plenary talk, Trillion Parameter Consortium Conference (2025).</li>
+  <li class="mb-2">Karthik Duraisamy — Towards AI Systems for Scientific Discovery, Invited talk, ISC-HPC Conference, Hamburg, Germany (2025).</li>
+  <li class="mb-2">Karthik Duraisamy — Generative Modeling as a Foundation for Fluid Dynamic Modeling, Invited talk, IUTAM Symposium on Machine Learning in Diverse Fluid Mechanics, Okinawa, Japan (2025).</li>
+  <li class="mb-2">Karthik Duraisamy — TTowards Scientific Agents: From Foundation Models to Automated Discovery, Plenary Lecture, CoDA: Conference on Data Analysis, Santa Fe, NM (2025).</li>
+  <li class="mb-2">Venkat Viswanathan — <a href="https://midas.umich.edu/events/kgml-workshop-leading-the-new-paradigm-of-ai-for-science/" target="_blank">Differentiable Physics</a>, U‑M Knowledge‑Guided Machine Learning (KGML) Workshop, Ann Arbor, MI (2025).</li>
+  <li class="mb-2">Changwen Xu — <a href="https://midas.umich.edu/events/kgml-workshop-leading-the-new-paradigm-of-ai-for-science/" target="_blank">Introduction to Scientific Foundation Models</a>, U‑M Knowledge‑Guided Machine Learning (KGML) Workshop, Ann Arbor, MI (2025).</li>
+  <li class="mb-2">Changwen Xu — <a href="https://www.youtube.com/playlist?list=PLx3IPY60uZ14KOKjTE726eUB_dSgkm9YF" target="_blank">CLOUD: A Scalable and Physics‑Informed Foundation Model for Crystal Representation Learning</a>, AI for Chemistry & Materials webinar, Online (2025).</li>
+  <li class="mb-2">Anoushka Bhutani — <a href="https://openreview.net/forum?id=PFOmiOoRFP" target="_blank">Scaling Foundation Models for Molecular Chemistry</a>, AI4X 2025 Conference, Singapore (2025).</li>
+  <li class="mb-2">Venkat Viswanathan — <a href="https://www.scifmconferences.org/scifm25/scifm25-program" target="_blank">Building and using Extreme‑scale Molecular Foundation Models</a>, SciFM25: Scientific Discovery in the Age of AI, Ann Arbor, MI (2025).</li>
+  <li class="mb-2">Karthik Duraisamy — <a href="https://www.scifmconferences.org/scifm25/scifm25-program" target="_blank">Opening remarks: Vision for AI‑augmented Discovery Engines & Critical Questions for the Conference</a>, SciFM25: Scientific Discovery in the Age of AI, Ann Arbor, MI (2025).</li>
+  <li class="mb-2">Changwen Xu — <a href="https://neurips.cc/virtual/2024/105898" target="_blank">CLOUD: A Scalable Scientific Foundation Model for Crystal Representation Learning</a>, NeurIPS 2024 Foundation Models for Science Workshop, Vancouver, BC (2024).</li>
+  <li class="mb-2">Alexius Wadell — <a href="https://youtu.be/jWxB4nhUfYs?si=s2pa6WORGjmOoMmi" target="_blank">Tokenization for Molecular Foundation Models</a>, FSML Seminar, Ann Arbor, MI (2024).</li>
+  <li class="mb-2">Anoushka Bhutani — <a href="https://youtu.be/nT69HvRECuw?si=kEyuzILZwb_4K1v1" target="_blank">Foundation Model Training and Interpretability for Molecular Design</a>, FSML Seminar, Ann Arbor, MI (2024).</li>
+  <li class="mb-2">Karthik Duraisamy — <a href="https://youtu.be/EFoYqCvCkuc" target="_blank">Charting the course for SciFMs: Themes & Questions</a>, SciFM24: Scientific Foundation Models, Ann Arbor, MI (2024).</li>
+  <li class="mb-2">Venkat Viswanathan — <a href="https://youtu.be/-Wg-PeisjqE" target="_blank">Scaling up Materials Foundation Models</a>, SciFM24: Scientific Foundation Models, Ann Arbor, MI (2024).</li>
+</ul>

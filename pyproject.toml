@@ -1,0 +1,8 @@
+[project]
+name = "scifm-website"
+version = "0.1.0"
+description = "SciFM website build tools"
+requires-python = ">=3.8"
+dependencies = [
+    "bibtexparser==1.4.3",
+]
