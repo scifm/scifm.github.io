@@ -12,12 +12,36 @@ def clean_text(text):
     return text.replace('{', '').replace('}', '').replace('{', '').replace('}', '').strip()
 
 
+def month_to_number(month):
+    """Convert month name/abbreviation to number."""
+    months = {
+        'jan': '01', 'january': '01',
+        'feb': '02', 'february': '02',
+        'mar': '03', 'march': '03',
+        'apr': '04', 'april': '04',
+        'may': '05',
+        'jun': '06', 'june': '06',
+        'jul': '07', 'july': '07',
+        'aug': '08', 'august': '08',
+        'sep': '09', 'september': '09',
+        'oct': '10', 'october': '10',
+        'nov': '11', 'november': '11',
+        'dec': '12', 'december': '12'
+    }
+    return months.get(month.lower(), '01')
+
+
 def entry_to_markdown(entry):
     """Convert BibTeX entry to markdown with YAML front matter."""
     title = clean_text(entry.get('title', ''))
     year = entry.get('year', '')
+    month = entry.get('month', '')
     journal = entry.get('journal', '')
     url = entry.get('url', '')
+    
+    # Convert month to number
+    month_num = month_to_number(month) if month else '01'
+    day = entry.get('day', '01')
     
     # Convert HTTP to HTTPS
     if url.startswith('http://'):
@@ -38,7 +62,7 @@ def entry_to_markdown(entry):
     yaml = f"""---
 title: "{title}"
 collection: publications
-date: {year}-01-01
+date: {year}-{month_num}-{day}
 venue: '{venue}'
 paperurl: '{url}'
 authors: '{authors}'

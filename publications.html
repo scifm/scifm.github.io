@@ -13,7 +13,8 @@ permalink: /publications/
 {% for year in pubs_by_year %}
   <h3>{{ year.name }}</h3>
   <ol>
-    {% for pub in year.items %}
+    {% assign sorted_pubs = year.items | sort: "date" | reverse %}
+    {% for pub in sorted_pubs %}
       <li>
         {{ pub.authors }}
         {% if pub.paperurl %}
