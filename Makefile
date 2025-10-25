@@ -35,6 +35,7 @@ serve: publications
 clean:
 	$(RM) -r _site _publications/*.md
 	@echo "Cleaned _site and publication files"
+	touch publications.bib
 
 # Show help
 help:

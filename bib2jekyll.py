@@ -19,6 +19,10 @@ def entry_to_markdown(entry):
     journal = entry.get('journal', '')
     url = entry.get('url', '')
     
+    # Convert HTTP to HTTPS
+    if url.startswith('http://'):
+        url = url.replace('http://', 'https://', 1)
+    
     # Venue
     if 'arXiv' in journal:
         venue = 'arXiv'
