@@ -11,7 +11,7 @@ people:
 
 hero_ctas:
   - label: Read the Paper
-    url: https://openreview.net/forum?id=PFOmiOoRFP
+    url: https://arxiv.org/abs/2510.18900
     style: btn-paper
     target: _blank
     rel: noopener noreferrer
