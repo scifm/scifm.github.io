@@ -24,11 +24,8 @@ _publications/: publications.bib bib2jekyll.py
 	uv run python bib2jekyll.py publications.bib _publications
 	@touch $@
 
-# Serve locally for development
-SERVE_HOST ?= 127.0.0.1
-SERVE_PORT ?= 4000
-
-serve: publications
+serve:
+	uv run python bib2jekyll.py publications.bib _publications
 	bundle exec jekyll serve --livereload
 
 # Clean build artifacts
@@ -50,6 +47,3 @@ help:
 	@echo "  make publications  - Regenerate publications from BibTeX"
 	@echo "  make clean         - Remove build artifacts"
 	@echo ""
-	@echo "Configuration:"
-	@echo "  SERVE_HOST=0.0.0.0 make serve  - Serve on all interfaces"
-	@echo "  SERVE_PORT=5000 make serve     - Serve on custom port"
