@@ -6,7 +6,7 @@ weight: 10
 card-content: |
     Foundation models for inorganic crystals that respect symmetry and physics.
 
-card-image: /assets/img/cloud_cover.png
+card-image: /assets/img/grid.svg
 people: []
 hero_ctas:
   - label: Read the Paper

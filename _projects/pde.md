@@ -6,7 +6,7 @@ weight: 11
 card-content: | 
     Creating surrogate physics models by finetuning a foundation model trained on multiple PDEs.
 people: []
-card-image: /assets/img/pde_cover_new.png
+card-image: /assets/img/water.svg
 cta_links:
   - label: LaDCast
     url: https://arxiv.org/abs/2506.09193
