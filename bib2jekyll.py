@@ -9,7 +9,7 @@ from pathlib import Path
 
 def clean_text(text):
     """Remove LaTeX braces and clean text."""
-    return text.replace('{', '').replace('}', '').strip()
+    return text.replace('{', '').replace('}', '').replace('{', '').replace('}', '').strip()
 
 
 def entry_to_markdown(entry):
@@ -32,7 +32,7 @@ def entry_to_markdown(entry):
         venue = 'Preprint'
     
     # Authors for citation
-    authors = entry.get('author', '').replace(' and ', ', ')
+    authors = entry.get('author', '')
     
     # Build YAML
     yaml = f"""---
