@@ -1,0 +1,63 @@
+{%- assign container_class = include.container_class | default: 'container' -%}
+{%- assign left_col = include.left_col | default: 'col-lg-7' -%}
+{%- assign right_col = include.right_col | default: 'col-lg-5' -%}
+{%- assign left_title_tag = include.left_title_tag | default: 'h2' -%}
+{%- assign right_title_tag = include.right_title_tag | default: 'h3' -%}
+<section class="sfm-split {{ include.class | default: '' }}">
+  <div class="{{ container_class }}">
+    <div class="row align-items-start gy-4">
+      <div class="{{ left_col }}">
+        <div class="sfm-split__panel sfm-split__panel--left">
+          {%- if include.left_eyebrow -%}
+            <p class="sfm-split__eyebrow">{{ include.left_eyebrow }}</p>
+          {%- endif -%}
+          {%- if include.left_title -%}
+            <{{ left_title_tag }} class="sfm-split__title">{{ include.left_title }}</{{ left_title_tag }}>
+          {%- endif -%}
+          {%- if include.left_lead -%}
+            <p class="sfm-split__lead">{{ include.left_lead }}</p>
+          {%- endif -%}
+          {%- if include.left_body -%}
+            {%- if include.left_markdown == false -%}
+              {{ include.left_body }}
+            {%- else -%}
+              {{ include.left_body | markdownify }}
+            {%- endif -%}
+          {%- endif -%}
+          {%- if include.left_children -%}
+            {{ include.left_children }}
+          {%- endif -%}
+          {%- if include.left_buttons -%}
+            {% include blocks/cta-group.html buttons=include.left_buttons class=include.left_button_class %}
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="{{ right_col }}">
+        <div class="sfm-split__panel sfm-split__panel--right">
+          {%- if include.right_eyebrow -%}
+            <p class="sfm-split__eyebrow">{{ include.right_eyebrow }}</p>
+          {%- endif -%}
+          {%- if include.right_title -%}
+            <{{ right_title_tag }} class="sfm-split__title">{{ include.right_title }}</{{ right_title_tag }}>
+          {%- endif -%}
+          {%- if include.right_lead -%}
+            <p class="sfm-split__lead">{{ include.right_lead }}</p>
+          {%- endif -%}
+          {%- if include.right_body -%}
+            {%- if include.right_markdown == false -%}
+              {{ include.right_body }}
+            {%- else -%}
+              {{ include.right_body | markdownify }}
+            {%- endif -%}
+          {%- endif -%}
+          {%- if include.right_children -%}
+            {{ include.right_children }}
+          {%- endif -%}
+          {%- if include.right_buttons -%}
+            {% include blocks/cta-group.html buttons=include.right_buttons class=include.right_button_class %}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

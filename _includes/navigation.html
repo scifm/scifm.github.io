@@ -1,25 +1,61 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="height: 4rem;"> 
-    <div class="container">
-        <!-- Website Title Inclusion -->
-        {% unless page.url == "/" %}
-        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}/">{{ site.navtitle }}</a>
-        {% endunless %}
-        
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<header class="site-header" role="banner">
+    <div class="site-header__inner container">
+        <div class="site-logo" aria-hidden="false">
+            <a href="{{ site.baseurl }}/" class="logo-link">
+                <img src="{% link assets/img/scifm_header_logo.png %}" alt="SciFM" class="logo-img">
+            </a>
+        </div>
+
+        <button class="site-nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="site-nav-toggle__bar"></span>
+            <span class="site-nav-toggle__bar"></span>
+            <span class="site-nav-toggle__bar"></span>
         </button>
-        
-        <div class="collapse navbar-collapse navbar-expanded-bg" id="navbarResponsive" style="padding-left:2rem; background-color: #343A40;">
-            <ul class="navbar-nav ml-auto">
+
+        <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Primary navigation">
+            <ul class="primary-nav__list">
                 {% for item in site.data.menu %}
-                <li class="nav-item{% if item.link == page.url %} active {% endif %}">
-                    <a class="nav-link" href="{{ site.baseurl }}{{ item.link }}">
-                        {{ item.title }}
-                    </a>
-                </li>
+                    {%- assign item_url = item.link | default: '/' -%}
+                    {%- assign is_active = false -%}
+                    {%- if page.url == item_url or page.permalink == item_url -%}
+                        {%- assign is_active = true -%}
+                    {%- endif -%}
+                    <li class="primary-nav__item">
+                        <a href="{{ site.baseurl }}{{ item_url }}"{% if is_active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+                    </li>
                 {% endfor %}
             </ul>
+            <div class="primary-nav__cta primary-nav__cta--mobile">
+                <a href="{{ site.baseurl }}/get-involved/" class="btn btn-primary">Get Involved</a>
+            </div>
+        </nav>
+
+        <div class="site-cta">
+            <a href="{{ site.baseurl }}/get-involved/" class="btn btn-primary cta-btn" role="button">Get Involved</a>
         </div>
     </div>
-</nav>
+</header>
+
+<script>
+    (function() {
+        var header = document.querySelector('.site-header');
+        if (!header) return;
+        var toggle = header.querySelector('.site-nav-toggle');
+        var nav = header.querySelector('#primary-navigation');
+        if (!toggle || !nav) return;
+
+        toggle.addEventListener('click', function() {
+            var expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+            header.classList.toggle('site-header--menu-open', !expanded);
+        });
+
+        nav.addEventListener('click', function(event) {
+            if (event.target.tagName === 'A' && header.classList.contains('site-header--menu-open')) {
+                toggle.setAttribute('aria-expanded', 'false');
+                header.classList.remove('site-header--menu-open');
+            }
+        });
+    })();
+</script>
