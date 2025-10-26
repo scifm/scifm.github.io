@@ -2,7 +2,6 @@
 title: Materials Intelligence
 layout: project
 card-title: Materials Intelligence
-weight: 10
 card-content: |
     Foundation models for inorganic crystals that respect symmetry and physics.
 

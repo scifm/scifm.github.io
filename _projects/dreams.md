@@ -2,7 +2,6 @@
 title: LLM Agents
 layout: project
 card-title: LLM Agents
-weight: 11
 card-content: |
     Accelerating high-fidelity materials discovery with autonomous LLM agents that think, plan, and compute like experts.
 card-image: /assets/img/assistant.svg
