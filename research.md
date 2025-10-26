@@ -9,5 +9,3 @@ permalink: /research/
     title="Research Thrusts"
     description="Explore our core directions and how they connect to real scientific challenges."
 %}
-
-<!-- Placeholder page for Research. Content to be added later. -->
