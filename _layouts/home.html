@@ -1,60 +1,21 @@
 ---
 layout: default
 ---
-
-{%- comment -%} Prominent quote band to set the stage {%- endcomment -%}
-<section class="quote-band bg-light border-bottom mt-4">
-    <div class="container py-3">
-        <div class="row">
-            <div class="col-lg-10 col-xl-8 mx-auto text-center">
-                <blockquote class="blockquote mb-0">
-                    <p class="fs-3 fw-light fst-italic mb-3 text-dark">
-                        "From Manhattan Project to 2.0 — scaling AI for science's next era."
-                    </p>
-                    <footer class="blockquote-footer fs-6 mb-0">
-                        <cite title="U.S. Department of Energy">U.S. Department of Energy</cite>, 2024
-                    </footer>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-</section>
-
-{%- comment -%} Split hero: concise copy + CTAs (left), hero figure (right) {%- endcomment -%}
-<section class="container hero-split py-4">
-    <div class="row mb-3">
-        <div class="col-12 text-center">
-            <h1 class="display-4 fw-bold">SciFM — Why It Matters?</h1>
-        </div>
-    </div>
+<hr>
+<section class="container py-4">
     <div class="row g-3">
-        <div class="col-lg-6 d-flex align-items-center">
             <div class="hero-copy">
-                <p class="lead mb-3">
-                    AI is transforming how we ask and answer scientific questions—connecting data, simulation, and theory into a continuous engine of discovery. 
-                    Breakthroughs will not simply come from bigger datasets, but from 
-                    <strong>foundation models that understand science</strong>.
-                </p>
                 <p class="lead mb-0">
-                    We pioneer the concept of <strong>Scientific Foundation Models (SciFMs)</strong>—a transformative framework that redefines how science is done, connecting computation, experimentation, and reasoning into one intelligent system. 
-                    Foundation models accelerate simulation and analysis, autonomous agents coordinate large-scale HPC campaigns, 
-                    and validated insights feed back to strengthen the models. 
-                    Our mission is simple: <strong>shorten the path from idea to insight</strong>—reliably and at scale.
+                    Scientific foundation models extend the breakthroughs of large language models and computer vision into science.
+                    Trained on massive unlabeled scientific data — experiments, simulations, papers, instrument logs — they learn generalizable, transferable knowledge across chemistry, materials, biology, and beyond without task-specific supervision.
+                    Coupled with AI agents that can plan experiments, run tools, and interpret results, they accelerate discovery from hypothesis generation to validation.
                 </p>
             </div>
-        </div>
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <img class="img-fluid hero-img" src="{% link assets/img/scifm_fancy_new_2.png %}" alt="SciFM overview diagram" style="max-width: 100%; max-height: 400px; height: auto; object-fit: contain;">
-        </div>
-    </div>
 </section>
-
-{%- comment -%} About SciFM at Michigan {%- endcomment -%}
+<hr>
 <section class="container py-4">
     <div class="row">
-        <div class="col-12">
             <h2 class="display-6 fw-bold mb-3">SciFM at Michigan</h2>
-            
             <p class="fs-5 mb-3">
                 This effort started as an MICDE Initiative on Scientific Foundation Models in May 2023, and morphed into the Center for Foundation Models & AI Agents for Science in September 2024.
                 We are supported by Los Alamos National Laboratory, NSF NAIRR, NVIDIA, OpenAI and Microsoft.
@@ -82,46 +43,17 @@ layout: default
                     </p>
                 </div>
             </div>
-        </div>
     </div>
 </section>
-
-{%- comment -%} Join the Adventure / CTAs {%- endcomment -%}
-<section class="container join-cta py-4 mb-4">
-    <div class="row mb-3">
-        <div class="col-12 text-center">
-            <h2 class="display-6 fw-bold mb-2">Join the Adventure</h2>
-            <p class="lead text-muted">Explore our research, meet the team, and collaborate with us</p>
+<hr>
+<div class="container">
+    <h2> Reasearch Projects </h2>
+    <div class="row justify-content-center">
+    {% for p in site.projects %}
+        <div class="col-md-4 mb-4 d-flex" style="padding: 0px; margin: 5px 0px 10px 10px;">
+            {% include project-card.html project=p %}
         </div>
+    {% endfor %}
     </div>
-    <div class="row g-3">
-        <div class="col-12 col-md-6 col-lg-3">
-            <a class="quick-tile d-block h-100 text-decoration-none" href="{{ site.baseurl }}/research/">
-                <div class="p-3 h-100 border rounded-3 shadow-sm hover-lift text-center">
-                    <h4 class="h5 fw-bold mb-2">Research</h4>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-            <a class="quick-tile d-block h-100 text-decoration-none" href="{{ site.baseurl }}/team/">
-                <div class="p-3 h-100 border rounded-3 shadow-sm hover-lift text-center">
-                    <h4 class="h5 fw-bold mb-2">People</h4>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-            <a class="quick-tile d-block h-100 text-decoration-none" href="{{ site.baseurl }}/publications/">
-                <div class="p-3 h-100 border rounded-3 shadow-sm hover-lift text-center">
-                    <h4 class="h5 fw-bold mb-2">Publications</h4>
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-            <a class="quick-tile d-block h-100 text-decoration-none" href="{{ site.baseurl }}/contact/">
-                <div class="p-3 h-100 border rounded-3 shadow-sm hover-lift text-center">
-                    <h4 class="h5 fw-bold mb-2">Collaborate</h4>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
+</div>
+<hr>
