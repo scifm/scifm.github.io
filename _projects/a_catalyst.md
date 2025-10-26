@@ -5,6 +5,7 @@ card-title: Molecular Discovery
 card-content: |
     MIST: A Scientific Foundation Model for Molecules and Mixtures.
 card-image: /assets/img/particles.svg
+weight: 10
 people:
 - abhutani
 - awadell
