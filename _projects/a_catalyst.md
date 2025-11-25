@@ -45,7 +45,7 @@ MIST is built for this goal: a single molecular foundation model that resolves i
 %}
 
 {% capture smirk_body %}
-Most molecular foundation models use atom-wise tokenization, teating all ``bracketed atoms'' as a single irreducible token. Bracketed atoms represent any atom outside the organic subset or atoms with an explicit nuclear, geometric, or electronic aspect. Treating each fully specified bracketed atom as a single token would require an astronomically large vocabulary; in practice, small vocabularies create coverage gaps.
+Most molecular foundation models use atom-wise tokenization, treating all ``bracketed atoms'' as a single irreducible token. Bracketed atoms represent any atom outside the organic subset or atoms with an explicit nuclear, geometric, or electronic aspect. Treating each fully specified bracketed atom as a single token would require an astronomically large vocabulary; in practice, small vocabularies create coverage gaps.
 SMIRK addresses this by further decomposing bracketed atoms in chemically meaningful glyphs.
 This yields a tokenizer with complete coverage of the OpenSMILES specification, preserving isotopic and stereochemical information, avoiding information lossy due to out-of-vocabulary tokens, and producing interpretable embeddings for attributes that matter to downstream tasks.
 {% endcapture %}
@@ -100,7 +100,7 @@ By turning latent structure into operational knobs —-- readable directions tha
 {% include blocks/figure.html
     src="/assets/img/mist-figures/interp.svg"
     alt="Aromaticity and PAH features"
-    caption="UMAP projections reveal that the pretrained embeddings encode Polycyclic Aromatic Hydrocarbons classes and ring aromaticitydespite the model never training on labelled examples of these classes, suggesting the existence of chemically coherent structures in MIST's embedding space."
+    caption="UMAP projections reveal that the pretrained embeddings encode Polycyclic Aromatic Hydrocarbons classes and ring aromaticity despite the model never training on labelled examples of these classes, suggesting the existence of chemically coherent structures in MIST's embedding space."
 %}
 {% endcapture %}
 
