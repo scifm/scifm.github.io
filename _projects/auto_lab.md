@@ -12,16 +12,24 @@ people:
 - cyhalek
 
 hero_ctas:
-  - label: Read the Paper
+  - label: Clio Paper
     url: https://www.nature.com/articles/s41467-022-32938-1
     style: btn-paper
     target: _blank
     rel: noopener noreferrer
-  - label: Check the Code
+  - label: Clio Code
     url: https://github.com/BattModels/Clio
     style: btn-code
     target: _blank
     rel: noopener noreferrer
+  - label: SALSA Paper
+    url: https://chemrxiv.org/engage/chemrxiv/article-details/6906695eef936fb4a2c79d07
+    style: btn-paper
+    target: _blank
+    rel: noopener noreferrer
+  - label: ElyteOS Paper
+    url: https://chemrxiv.org/engage/chemrxiv/article-details/689a5d53a94eede1545fe40d
+    style: btn-paper
 ---
 
 {% capture hero_body %}
