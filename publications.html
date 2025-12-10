@@ -16,13 +16,20 @@ permalink: /publications/
     {% assign sorted_pubs = year.items | sort: "date" | reverse %}
     {% for pub in sorted_pubs %}
       <li>
-        {{ pub.authors }}
+        {% assign author_list = pub.authors | split: " and " -%}
+        {%- if author_list.size > 5 -%}
+          {%- for i in (0..4) -%}
+            {{ author_list[i] }}{%- if forloop.last == false %} and {% endif -%}
+          {%- endfor -%}, et al.
+        {%- else -%}
+          {{ pub.authors }}.
+        {%- endif -%}
         {% if pub.paperurl %}
-          <a href="{{ pub.paperurl }}" target="_blank"><strong>{{ pub.title }}</strong></a>
+          <a href="{{ pub.paperurl }}" target="_blank"><strong>{{ pub.title }}</strong></a>.
         {% else %}
-          <strong>{{ pub.title }}</strong>
+          <strong>{{ pub.title }}</strong>.
         {% endif %}
-        <em>{{ pub.venue }}</em> ({{ pub.date | date: "%Y" }})
+        <em>{{ pub.venue }}</em>. ({{ pub.date | date: "%Y" }}).
       </li>
     {% endfor %}
   </ol>
