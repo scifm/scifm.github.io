@@ -27,15 +27,6 @@ abhutani:
   email: "abhutani [at] umich [dot] edu"
   org: University of Michigan
 
-awadell:
-  role: team
-  display_name: "Alex Wadell"
-  webpage: "https://www.linkedin.com/in/alexiuswadell/"
-  bio: Ph.D. Candidate, Mechanical Engineering
-  image: assets/img/awadell.jpg
-  email: "awadell [at] umich [dot] edu"
-  org: University of Michigan
-
 amalss:
   role: team
   display_name: "Amal S Sebastian"
@@ -43,15 +34,6 @@ amalss:
   bio: Ph.D. Candidate, Aerospace Engineering
   webpage: "https://amalss18.github.io/"
   email: amalss [at] umich [dot] edu
-  org: University of Michigan
-
-shangzhu:
-  role: team
-  display_name: "Shang Zhu"
-  image: assets/img/shangzhu.jpeg
-  bio: Ph.D. Candidate, Mechanical Engineering
-  webpage: "https://www.linkedin.com/in/shang-zhu-0935a4153/"
-  email: shangzhu [at] umich [dot] edu
   org: University of Michigan
 
 changwex:
@@ -77,13 +59,6 @@ vansh:
   role: team
   email: "vanshs [at] umich [dot] com"
   bio: Ph.D. Candidate, Mechanical Engineering
-  org: University of Michigan
-
-jasminlim:
-  display_name: "Jasmin Lim"
-  role: other
-  email: "jaslim [at] umich [dot] com"
-  bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
 niloygupta:
@@ -149,28 +124,6 @@ william:
   bio: Ph.D. Candidate, Aerospace Engineering
   org: University of Michigan
 
-pratikkumar:
-  display_name: "Pratikkumar Raje"
-  role: postdoc
-  email: "praje [at] umich [dot] com"
-  bio: Postdoctoral Scholar, Aerospace Engineering
-  org: University of Michigan
-
-jame:
-  display_name: "James Duvall"
-  role: postdoc
-  email: "jamesduv [at] umich [dot] com"
-  bio: Postdoctoral Scholar, Aerospace Engineering
-  org: University of Michigan
-
-varunm:
-  display_name: Varun Madhavan
-  role: team
-  image: assets/img/varunm.jpeg
-  webpage: https://www.linkedin.com/in/varun-madhavan/
-  bio: Research Intern
-  org: University of Michigan
-
 arunppsg:
   role: dfs
   display_name: Arun Pa Thiagarajan
@@ -194,14 +147,14 @@ lithium:
     image: img/people/lithium.jpg
     bio: Mechanical Engineering
     email: lithium [at] umich [dot] edu
-	
+    
 tz4:
     display_name: "Tianyi Zhang"
     role: phd
     image: img/people/tiz.jpeg
     bio: Mechanical Engineering
     webpage: "https://www.linkedin.com/in/tianyi-zhang-89b2ba163/"
-    email: tiz [at] umnich [dot] edu	
+    email: tiz [at] umnich [dot] edu    
 
 ## Collaborators
 arvind:
