@@ -1,0 +1,26 @@
+# Publication images for the auto-scrolling figure strip
+# Add entries with the paper URL and corresponding image path
+
+- paperurl: 'https://arxiv.org/abs/2507.14267'
+  image: 'assets/img/dream_cover.png'
+  title: 'DREAMS: Density Functional Theory Based Research Engine for Agentic Materials Simulation'
+
+- paperurl: 'https://arxiv.org/abs/2506.17345'
+  image: 'assets/img/scope.png'
+  title: 'CLOUD: A Scalable and Physics-Informed Foundation Model for Crystal Representation Learning'
+
+- paperurl: 'https://arxiv.org/pdf/2510.18900'
+  image: 'assets/img/featured-papers/scaling.svg'
+  title: 'Foundation Models for Discovery and Exploration in Chemical Space'
+
+- paperurl: 'https://arxiv.org/abs/2505.23648'
+  image: 'assets/img/featured-papers/main_figure_updated.png'
+  title: 'Continuous Chain of Thought Enables Parallel Exploration and Reasoning'
+
+- paperurl: 'https://arxiv.org/abs/2506.18887'
+  image: 'assets/img/featured-papers/graphical_abstract_new.png'
+  title: 'Steering Conceptual Bias via Transformer Latent-Subspace Activation'
+
+- paperurl: 'https://arxiv.org/abs/2409.15370'
+  image: 'assets/img/featured-papers/toc_image.svg'
+  title: 'Smirk: An atomically complete tokenizer for molecular foundation models'
