@@ -4,7 +4,7 @@ layout: project
 card-title: Autonomous Labs
 card-content: |
     Clio: An Autonomous Lab for Aqueous and Non-aqueous Electrolyte Discovery.
-card-image: /assets/img/auto_lab/auto_lab_main.svg
+card-image: /assets/img/lab.svg
 weight: 10
 people:
 - lithium
@@ -83,4 +83,16 @@ ElyteOS controls the Clio and SALSA characterization platforms. It translates ex
     title="The SALSA solubility module"
     body=SALSA
     children=SALSA_children
+%}
+
+{% capture cta_children %}
+{% include blocks/cta-group.html
+    class="justify-content-center"
+    buttons=page.hero_ctas
+%}
+{% endcapture %}
+
+{% include blocks/text-section.html
+    class="text-center"
+    children=cta_children
 %}
