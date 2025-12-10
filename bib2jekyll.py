@@ -56,8 +56,8 @@ def entry_to_markdown(entry):
         venue = 'Preprint'
     
     # Authors for citation
-    authors = entry.get('author', '')
-    
+    authors = clean_text(entry.get('author', ''))
+
     # Build YAML
     yaml = f"""---
 title: "{title}"
