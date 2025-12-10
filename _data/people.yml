@@ -143,18 +143,26 @@ aravind:
 
 lithium:
     display_name: "Hongyi Lin"
-    role: phd
+    role: team
     image: img/people/lithium.jpg
-    bio: Mechanical Engineering
+    bio: Ph.D. Candidate, Mechanical Engineering
     email: lithium [at] umich [dot] edu
     
 tz4:
     display_name: "Tianyi Zhang"
-    role: phd
+    role: team
     image: img/people/tiz.jpeg
-    bio: Mechanical Engineering
+    bio: Ph.D. Candidate, Aerospace Engineering
     webpage: "https://www.linkedin.com/in/tianyi-zhang-89b2ba163/"
     email: tiz [at] umnich [dot] edu    
+
+cyhalek:
+    display_name: "Yuhan Chen"
+    role: team
+    image: img/people/cyhalek.jpg
+    bio: Research Assistant, Aerospace Engineering
+    webpage: "https://www.linkedin.com/in/yuhan-chen-1ba381220"
+    email: cyhalek [at] umnich [dot] edu    
 
 ## Collaborators
 arvind:
