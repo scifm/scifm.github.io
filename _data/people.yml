@@ -188,6 +188,21 @@ aravind:
   webpage: https://www.linkedin.com/in/sudharsan-aravind-v-18826a1aa/
   org: Deep Forest Sciences
 
+lithium:
+    display_name: "Hongyi Lin"
+    role: phd
+    image: img/people/lithium.jpg
+    bio: Mechanical Engineering
+    email: lithium [at] umich [dot] edu
+	
+tz4:
+    display_name: "Tianyi Zhang"
+    role: phd
+    image: img/people/tiz.jpeg
+    bio: Mechanical Engineering
+    webpage: "https://www.linkedin.com/in/tianyi-zhang-89b2ba163/"
+    email: tiz [at] umnich [dot] edu	
+
 ## Collaborators
 arvind:
   role: colab
