@@ -14,9 +14,11 @@ gem "html-proofer", "~> 5.0"
 
 gem "nokogiri", ">= 1.18.9"
 
+gem "webrick", ">= 1.8.2"
+
 gem "csv", "~> 3.3"
 
-gem "rexml", "~> 3.3"
+gem "rexml", ">= 3.3.9"
 
 gem "base64", "~> 0.3.0"
 
