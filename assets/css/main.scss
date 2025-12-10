@@ -777,5 +777,114 @@ div#news {
 /* For the project-grid with align-items-stretch */
 .section-research .row.align-items-stretch.justify-content-center {
     row-gap: 2rem;
+/* Auto-scrolling paper image strip */
+.paper-strip-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.paper-strip {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.paper-strip-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-left 60s linear infinite;
+    width: max-content;
+    padding-bottom: 4rem;
+}
+
+.paper-strip-track:hover {
+    animation-play-state: paused;
+}
+
+.paper-strip-item {
+    flex-shrink: 0;
+    width: 280px;
+    height: 196px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: visible;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.paper-strip-item:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.paper-strip-item::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 39, 76, 0.95);
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.paper-strip-item:hover::after {
+    opacity: 1;
+}
+
+.paper-strip-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .paper-strip-item {
+        width: 180px;
+        height: 126px;
+    }
+
+    .paper-strip-track {
+        gap: 1.5rem;
+        animation-duration: 40s;
+    }
+
+    .paper-strip-wrapper {
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+    }
 }
 
