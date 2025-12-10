@@ -1,9 +1,9 @@
 ---
-title: LLM Agents
+title: AI Agents
 layout: project
-card-title: LLM Agents
+card-title: AI Agents
 card-content: |
-    Accelerating high-fidelity materials discovery with autonomous LLM agents that think, plan, and compute like experts.
+    Accelerating high-fidelity materials discovery with autonomous AI agents that think, plan, and compute like experts.
 card-image: /assets/img/assistant.svg
 people: []
 cta_links:
