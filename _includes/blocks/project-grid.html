@@ -14,9 +14,9 @@
       {%- if include.description -%}<p class="text-muted mb-0">{{ include.description }}</p>{%- endif -%}
     </header>
   {%- endif -%}
-  <div class="row g-4 align-items-stretch">
+  <div class="row g-4 align-items-stretch justify-content-center">
     {%- for project in projects -%}
-      <div class="col-12 col-md-6 col-lg-6 d-flex">
+      <div class="col-12 col-sm-6 col-md-4 d-flex">
         {% include project-card.html project=project %}
       </div>
     {%- endfor -%}

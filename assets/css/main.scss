@@ -757,6 +757,28 @@ div#news {
     .btn-paper, .btn-code { width: 100%; display:block; }
 }
 
+/* Center leftover cards in the final row for 3-column layout */
+.row.justify-content-center.g-3,
+.row.justify-content-center.g-4 {
+    row-gap: 2rem !important;
+}
+
+/* Center incomplete rows using flexbox */
+.row.justify-content-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row.justify-content-center > [class*='col-'] {
+    margin-bottom: 2rem;
+}
+
+/* For the project-grid with align-items-stretch */
+.section-research .row.align-items-stretch.justify-content-center {
+    row-gap: 2rem;
+}
+
 /* Auto-scrolling paper image strip */
 .paper-strip-wrapper {
     width: 100%;
