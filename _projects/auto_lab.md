@@ -29,7 +29,6 @@ hero_ctas:
     rel: noopener noreferrer
   - label: ElyteOS Paper
     url: https://chemrxiv.org/engage/chemrxiv/article-details/689a5d53a94eede1545fe40d
-    style: btn-paper
 ---
 
 {% capture hero_body %}
@@ -79,7 +78,7 @@ The SALSA solubility module complements Clio. It is an autonomous high-throughpu
 ElyteOS controls the Clio and SALSA characterization platforms. It translates experiment requests into executable sequences and manages asynchronous data logging. When users remotely submit a request and specify fabrication and characterization parameters for a liquid formulation, ElyteOS executes the experiments and returns structured data to the cloud database.
 {% endcapture %}
 
-{% capture SALSA %}
+{% capture SALSA_children %}
 {% include blocks/figure.html
     src="/assets/img/auto_lab/SALSA.svg"
     alt="SALSA module"
