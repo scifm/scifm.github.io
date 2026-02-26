@@ -28,6 +28,9 @@ hero_ctas:
     target: _blank
     rel: noopener noreferrer
   - label: ElyteOS Paper
+    style: btn-code
+    target: _blank
+    rel: noopener noreferrer
     url: https://chemrxiv.org/engage/chemrxiv/article-details/689a5d53a94eede1545fe40d
 ---
 

@@ -716,12 +716,13 @@ div#news {
 }
 
 .btn-paper {
-    background: linear-gradient(180deg, #ffefc2, #ffd54a);
+    background: linear-gradient(180deg, #f8e186, #FFCB05);
     color: #00274C;
     border: 0;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1.5rem;   
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     text-decoration: none;
 }
@@ -733,13 +734,13 @@ div#news {
 }
 
 .btn-code {
-    /* white-to-blue vertical gradient like .btn-paper but blue accent */
-    background: linear-gradient(180deg, #ffffff, #2b7cff);
-    color: #00274C; /* dark text to match .btn-paper contrast */
+    background: linear-gradient(180deg,#225483, #00274C);
+    color: #ffffff; 
     border: 0;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1.5rem; 
     box-shadow: 0 6px 18px rgba(43,124,255,0.08);
     text-decoration: none;
     transition: transform 120ms ease, box-shadow 120ms ease;
@@ -748,8 +749,8 @@ div#news {
 .btn-code:hover, .btn-code:focus {
     transform: translateY(-2px);
     box-shadow: 0 10px 22px rgba(43,124,255,0.12);
-    background: linear-gradient(180deg, #e6f0ff, #1a63e6); /* slightly darker blue */
-    color: #ffffff; /* invert to white on hover for stronger contrast */
+    background: #00274C;
+    color: #ffffff; 
 }
 
 @media (max-width: 576px) {
