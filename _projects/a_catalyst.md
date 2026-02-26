@@ -16,8 +16,13 @@ hero_ctas:
     style: btn-paper
     target: _blank
     rel: noopener noreferrer
-  - label: Check the Code
+  - label: Smirk 😏
     url: https://github.com/BattModels/smirk
+    style: btn-code
+    target: _blank
+    rel: noopener noreferrer
+  - label: MIST models 🤗
+    url: https://huggingface.co/mist-models
     style: btn-code
     target: _blank
     rel: noopener noreferrer
