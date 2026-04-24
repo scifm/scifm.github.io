@@ -276,6 +276,15 @@ hollon:
   bio: Assistant Research Professor of Neurosurgery
   org: University of Michigan
   webpage: https://medschool.umich.edu/profile/7291/todd-c-hollon
+
+
+vinuesa:
+  role: faculty
+  display_name: Ricardo Vinuesa
+  image: assets/img/vinuesa.jpg
+  bio: Associate Professor of Aerospace Engineering
+  org: University of Michigan
+  webpage: https://aero.engin.umich.edu/people/ricardo-vinuesa/
   
 ## Summer School Organizers
 
