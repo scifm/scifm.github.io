@@ -96,6 +96,12 @@ yilin:
   bio: Ph.D. Student, Aerospace Engineering
   org: University of Michigan
 
+fwang:
+  display_name: "Fiona Wang"
+  role: team
+  bio: Ph.D. Student, Biological Engineering
+  org: Massachusetts Institute of Technology
+
 amirpasha:
   display_name: "Amirpasha Hedayat"
   role: team
@@ -237,14 +243,6 @@ gavini:
   webpage: https://me.engin.umich.edu/people/faculty/vikram-gavini/
   org: University of Michigan
 
-ozay:
-  role: faculty
-  display_name: Necmiye Ozay
-  image: assets/img/necmiye.jpg
-  bio: Associate Professor, Robotics & Electrical and Computer Engineering
-  webpage: https://web.eecs.umich.edu/~necmiye/
-  org: University of Michigan
-
 oymak:
   role: assoc_director
   display_name: Samet Oymak
@@ -285,6 +283,29 @@ vinuesa:
   bio: Associate Professor of Aerospace Engineering
   org: University of Michigan
   webpage: https://aero.engin.umich.edu/people/ricardo-vinuesa/
+
+buehler:
+  role: faculty
+  display_name: Markus Buehler
+  image: assets/img/markus.jpg
+  bio: Professor of Mechanical Engineering & Civil and Environmental Engineering
+  org: Massachusetts Institute of Technology
+  webpage: https://cee.mit.edu/people_individual/markus-j-buehler/
+
+lawrence:
+  role: faculty
+  display_name: Earl Lawrence
+  image: assets/img/earl.jpg
+  bio: Chief Scientist
+  org: National Security AI Office, Los Alamos National Laboratory
+  webpage: https://www.linkedin.com/in/earl-lawrence-514ba586/
+
+debardeleben:
+  role: faculty
+  display_name: Nathan DeBardeleben
+  bio: Scientist 5
+  org: Los Alamos National Laboratory
+  webpage: https://www.linkedin.com/in/nathan-debardeleben-b9a8031/
   
 ## Summer School Organizers
 
