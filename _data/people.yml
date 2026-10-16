@@ -4,7 +4,7 @@ venkvis:
   display_name: "Venkat Viswanathan"
   webpage: https://www.linkedin.com/in/venkat-viswanathan/
   image: assets/img/venkvis.png
-  bio: Associate Professor of Aerospace & Mechanical Engineering
+  bio: Professor of Aerospace & Mechanical Engineering
   email: "venkvis [at] umich [dot] edu"
   org: University of Michigan
 
@@ -247,7 +247,7 @@ oymak:
   role: assoc_director
   display_name: Samet Oymak
   image: assets/img/oymak.jpg
-  bio: Assistant Professor of Electrical Engineering and Computer Science
+  bio: Associate Professor of Electrical Engineering and Computer Science
   org: University of Michigan
   webpage: https://sota.engin.umich.edu
 
@@ -263,7 +263,7 @@ gorodetsky:
   role: faculty
   display_name: Alex Gorodetsky
   image: assets/img/gorodetsky.jpg
-  bio: Assistant Professor of Aerospace Engineering
+  bio: Associate Professor of Aerospace Engineering
   org: University of Michigan
   webpage: https://aero.engin.umich.edu/people/raman-venkat/
 

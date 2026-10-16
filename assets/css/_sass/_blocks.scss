@@ -32,6 +32,7 @@
 
 .sfm-hero__media {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 1.5rem 0 0;
@@ -42,6 +43,14 @@
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
   width: 100%;
   height: auto;
+}
+
+.sfm-hero__caption {
+  text-align: left;
+}
+
+.sfm-hero__caption p {
+  margin-bottom: 0;
 }
 
 @media (max-width: 991.98px) {
